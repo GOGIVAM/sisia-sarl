@@ -32,6 +32,95 @@
   padding: 0;
 }
 
+/* Carrousel personnalisé avec le style original */
+.carousel-container-custom {
+  position: relative;
+  max-width: 1140px;
+  margin: 30px auto 0;
+  padding: 0 60px;
+}
+
+.carousel-wrapper-custom {
+  overflow: hidden;
+}
+
+.carousel-track-custom {
+  display: flex;
+  transition: transform 0.4s ease;
+  gap: 18px;
+}
+
+.service-card-custom {
+  min-width: calc(25% - 13.5px);
+  flex-shrink: 0;
+  cursor: pointer;
+  text-decoration: none;
+  display: block;
+}
+
+.service-card-custom:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.carousel-button-custom {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 102, 204, 0.9);
+  color: white;
+  border: none;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+  z-index: 10;
+  line-height: 1;
+}
+
+.carousel-button-custom:hover {
+  background-color: #0052a3;
+}
+
+.carousel-button-custom.prev {
+  left: 0;
+}
+
+.carousel-button-custom.next {
+  right: 0;
+}
+
+@media (max-width: 1199px) {
+  .service-card-custom {
+    min-width: calc(33.333% - 12px);
+  }
+}
+
+@media (max-width: 991px) {
+  .service-card-custom {
+    min-width: calc(50% - 9px);
+  }
+  
+  .carousel-container-custom {
+    padding: 0 55px;
+  }
+}
+
+@media (max-width: 767px) {
+  .service-card-custom {
+    min-width: 100%;
+  }
+  
+  .carousel-container-custom {
+    padding: 0 50px;
+  }
+}
+
 @media (max-width: 1199px) {
    .u-section-1 {
     background-position: 50% 100%;
@@ -47,6 +136,7 @@
     min-height: 369px;
   }
 }
+
 
 @media (max-width: 767px) {
   .u-section-1 .u-sheet-1 {
