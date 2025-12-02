@@ -18,14 +18,21 @@
 }
 
 .u-section-1 .u-text-1 {
-  font-weight: 700;
-  text-shadow: 0px 2px 15px rgba(0, 0, 0, 0.4);
+  font-weight: 800;
+  font-size: 3.5rem;
+  letter-spacing: -0.5px;
+  text-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
   --animation-custom_in-translate_x: 0px;
   --animation-custom_in-translate_y: 0px;
   --animation-custom_in-opacity: 0;
   --animation-custom_in-rotate: 0deg;
   --animation-custom_in-scale: 0.3;
   margin: 60px auto 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #ffffff, rgba(255, 255, 255, 0.9));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .u-section-1 .u-text-2 {
@@ -80,14 +87,30 @@
 
 .u-section-2 .u-text-1 {
   color: #DC0000;
-  font-size: 2.5rem;
-  font-weight: 700;
+  font-size: 2.8rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
   --animation-custom_in-translate_x: 0px;
   --animation-custom_in-translate_y: 0px;
   --animation-custom_in-opacity: 0;
   --animation-custom_in-rotate: 0deg;
   --animation-custom_in-scale: 0.3;
   margin: 0 auto 60px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.u-section-2 .u-text-1::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, #DC0000, transparent);
+  border-radius: 2px;
 }
 
 .u-section-2 .u-list-1 {
@@ -213,7 +236,8 @@
 .u-section-2 .u-btn-2:hover {
   background: #DC0000;
   transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(220, 0, 0, 0.3);
+  box-shadow: 0 8px 25px rgba(220, 0, 0, 0.25);
+  color: white;
 }
 
 /* Carte Téléphone (10% Bleu) */
@@ -239,7 +263,7 @@
   left: 0;
   width: 100%;
   height: 4px;
-  background: linear-gradient(90deg, #0033cc, #0052ff);
+  background: #DC0000;
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -248,7 +272,7 @@
 .u-section-2 .u-list-item-2:hover {
   transform: translateY(-8px);
   box-shadow: 0 12px 40px rgba(90, 124, 142, 0.12);
-  border-color: #5A7C8E;
+  border-color: #DC0000;
 }
 
 .u-section-2 .u-list-item-2:hover::before {
@@ -326,7 +350,8 @@
 .u-section-2 .u-btn-4:hover {
   background: #DC0000;
   transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(220, 0, 0, 0.3);
+  box-shadow: 0 8px 25px rgba(220, 0, 0, 0.25);
+  color: white;
 }
 
 /* Responsive - Section 2 */
@@ -386,6 +411,31 @@
   }
 }
 
+/* Override Nicepage hover styles for buttons */
+.u-section-2 .u-btn-2:hover,
+.u-section-2 .u-btn-4:hover {
+  background-color: #DC0000 !important;
+  color: white !important;
+  box-shadow: 0 8px 25px rgba(220, 0, 0, 0.25) !important;
+}
+
+/* Forcer le titre "Nous contacter" à être centré */
+.u-section-3 .u-text-1 {
+  text-align: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  display: block !important;
+}
+
+/* Forcer le titre centré - très spécifique */
+.u-section-3 .u-layout-cell-1 h3 {
+  text-align: center !important;
+}
+
+.u-section-3 .u-layout-cell-1 p.u-text-2 {
+  text-align: center !important;
+}
+
 /* Section 3 - Formulaire de contact */
 .u-section-3 {
   background-color: #f8f9fa;
@@ -412,30 +462,50 @@
 
 .u-section-3 .u-container-layout-1 {
   padding: 30px 40px;
+  text-align: center;
 }
 
 .u-section-3 .u-text-1 {
-  margin: 0 auto 0 0;
+  margin: 0 auto 0 auto;
   color: #DC0000;
-  font-weight: 700;
-  font-size: 2.2rem;
+  font-weight: 800;
+  font-size: 2.8rem;
+  text-align: center;
+  letter-spacing: -0.5px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.u-section-3 .u-text-1::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, #DC0000, transparent);
+  border-radius: 2px;
 }
 
 .u-section-3 .u-text-2 {
-  margin: 15px auto 0 0;
+  margin: 15px auto 0 auto;
   color: #666666;
   line-height: 1.7;
   font-size: 1.05rem;
+  text-align: center;
 }
 
 .u-section-3 .u-form-1 {
   background-color: #ffffff;
   height: auto;
-  margin: 35px 30px 0 0;
+  margin: 35px auto 0 auto;
   border-radius: 16px;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
   border: 2px solid #f5f5f5;
   transition: all 0.3s ease;
+  max-width: 500px;
 }
 
 .u-section-3 .u-form-1:hover {
@@ -484,7 +554,8 @@
 .u-section-3 .u-btn-1:hover {
   background: #DC0000;
   transform: translateY(-3px);
-  box-shadow: 0 10px 30px rgba(220, 0, 0, 0.3);
+  box-shadow: 0 10px 30px rgba(220, 0, 0, 0.25);
+  color: white;
 }
 
 .u-section-3 .u-btn-1:active {
