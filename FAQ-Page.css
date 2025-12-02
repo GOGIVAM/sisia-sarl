@@ -2,9 +2,15 @@
    SISIA SARL - FAQ Page Styles
    Palette UI/UX: 60-30-10 Rule
    60% = Blanc/Gris clair (#FFFFFF, #F8F9FA)
-   30% = Rouge (#DC0000) - Logo brand color DOMINANT
+   30% = Rouge (#DC2F3C) - Logo brand color DOMINANT
    10% = Bleu-gris (#5A7C8E) - Accent subtil
    ==================================== */
+
+:root {
+  --brand-red: #DC2F3C;
+  --brand-red-light: #E63946;
+  --brand-red-dark: #B8232F;
+}
 
 /* Section 1 - Hero Banner */
 .u-section-1 {
@@ -71,7 +77,7 @@
 }
 
 .u-section-2 .u-text-1 {
-  color: #DC0000;
+  color: var(--brand-red);
   font-size: 2.8rem;
   font-weight: 800;
   letter-spacing: -0.5px;
@@ -94,7 +100,7 @@
   transform: translateX(-50%);
   width: 60px;
   height: 4px;
-  background: linear-gradient(90deg, transparent, #DC0000, transparent);
+  background: linear-gradient(90deg, transparent, var(--brand-red), transparent);
   border-radius: 2px;
 }
 
@@ -147,7 +153,7 @@
   left: 0;
   width: 100%;
   height: 4px;
-  background: linear-gradient(90deg, #DC0000, #ff3333);
+  background: linear-gradient(90deg, var(--brand-red), #ff3333);
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -160,10 +166,18 @@
 .u-section-2 .u-accordion-link-4:hover,
 .u-section-2 .u-accordion-link-5:hover {
   background-color: #ffffff !important;
-  border-color: #DC0000 !important;
-  color: #DC0000 !important;
-  transform: translateY(-4px);
-  box-shadow: 0 12px 40px rgba(220, 0, 0, 0.15);
+  border-color: var(--brand-red) !important;
+  color: var(--brand-red) !important;
+  transform: translateY(-4px) !important;
+  box-shadow: 0 12px 40px rgba(220, 47, 60, 0.15) !important;
+}
+
+a.u-button-style.u-button-style.u-text-hover-palette-1-base.u-accordion-link-1:hover,
+a.u-button-style.u-button-style.u-text-hover-palette-1-base.u-accordion-link-2:hover,
+a.u-button-style.u-button-style.u-text-hover-palette-1-base.u-accordion-link-3:hover,
+a.u-button-style.u-button-style.u-text-hover-palette-1-base.u-accordion-link-4:hover,
+a.u-button-style.u-button-style.u-text-hover-palette-1-base.u-accordion-link-5:hover {
+  color: var(--brand-red) !important;
 }
 
 .u-section-2 .u-accordion-link-1:hover::before,
@@ -186,9 +200,9 @@
 .u-section-2 .u-accordion-link-4[aria-selected="true"],
 .u-section-2 .u-accordion-link-5[aria-selected="true"] {
   background-color: #f8f9fa !important;
-  border-color: #DC0000 !important;
-  color: #DC0000 !important;
-  box-shadow: 0 8px 30px rgba(220, 0, 0, 0.12);
+  border-color: var(--brand-red) !important;
+  color: var(--brand-red) !important;
+  box-shadow: 0 8px 30px rgba(220, 47, 60, 0.12);
 }
 
 .u-section-2 .u-accordion-link-1.active::before,
@@ -221,8 +235,8 @@
 .u-section-2 .u-accordion-link-3:hover .u-icon-3,
 .u-section-2 .u-accordion-link-4:hover .u-icon-4,
 .u-section-2 .u-accordion-link-5:hover .u-icon-5 {
-  color: #DC0000 !important;
-  transform: rotate(90deg);
+  color: var(--brand-red) !important;
+  transform: rotate(90deg) !important;
 }
 
 .u-section-2 .u-accordion-link-1.active .u-icon-1,
@@ -235,7 +249,7 @@
 .u-section-2 .u-accordion-link-3[aria-selected="true"] .u-icon-3,
 .u-section-2 .u-accordion-link-4[aria-selected="true"] .u-icon-4,
 .u-section-2 .u-accordion-link-5[aria-selected="true"] .u-icon-5 {
-  color: #DC0000 !important;
+  color: var(--brand-red) !important;
   transform: rotate(45deg);
 }
 
