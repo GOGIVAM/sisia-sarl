@@ -1,5 +1,6 @@
- .u-section-1 {
-  background-image: linear-gradient(0deg, rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('images/young-woman-using-home-technology5-min.jpg');
+/* Section 1 - Hero Banner avec couleurs logo */
+.u-section-1 {
+  background-image: linear-gradient(0deg, rgba(220, 0, 0, 0.4), rgba(0, 51, 204, 0.4)), url('images/young-woman-using-home-technology5-min.jpg');
   background-position: 50% 50%;
 }
 
@@ -9,7 +10,7 @@
 
 .u-section-1 .u-text-1 {
   font-weight: 700;
-  text-shadow: 0px 0px 8px rgba(128,128,128,1);
+  text-shadow: 0px 0px 8px rgba(220, 0, 0, 0.8);
   --animation-custom_in-translate_x: 0px;
   --animation-custom_in-translate_y: 0px;
   --animation-custom_in-opacity: 0;
@@ -59,8 +60,12 @@
   .u-section-1 .u-sheet-1 {
     min-height: 104px;
   }
-} .u-section-2 {
+}
+
+/* Section 2 - Coordonnées avec couleurs logo */
+.u-section-2 {
   background-image: none;
+  background-color: #f8f9fa;
 }
 
 .u-section-2 .u-sheet-1 {
@@ -68,6 +73,7 @@
 }
 
 .u-section-2 .u-text-1 {
+  color: #DC0000;
   --animation-custom_in-translate_x: 0px;
   --animation-custom_in-translate_y: 0px;
   --animation-custom_in-opacity: 0;
@@ -95,6 +101,14 @@
   --animation-custom_in-opacity: 0;
   --animation-custom_in-rotate: 0deg;
   --animation-custom_in-scale: 1;
+  background-color: #ffffff;
+  box-shadow: 0 4px 15px rgba(220, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.u-section-2 .u-list-item-1:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(220, 0, 0, 0.2);
 }
 
 .u-section-2 .u-container-layout-1 {
@@ -104,6 +118,8 @@
 .u-section-2 .u-text-2 {
   text-transform: uppercase;
   margin: 0 auto 0 0;
+  color: #DC0000;
+  font-weight: 700;
 }
 
 .u-section-2 .u-btn-1 {
@@ -113,21 +129,38 @@
   font-weight: 700;
   margin: 20px auto 0 0;
   padding: 0;
+  color: #0033cc;
+  border-color: #0033cc;
+  transition: all 0.3s ease;
+}
+
+.u-section-2 .u-btn-1:hover {
+  color: #DC0000;
+  border-color: #DC0000;
 }
 
 .u-section-2 .u-text-3 {
   margin: 20px auto 0 0;
+  color: #2c3e50;
 }
 
 .u-section-2 .u-btn-2 {
   letter-spacing: 1px;
   font-size: 0.75rem;
-  background-image: none;
+  background-image: linear-gradient(135deg, #DC0000, #ff3333);
   --radius: 30px;
   text-transform: uppercase;
   font-weight: 600;
   margin: 20px auto 0 0;
   padding: 10px 21px 10px 20px;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.u-section-2 .u-btn-2:hover {
+  background-image: linear-gradient(135deg, #0033cc, #0052ff);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(220, 0, 0, 0.3);
 }
 
 .u-section-2 .u-list-item-2 {
@@ -136,6 +169,14 @@
   --animation-custom_in-opacity: 0;
   --animation-custom_in-rotate: 0deg;
   --animation-custom_in-scale: 1;
+  background-color: #ffffff;
+  box-shadow: 0 4px 15px rgba(0, 51, 204, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.u-section-2 .u-list-item-2:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 51, 204, 0.2);
 }
 
 .u-section-2 .u-container-layout-2 {
@@ -145,6 +186,8 @@
 .u-section-2 .u-text-4 {
   text-transform: uppercase;
   margin: 0 auto 0 0;
+  color: #0033cc;
+  font-weight: 700;
 }
 
 .u-section-2 .u-btn-3 {
@@ -154,21 +197,38 @@
   font-weight: 700;
   margin: 20px auto 0 0;
   padding: 0;
+  color: #DC0000;
+  border-color: #DC0000;
+  transition: all 0.3s ease;
+}
+
+.u-section-2 .u-btn-3:hover {
+  color: #0033cc;
+  border-color: #0033cc;
 }
 
 .u-section-2 .u-text-5 {
   margin: 20px auto 0 0;
+  color: #2c3e50;
 }
 
 .u-section-2 .u-btn-4 {
   letter-spacing: 1px;
   font-size: 0.75rem;
-  background-image: none;
+  background-image: linear-gradient(135deg, #0033cc, #0052ff);
   --radius: 30px;
   text-transform: uppercase;
   font-weight: 600;
   margin: 20px auto 0 0;
   padding: 10px 21px 10px 20px;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.u-section-2 .u-btn-4:hover {
+  background-image: linear-gradient(135deg, #DC0000, #ff3333);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 51, 204, 0.3);
 }
 
 .u-section-2 .u-list-item-3 {
@@ -248,7 +308,10 @@
     padding-left: 10px;
     padding-right: 10px;
   }
-}.u-section-3 .u-sheet-1 {
+}
+
+/* Section 3 - Formulaire de contact avec couleurs logo */
+.u-section-3 .u-sheet-1 {
   min-height: 691px;
 }
 
@@ -272,24 +335,55 @@
 
 .u-section-3 .u-text-1 {
   margin: 0 auto 0 0;
+  color: #DC0000;
+  font-weight: 700;
 }
 
 .u-section-3 .u-text-2 {
   margin: 20px auto 0 0;
+  color: #2c3e50;
 }
 
 .u-section-3 .u-form-1 {
   background-image: none;
+  background-color: #f8f9fa;
   height: 494px;
   margin: 40px 30px 0 0;
+  border-radius: 20px;
+  box-shadow: 0 5px 20px rgba(220, 0, 0, 0.1);
+}
+
+.u-section-3 .u-form-1 input,
+.u-section-3 .u-form-1 textarea {
+  border: 2px solid #e0e0e0;
+  transition: all 0.3s ease;
+}
+
+.u-section-3 .u-form-1 input:focus,
+.u-section-3 .u-form-1 textarea:focus {
+  border-color: #DC0000;
+  box-shadow: 0 0 10px rgba(220, 0, 0, 0.2);
+}
+
+.u-section-3 .u-form-1 label {
+  color: #0033cc;
+  font-weight: 600;
 }
 
 .u-section-3 .u-btn-1 {
-  background-image: none;
+  background-image: linear-gradient(135deg, #DC0000, #ff3333);
   font-size: 1.25rem;
   text-transform: uppercase;
   font-weight: 500;
   padding: 10px 43px 11px 42px;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.u-section-3 .u-btn-1:hover {
+  background-image: linear-gradient(135deg, #0033cc, #0052ff);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(220, 0, 0, 0.3);
 }
 
 .u-section-3 .u-layout-cell-2 {
@@ -310,6 +404,8 @@
   height: 616px;
   --radius: 50px;
   margin: 0 auto 0 0;
+  border: 5px solid #DC0000;
+  box-shadow: 0 10px 30px rgba(0, 51, 204, 0.2);
 }
 
 @media (max-width: 1199px) {
@@ -395,6 +491,14 @@
     width: 340px;
     height: 368px;
   }
-} .u-section-4 {
+}
+
+/* Section 4 - Carte Google Maps */
+.u-section-4 {
   min-height: 500px;
+}
+
+.u-section-4 iframe {
+  border: 3px solid #DC0000;
+  border-radius: 10px;
 }
