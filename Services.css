@@ -1065,3 +1065,46 @@
     margin-left: initial;
   }
 }
+
+/* ===== HEADER PHONE NUMBER RED ===== */
+.u-header .u-btn-1 {
+  color: var(--brand-red) !important;
+}
+
+/* ===== FOOTER PHONE NUMBER RED ===== */
+.u-layout-cell-4 .u-btn-3 {
+  color: var(--brand-red) !important;
+}
+
+/* ===== NAVBAR LINKS HOVER ===== */
+.u-menu-1 .u-nav-link,
+.u-menu-1 .u-nav-2 .u-nav-link {
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.u-menu-1 .u-nav-link:hover,
+.u-menu-1 .u-nav-link:focus,
+.u-menu-1 .u-nav-2 .u-nav-link:hover,
+.u-menu-1 .u-nav-2 .u-nav-link:focus {
+  color: var(--brand-red) !important;
+  text-decoration: underline;
+  text-decoration-color: var(--brand-red);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 5px;
+}
+
+/* ===== FOOTER QUICK LINKS HOVER ===== */
+.u-layout-cell-5 .u-text-11 a,
+.u-layout-cell-5 .u-text-11 li a {
+  position: relative;
+  transition: all 0.3s ease;
+  padding-bottom: 2px;
+  border-bottom: 2px solid transparent;
+}
+
+.u-layout-cell-5 .u-text-11 a:hover,
+.u-layout-cell-5 .u-text-11 li a:hover {
+  border-bottom-color: var(--brand-red);
+  color: var(--brand-red) !important;
+}

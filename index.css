@@ -108,7 +108,7 @@
 .u-section-1 .u-image-1 {
   min-height: 653px;
   height: auto;
-  background-image: linear-gradient(0deg, rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("images/rendering-smart-home-device6.jpg");
+  background-image: linear-gradient(0deg, rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("images/materiel-reduit2-e1575386967171.png");
   background-position: 50% 50%;
   margin-top: 0;
   margin-bottom: 0;
@@ -834,7 +834,7 @@
 }
 
 .u-section-3 .u-image-2 {
-  background-image: linear-gradient(0deg, rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url('images/blurry-man-working-laptop-front.jpg');
+  background-image: linear-gradient(0deg, rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url('images/télécharger (1).webp');
   background-position: 50% 50%;
   --animation-custom_in-translate_x: 0px;
   --animation-custom_in-translate_y: 300px;
@@ -921,7 +921,7 @@
 }
 
 .u-section-3 .u-image-4 {
-  background-image: linear-gradient(0deg, rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url('images/woman-holding-smart-speaker-side.jpg');
+  background-image: linear-gradient(0deg, rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url('images/OIP (3).webp');
   background-position: 1.08% 50%;
   --animation-custom_in-translate_x: 0px;
   --animation-custom_in-translate_y: 300px;
@@ -964,7 +964,7 @@
 }
 
 .u-section-3 .u-image-5 {
-  background-image: linear-gradient(0deg, rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url('images/view-modern-photorealistic-lamp.jpg');
+  background-image: linear-gradient(0deg, rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url('images/télécharger.webp');
   background-position: 50% 50%;
   --animation-custom_in-translate_x: 0px;
   --animation-custom_in-translate_y: 300px;
@@ -1266,7 +1266,7 @@
 
 .u-section-5 .u-image-1 {
   min-height: 594px;
-  background-image: url("images/person-holding-smartphone-with-h.jpg");
+  background-image: url("images/ingnieur-mle-de-travail-sur-l-ordinateur-portable-dans-usine-noir-vrifiant-le-contrle-la-qualit-tat-machine-service-et-1979237911.jpg");
   --radius: 50px;
   background-position: 50% 50%;
   --animation-custom_in-translate_x: -300px;
@@ -1855,7 +1855,7 @@
     margin-top: -202px;
   }
 } .u-section-8 {
-  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('images/young-woman-using-home-technology7.jpg');
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('images/homepage-hero-devices-camera-v2.png');
 }
 
 .u-section-8 .u-sheet-1 {
@@ -2972,4 +2972,47 @@
   }
 } .u-section-13 {
   min-height: 500px;
+}
+
+/* ===== HEADER PHONE NUMBER RED ===== */
+.u-header .u-btn-1 {
+  color: var(--brand-red) !important;
+}
+
+/* ===== FOOTER PHONE NUMBER RED ===== */
+.u-layout-cell-4 .u-btn-3 {
+  color: var(--brand-red) !important;
+}
+
+/* ===== NAVBAR LINKS HOVER ===== */
+.u-menu-1 .u-nav-link,
+.u-menu-1 .u-nav-2 .u-nav-link {
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.u-menu-1 .u-nav-link:hover,
+.u-menu-1 .u-nav-link:focus,
+.u-menu-1 .u-nav-2 .u-nav-link:hover,
+.u-menu-1 .u-nav-2 .u-nav-link:focus {
+  color: var(--brand-red) !important;
+  text-decoration: underline;
+  text-decoration-color: var(--brand-red);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 5px;
+}
+
+/* ===== FOOTER QUICK LINKS HOVER ===== */
+.u-layout-cell-5 .u-text-11 a,
+.u-layout-cell-5 .u-text-11 li a {
+  position: relative;
+  transition: all 0.3s ease;
+  padding-bottom: 2px;
+  border-bottom: 2px solid transparent;
+}
+
+.u-layout-cell-5 .u-text-11 a:hover,
+.u-layout-cell-5 .u-text-11 li a:hover {
+  border-bottom-color: var(--brand-red);
+  color: var(--brand-red) !important;
 }
