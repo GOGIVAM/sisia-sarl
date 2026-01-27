@@ -230,7 +230,12 @@
                 <h3 class="u-align-left u-text u-text-default u-text-1">Réaliser un projet SISIA</h3>
                 <p class="u-align-left u-text u-text-default u-text-2">Contactez-nous pour toute demande de projet, d’étude ou d’accompagnement personnalisé dans l’automatisme, la sécurité, l’énergie ou l’informatique.</p>
                 <div class="u-expanded-width u-form u-grey-5 u-radius-50 u-form-1">
-                  <form action="https://service.nicepagesrv.com/form/v4/form-process" class="u-clearfix u-form-spacing-20 u-form-vertical u-inner-form" source="email" name="form" style="padding: 30px;">
+                  <form action="https://api.web3forms.com/submit" class="u-clearfix u-form-spacing-20 u-form-vertical u-inner-form" name="form" style="padding: 30px;" method="POST">
+                      <input type="hidden" name="access_key" value="8d668814-d685-4d27-ae26-fbd31f28b884">
+                      <input type="hidden" name="subject" value="Nouveau message de contact de SISIA">
+                      <input type="hidden" name="from_name" value="Formulaire SISIA">
+                      <input type="hidden" name="redirect" value="https://sissia-sarl.cm">
+                      <input type="checkbox" name="botcheck" class="botcheck" style="display: none;">
                     <div class="u-form-group u-form-name">
                       <label for="name-b064" class="u-label">Name</label>
                       <input type="text" placeholder="Enter your Name" id="name-b064" name="name" class="u-border-none u-input u-input-rectangle u-radius-20" required>
@@ -249,8 +254,6 @@
                     </div>
                     <div class="u-form-send-message u-form-send-success">Thank you! Your message has been sent.</div>
                     <div class="u-form-send-error u-form-send-message">Unable to send your message. Please fix errors then try again.</div>
-                    <input type="hidden" value="" name="recaptchaResponse">
-                    <input type="hidden" name="formServices" value="">
                   </form>
                 </div>
               </div>
