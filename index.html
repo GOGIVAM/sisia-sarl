@@ -6,7 +6,8 @@
     <meta name="description" content="">
   <title>Accueil | SISIA - Solutions Industrielles et Sécurité</title>
     <link rel="stylesheet" href="nicepage.css" media="screen">
-<link rel="stylesheet" href="index.css" media="screen">
+  <link rel="stylesheet" href="index.css" media="screen">
+  <link rel="stylesheet" href="carousel.css" media="screen">
     <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
     <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
     <meta name="generator" content="Nicepage 8.0.9, nicepage.com">
@@ -19,14 +20,11 @@
 		"name": "",
 		"logo": "images/logo-smart3.png",
 		"sameAs": [
-				"https://facebook.com/name",
-				"https://twitter.com/name",
-				"https://instagram.com/name",
-				"https://facebook.com/name",
-				"https://twitter.com/name",
-				"https://instagram.com/name"
+				"https://facebook.com/sisiasarl",
+				"https://www.linkedin.com/company/1188846"
 		]
 }</script>
+
     <meta name="theme-color" content="#2E5AAC">
     <meta name="twitter:site" content="@">
     <meta name="twitter:card" content="summary_large_image">
@@ -41,10 +39,10 @@
             <p class="u-align-center-xs u-text u-text-default u-text-1"> Besoin d'aide? Appelez nous <a href="tel:+237676246478" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1">+237 676 24 64 78</a>
             </p>
             <div class="u-hidden-sm u-hidden-xs u-social-icons u-social-icons-1">
-              <a class="u-social-url" title="facebook" target="_blank" rel="noopener" href="https://www.facebook.com/profile.php?id=100064127498498"><span class="u-icon u-social-facebook u-social-icon u-text-palette-1-base u-icon-1"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112" style=""><use xlink:href="#svg-5e14"></use></svg><svg class="u-svg-content" viewBox="0 0 112 112" x="0" y="0" id="svg-5e14"><path fill="currentColor" d="M75.5,28.8H65.4c-1.5,0-4,0.9-4,4.3v9.4h13.9l-1.5,15.8H61.4v45.1H42.8V58.3h-8.8V42.4h8.8V32.2
+              <a class="u-social-url" title="facebook" target="_blank" rel="noopener" href="https://facebook.com/sisiasarl"><span class="u-icon u-social-facebook u-social-icon u-text-palette-1-base u-icon-1"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112" style=""><use xlink:href="#svg-5e14"></use></svg><svg class="u-svg-content" viewBox="0 0 112 112" x="0" y="0" id="svg-5e14"><path fill="currentColor" d="M75.5,28.8H65.4c-1.5,0-4,0.9-4,4.3v9.4h13.9l-1.5,15.8H61.4v45.1H42.8V58.3h-8.8V42.4h8.8V32.2
 c0-7.4,3.4-18.8,18.8-18.8h13.8v15.4H75.5z"></path></svg></span>
               </a>
-              <a class="u-social-url" title="linkedin" target="_blank" rel="noopener" href="https://www.linkedin.com/company/sisia-sarl"><span class="u-icon u-social-icon u-social-linkedin u-text-palette-1-base u-icon-2"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112" style=""><use xlink:href="#svg-linkedin"></use></svg><svg class="u-svg-content" viewBox="0 0 112 112" x="0" y="0" id="svg-linkedin"><path fill="currentColor" d="M33.8,96.8H14.5v-58h19.3V96.8z M24.1,30.9c-6.2,0-11.2-5-11.2-11.2c0-6.2,5-11.2,11.2-11.2c6.2,0,11.2,5,11.2,11.2C35.3,25.9,30.3,30.9,24.1,30.9z M97.5,96.8H78.3V68.7c0-6.7-0.1-15.3-9.3-15.3c-9.3,0-10.7,7.3-10.7,14.8v28.6H39V38.8h18.5v7.9h0.3c2.6-4.9,8.9-10,18.3-10c19.6,0,23.2,12.9,23.2,29.6v31.5H97.5z"></path></svg></span>
+              <a class="u-social-url" title="linkedin" target="_blank" rel="noopener" href="https://www.linkedin.com/company/1188846"><span class="u-icon u-social-icon u-social-linkedin u-text-palette-1-base u-icon-2"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112" style=""><use xlink:href="#svg-linkedin"></use></svg><svg class="u-svg-content" viewBox="0 0 112 112" x="0" y="0" id="svg-linkedin"><path fill="currentColor" d="M33.8,96.8H14.5v-58h19.3V96.8z M24.1,30.9c-6.2,0-11.2-5-11.2-11.2c0-6.2,5-11.2,11.2-11.2c6.2,0,11.2,5,11.2,11.2C35.3,25.9,30.3,30.9,24.1,30.9z M97.5,96.8H78.3V68.7c0-6.7-0.1-15.3-9.3-15.3c-9.3,0-10.7,7.3-10.7,14.8v28.6H39V38.8h18.5v7.9h0.3c2.6-4.9,8.9-10,18.3-10c19.6,0,23.2,12.9,23.2,29.6v31.5H97.5z"></path></svg></span>
               </a>
             </div>
           </div>
@@ -157,77 +155,84 @@ c0-7.4,3.4-18.8,18.8-18.8h13.8v15.4H75.5z"></path></svg></span>
   <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
     <h2 class="u-align-center u-text u-text-default u-text-1" data-animation-name="customAnimationIn" data-animation-duration="1500">Nos Métiers en Détail</h2>
 
-    <div class="service-cards-container">
-      
-      <!-- Card 1: Electricite Industrielle -->
-      <div class="service-card">
-        <div class="service-image">
-          <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=800&h=600&fit=crop" alt="Electricite industrielle">
-        </div>
-        <div class="service-content">
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path d="M13 2L3 14h8l-1 8 10-12h-8l1-8z"/>
-            </svg>
+      <!-- Carousel Container -->
+      <div class="services-carousel">
+        <div class="carousel-wrapper">
+          
+          <!-- Slide 1: Electricite Industrielle -->
+          <div class="carousel-slide active">
+            <div class="carousel-image">
+              <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=1200&h=700&fit=crop" alt="Electricite industrielle">
+              <div class="carousel-overlay"></div>
+            </div>
+            <div class="carousel-caption">
+              <div class="caption-icon">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M13 2L3 14h8l-1 8 10-12h-8l1-8z"/>
+                </svg>
+              </div>
+              <h3>Électricité Industrielle et Tertiaire</h3>
+            </div>
           </div>
-          <h3>Électricité Industrielle et Tertiaire</h3>
-          <ul class="service-list">
-            <li>Travaux d'électricité en industrie et tertiaire: installation électrique, travaux neufs, étude et réalisation des projets</li>
-            <li>Maintenance électrique: entretien et ingénierie des procès industriels</li>
-            <li>Câblage et normalisation des armoires électriques</li>
-            <li>Automatisme, Instrumentation, Régulation, Supervision, Asservissement</li>
-            <li>Énergie Solaire: système hybride, système autonome, backup, lampadaire solaire, onduleur, panneaux solaires</li>
-            <li>Mise à disposition du personnel technique OHQ</li>
-          </ul>
-        </div>
-      </div>
 
-      <!-- Card 2: Alarme et Securite -->
-      <div class="service-card reverse">
-        <div class="service-image">
-          <img src="https://images.unsplash.com/photo-1557597774-9d273605dfa9?w=800&h=600&fit=crop" alt="Systeme de securite">
-        </div>
-        <div class="service-content">
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/>
-            </svg>
+          <!-- Slide 2: Alarme et Securite -->
+          <div class="carousel-slide">
+            <div class="carousel-image">
+              <img src="https://images.unsplash.com/photo-1557597774-9d273605dfa9?w=1200&h=700&fit=crop" alt="Systeme de securite">
+              <div class="carousel-overlay"></div>
+            </div>
+            <div class="carousel-caption">
+              <div class="caption-icon">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/>
+                </svg>
+              </div>
+              <h3>Alarme et Sécurité</h3>
+            </div>
           </div>
-          <h3>Alarme et Sécurité</h3>
-          <ul class="service-list">
-            <li>Installation et maintenance des contrôleurs d'accès pour usine, bureaux, bâtiments: Identification par empreintes digitales, identification par carte magnétique dotée d'une puce RFID, reconnaissance faciale (Z4 eco, IPC)</li>
-            <li>Installation et maintenance des vidéos surveillances</li>
-            <li>Domotique (Installation des systèmes de sécurité pour domicile), alarme anti-intrusion</li>
-            <li>Installation et maintenance des alarmes à incendie</li>
-          </ul>
-        </div>
-      </div>
 
-      <!-- Card 3: Negoce Materiels -->
-      <div class="service-card">
-        <div class="service-image">
-          <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=800&h=600&fit=crop" alt="Materiel industriel">
-        </div>
-        <div class="service-content">
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path d="M21 11H6.83l3.58-3.59L9 6l-6 6 6 6 1.41-1.41L6.83 13H21z"/>
-              <circle cx="17" cy="7" r="2"/>
-              <circle cx="17" cy="17" r="2"/>
-            </svg>
+          <!-- Slide 3: Negoce Materiels -->
+          <div class="carousel-slide">
+            <div class="carousel-image">
+              <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=1200&h=700&fit=crop" alt="Materiel industriel">
+              <div class="carousel-overlay"></div>
+            </div>
+            <div class="carousel-caption">
+              <div class="caption-icon">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M21 11H6.83l3.58-3.59L9 6l-6 6 6 6 1.41-1.41L6.83 13H21z"/>
+                  <circle cx="17" cy="7" r="2"/>
+                  <circle cx="17" cy="17" r="2"/>
+                </svg>
+              </div>
+              <h3>Négoce en Matériels Industriels</h3>
+            </div>
           </div>
-          <h3>Négoce en Matériels Industriels</h3>
-          <ul class="service-list">
-            <li>Matériel électrique industriel: capteurs, cellules optoélectroniques, débitmètres, modules de communication, automates, disjoncteurs, variateurs, inverseurs, relais, câbles, etc.</li>
-            <li>Composants hydrauliques et pneumatiques: vérins, régulateurs de pression, clapets anti-retour, filtres, pompe, moteur hydraulique, traitement d'air, distributeur pneumatique, etc.</li>
-            <li>Vente des roulements et transmissions</li>
-          </ul>
+
+        </div>
+
+        <!-- Navigation Arrows -->
+        <button class="carousel-btn prev-btn" aria-label="Previous slide">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+          </svg>
+        </button>
+        <button class="carousel-btn next-btn" aria-label="Next slide">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+          </svg>
+        </button>
+
+        <!-- Indicators -->
+        <div class="carousel-indicators">
+          <button class="indicator active" data-slide="0"></button>
+          <button class="indicator" data-slide="1"></button>
+          <button class="indicator" data-slide="2"></button>
         </div>
       </div>
 
     </div>
-  </div>
-</section>
+  </section>
     <section class="skrollable u-clearfix u-container-align-center u-image u-parallax u-shading u-uploaded-video u-section-4" id="carousel_4bf1" data-image-width="1980" data-image-height="1321">
       <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
     <h2 class="u-align-center u-text u-text-default u-text-1" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="0">Prêt à moderniser vos installations ?</h2>
@@ -548,6 +553,7 @@ c0-7.4,3.4-18.8,18.8-18.8h13.8v15.4H75.5z"></path></svg></span>
         </div>
       </div></footer>
     <section class="u-backlink u-clearfix u-grey-80"></section>
+      <script type="text/javascript" src="carousel.js"></script>
 
   
 </body></html>
