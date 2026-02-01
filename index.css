@@ -5986,19 +5986,24 @@
 .supervision-section .supervision-header {
   text-align: center !important;
   margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .supervision-badge {
-  display: inline-block;
-  padding: 8px 20px;
-  background: linear-gradient(135deg, rgba(220, 47, 60, 0.1) 0%, rgba(230, 57, 70, 0.15) 100%);
-  color: #DC2F3C;
-  font-size: 0.8rem;
-  font-weight: 600;
+  display: block;
+  width: fit-content;
+  padding: 10px 24px;
+  background: linear-gradient(135deg, #DC2F3C 0%, #E63946 100%);
+  color: #ffffff;
+  font-size: 0.85rem;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  border-radius: 30px;
-  margin-bottom: 20px;
+  letter-spacing: 2px;
+  border-radius: 50px;
+  margin: 0 auto 25px auto;
+  box-shadow: 0 4px 15px rgba(220, 47, 60, 0.3);
 }
 
 .supervision-title {
