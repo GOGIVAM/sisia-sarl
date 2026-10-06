@@ -33,7 +33,7 @@ Ajouter ou corriger un texte : modifier `legacy/<page>.html`, lancer `node scrip
 ## Déploiement sur Vercel
 
 1. Importer le dépôt GitHub dans Vercel (framework : Vite, `vercel.json` déjà configuré).
-2. Variable d'environnement : `VITE_SITE_URL` = domaine public final (ex. `https://www.sisia-sarl.com`). Elle alimente canonical, hreflang, sitemap et robots.
+2. Variable d'environnement : `VITE_SITE_URL` = domaine public final (par défaut `https://sisia-sarl.com`). Elle alimente canonical, hreflang, sitemap et robots.
 3. Domaine : ajouter le domaine dans Vercel > Settings > Domains, puis, chez Camoo, modifier uniquement :
    - l'enregistrement `A` de `sisia-sarl.com` vers `76.76.21.21`
    - le `CNAME` de `www` vers `cname.vercel-dns.com`

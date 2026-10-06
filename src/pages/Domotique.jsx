@@ -1,6 +1,7 @@
 // Généré par scripts/convert.mjs depuis legacy/Domotique.html : contenu d'origine conservé.
 import PageShell from '../components/PageShell.jsx';
 import { useT } from '../i18n/index.jsx';
+import { brandTitle } from '../seo.js';
 import fr from '../i18n/fr/Domotique.json';
 import en from '../i18n/en/Domotique.json';
 import Link from '../components/LocLink.jsx';
@@ -12,7 +13,7 @@ export default function Domotique() {
     <PageShell htmlAttrs={{"style":"font-size: 16px;","lang":"fr"}} bodyAttrs={{"data-path-to-root":"./","data-include-products":"false","class":"u-body u-xl-mode","data-lang":"fr"}}>
       <meta name="keywords" content="Domotique, Alarme anti-intrusion, Sécurité domicile, Maison intelligente, SISIA, Cameroun" />
       <meta name="description" content={t("k10i14h5")} />
-      <title>{t("k10i14h5")}</title>
+      <title>{brandTitle(t("k10i14h5"))}</title>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\"@context\":\"http://schema.org\",\"@type\":\"Organization\",\"name\":\"SISIA SARL\",\"logo\":\"images/logo-smart3.png\",\"sameAs\":[\"https://facebook.com/sisiasarl\",\"https://www.linkedin.com/company/1188846\"]}" }} />
       <meta name="theme-color" content="#2E5AAC" />
       <meta name="twitter:card" content="summary_large_image" />

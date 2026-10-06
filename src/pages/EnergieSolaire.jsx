@@ -1,6 +1,7 @@
 // Généré par scripts/convert.mjs depuis legacy/Energie-solaire.html : contenu d'origine conservé.
 import PageShell from '../components/PageShell.jsx';
 import { useT } from '../i18n/index.jsx';
+import { brandTitle } from '../seo.js';
 import fr from '../i18n/fr/EnergieSolaire.json';
 import en from '../i18n/en/EnergieSolaire.json';
 import Link from '../components/LocLink.jsx';
@@ -12,7 +13,7 @@ export default function EnergieSolaire() {
     <PageShell htmlAttrs={{"style":"font-size: 16px;","lang":"fr"}} bodyAttrs={{"data-path-to-root":"./","data-include-products":"false","class":"u-body u-xl-mode","data-lang":"fr"}}>
       <meta name="keywords" content="Énergie solaire, Panneaux solaires, Solutions énergétiques" />
       <meta name="description" content={t("k1yahn7x")} />
-      <title>{t("k58lsze")}</title>
+      <title>{brandTitle(t("k58lsze"))}</title>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\"@context\":\"http://schema.org\",\"@type\":\"Organization\",\"name\":\"SISIA SARL\",\"logo\":\"images/logo-smart3.png\",\"sameAs\":[\"https://facebook.com/sisiasarl\",\"https://www.linkedin.com/company/1188846\"]}" }} />
       <meta name="theme-color" content="#2E5AAC" />
       <meta name="twitter:card" content="summary_large_image" />

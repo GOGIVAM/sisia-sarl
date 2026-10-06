@@ -1,6 +1,7 @@
 // Généré par scripts/convert.mjs depuis legacy/blog/energie-solaire-ecole.html : contenu d'origine conservé.
 import PageShell from '../components/PageShell.jsx';
 import { useT } from '../i18n/index.jsx';
+import { brandTitle } from '../seo.js';
 import fr from '../i18n/fr/BlogEnergieSolaireEcole.json';
 import en from '../i18n/en/BlogEnergieSolaireEcole.json';
 import Link from '../components/LocLink.jsx';
@@ -12,7 +13,7 @@ export default function BlogEnergieSolaireEcole() {
     <PageShell htmlAttrs={{"style":"font-size: 16px;","lang":"en"}} bodyAttrs={{"data-path-to-root":"./","data-include-products":"false","class":"u-body u-xl-mode","data-lang":"en"}}>
       <meta name="keywords" content="Post 1 Headline" />
       <meta name="description" content="" />
-      <title>{t("kbpofuz")}</title>
+      <title>{brandTitle(t("kbpofuz"))}</title>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\"@context\":\"http://schema.org\",\"@type\":\"Organization\",\"name\":\"sissia-sarl\",\"logo\":\"images/logo-smart3.png\",\"sameAs\":[\"https://facebook.com/sisiasarl\",\"https://www.linkedin.com/company/1188846\"]}" }} />
       <meta name="theme-color" content="#2E5AAC" />
       <meta name="twitter:site" content="@" />

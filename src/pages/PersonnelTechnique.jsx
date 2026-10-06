@@ -1,6 +1,7 @@
 // Généré par scripts/convert.mjs depuis legacy/Personnel-technique.html : contenu d'origine conservé.
 import PageShell from '../components/PageShell.jsx';
 import { useT } from '../i18n/index.jsx';
+import { brandTitle } from '../seo.js';
 import fr from '../i18n/fr/PersonnelTechnique.json';
 import en from '../i18n/en/PersonnelTechnique.json';
 import Link from '../components/LocLink.jsx';
@@ -12,7 +13,7 @@ export default function PersonnelTechnique() {
     <PageShell htmlAttrs={{"style":"font-size: 16px;","lang":"fr"}} bodyAttrs={{"data-path-to-root":"./","data-include-products":"false","class":"u-body u-xl-mode","data-lang":"fr"}}>
       <meta name="keywords" content="Personnel technique, OHQ, Mise à disposition, Techniciens qualifiés, SISIA, Cameroun" />
       <meta name="description" content={t("kt6tz8u")} />
-      <title>{t("k1skvly7")}</title>
+      <title>{brandTitle(t("k1skvly7"))}</title>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\"@context\":\"http://schema.org\",\"@type\":\"Organization\",\"name\":\"SISIA SARL\",\"logo\":\"images/logo-smart3.png\",\"sameAs\":[\"https://facebook.com/sisiasarl\",\"https://www.linkedin.com/company/1188846\"]}" }} />
       <meta name="theme-color" content="#2E5AAC" />
       <meta name="twitter:site" content="@" />

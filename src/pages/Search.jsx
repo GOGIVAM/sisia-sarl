@@ -1,6 +1,7 @@
 // Généré par scripts/convert.mjs depuis legacy/search/search.html : contenu d'origine conservé.
 import PageShell from '../components/PageShell.jsx';
 import { useT } from '../i18n/index.jsx';
+import { brandTitle } from '../seo.js';
 import fr from '../i18n/fr/Search.json';
 import en from '../i18n/en/Search.json';
 import Link from '../components/LocLink.jsx';
@@ -12,7 +13,7 @@ export default function Search() {
     <PageShell htmlAttrs={{"style":"font-size: 16px;","lang":"en"}} bodyAttrs={{"data-path-to-root":"../","data-include-products":"false","class":"u-body u-xl-mode","data-lang":"en"}}>
       <meta name="keywords" content="Search Results" />
       <meta name="description" content="" />
-      <title>{t("k17bdega")}</title>
+      <title>{brandTitle(t("k17bdega"))}</title>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\"@context\":\"http://schema.org\",\"@type\":\"Organization\",\"name\":\"sissia-sarl\",\"logo\":\"images/logo-smart3.png\",\"sameAs\":[\"https://facebook.com/name\",\"https://twitter.com/name\",\"https://instagram.com/name\",\"https://facebook.com/name\",\"https://twitter.com/name\",\"https://instagram.com/name\"]}" }} />
       <meta name="theme-color" content="#2E5AAC" />
       <meta name="twitter:site" content="@" />

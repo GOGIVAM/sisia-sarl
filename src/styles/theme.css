@@ -1,0 +1,216 @@
+/* =========================================================================
+   SISIA : thème "Trust & Authority" (chargé en dernier)
+   Marine profond + bleu de marque, rouge du logo réservé aux accents.
+   Répartition visée : 60 % clair, 25 % marine, 10 % bleu, 5 % rouge.
+   ========================================================================= */
+:root {
+  --navy: #0b1b3a;
+  --navy-2: #12295a;
+  --brand: #2e5aac;
+  --brand-600: #244a8f;
+  --sky: #eaf1fc;
+  --sky-2: #f3f7fd;
+  --ink: #0f172a;
+  --muted: #475569;
+  --bg: #f8fafc;
+  --line: #e2e8f0;
+  --red: #d71920;
+  --accent: var(--red);
+  --font-head: 'Lexend', 'Ubuntu', system-ui, sans-serif;
+  --font-body: 'Source Sans 3', 'Open Sans', system-ui, sans-serif;
+  --z-header: 1000;
+}
+
+/* ---- Typographie ------------------------------------------------------ */
+html body, html body p, html body li, html body span, html body a, html body label,
+html body input, html body textarea, html body select, html body button, html body .u-text {
+  font-family: var(--font-body);
+}
+html body h1, html body h2, html body h3, html body h4, html body h5, html body h6,
+html body .u-btn, html body .kicker, html body .btn-pill, html body .chip {
+  font-family: var(--font-head);
+}
+body { color: var(--ink); font-size: 17px; line-height: 1.65; }
+p { color: inherit; }
+h1, h2, h3, h4 { letter-spacing: -0.012em; line-height: 1.18; }
+
+/* ---- Titres de sections : marine, avec filet rouge discret ------------ */
+body section:not(.u-section-1):not([class*="u-image"]):not([class*="u-shading"]):not([class*="u-black"]):not([class*="u-palette-1-dark"]):not(.partners-strip):not(.logo-wall):not(.page-hero) h1.u-text,
+body section:not(.u-section-1):not([class*="u-image"]):not([class*="u-shading"]):not([class*="u-black"]):not([class*="u-palette-1-dark"]):not(.logo-wall):not(.page-hero) h2.u-text {
+  color: var(--navy) !important;
+}
+
+/* ---- Barre supérieure ------------------------------------------------- */
+header.u-header .u-section-row-1 {
+  background: linear-gradient(90deg, var(--navy) 0%, var(--navy-2) 100%) !important;
+}
+header.u-header .u-section-row-1 .u-sheet { min-height: 42px; }
+header.u-header .u-section-row-1 p { color: #dbe6fb !important; font-size: 14px; letter-spacing: 0.01em; }
+header.u-header .u-section-row-1 a.u-btn { color: #ffffff !important; font-weight: 700; }
+header.u-header .u-section-row-1 a.u-btn:hover { color: #9fc2ff !important; transform: none; box-shadow: none; }
+header.u-header .u-social-icons .u-icon { color: #b9cdf3 !important; transition: color 0.2s, transform 0.3s var(--ease); }
+header.u-header .u-social-icons .u-icon:hover { color: #fff !important; transform: translateY(-2px); }
+
+/* ---- Navigation principale ------------------------------------------- */
+header.u-header .u-section-row-2 {
+  background: rgba(255, 255, 255, 0.9) !important;
+  border-bottom: 1px solid var(--line);
+  box-shadow: none;
+}
+body.is-scrolled header.u-header .u-section-row-2 { box-shadow: 0 12px 32px rgba(11, 27, 58, 0.12); }
+header.u-header .u-menu { margin-right: 96px; }
+header.u-header .u-nav-container .u-nav { gap: 4px; }
+header.u-header .u-nav-container .u-nav-link {
+  font-family: var(--font-head) !important;
+  font-size: 14.5px !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.005em;
+  color: var(--ink) !important;
+  padding: 11px 17px !important;
+  border-radius: 999px;
+  line-height: 1 !important;
+  transition: background 0.25s, color 0.25s, box-shadow 0.25s;
+}
+header.u-header .u-nav-container .u-nav-link::after { display: none !important; }
+header.u-header .u-nav-container .u-nav-link:hover { background: var(--sky); color: var(--brand) !important; }
+header.u-header .u-nav-container .u-nav-link.active { background: var(--sky); color: var(--brand) !important; font-weight: 600 !important; }
+/* dernier lien (Contact) : bouton plein */
+header.u-header .u-nav-container .u-nav-item:last-child .u-nav-link,
+header.u-header .u-nav-container .u-nav-item:last-child .u-nav-link.active {
+  background: var(--brand); color: #fff !important; box-shadow: 0 6px 16px rgba(46, 90, 172, 0.32);
+}
+header.u-header .u-nav-container .u-nav-item:last-child .u-nav-link:hover { background: var(--brand-600); color: #fff !important; transform: translateY(-1px); }
+.lang-switcher--nav { right: 0 !important; margin-top: 20px; }
+
+/* menu mobile */
+header.u-header .u-hamburger-link { color: var(--navy) !important; }
+.u-sidenav { background: linear-gradient(160deg, var(--navy), var(--navy-2)) !important; }
+.u-sidenav .u-nav-link { font-family: var(--font-head) !important; font-size: 20px !important; color: #fff !important; padding: 14px 24px !important; }
+.u-sidenav .u-nav-link:hover { color: #9fc2ff !important; }
+@media (max-width: 939px) { header.u-header .u-menu { margin-right: 0; } }
+
+/* ---- Boutons ---------------------------------------------------------- */
+.u-btn.u-palette-1-base, .u-btn.u-btn-submit, .u-btn.u-btn-1 {
+  font-family: var(--font-head) !important; font-weight: 600 !important; letter-spacing: 0.01em;
+}
+.u-btn.u-palette-1-base { background-image: linear-gradient(135deg, var(--brand), var(--brand-600)) !important; }
+
+/* ---- Pied de page ----------------------------------------------------- */
+footer.u-footer { background: var(--navy) !important; }
+footer.u-footer h2, footer.u-footer h3, footer.u-footer h4 { color: #fff !important; }
+footer.u-footer p, footer.u-footer a { color: #cbd8f1; }
+footer.u-footer a:hover { color: #fff; }
+
+/* =========================================================================
+   Section partenaires : mur de logos (2 rangées, sens opposés)
+   ========================================================================= */
+.logo-wall {
+  position: relative; overflow: hidden; padding: 88px 0 80px;
+  background:
+    radial-gradient(900px 300px at 12% 0%, rgba(46, 90, 172, 0.10), transparent 60%),
+    radial-gradient(800px 300px at 95% 100%, rgba(215, 25, 32, 0.06), transparent 60%),
+    var(--sky-2);
+  border-top: 1px solid var(--line);
+}
+.logo-wall__head { max-width: 760px; margin: 0 auto 40px; padding: 0 20px; text-align: center; }
+.logo-wall__head .kicker { color: var(--red); }
+.logo-wall__head h2 { font-size: clamp(28px, 3.4vw, 40px); color: var(--navy); margin: 0 0 14px; }
+.logo-wall__head p { margin: 0; color: var(--muted); font-size: 18px; }
+.logo-wall__stats { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; margin-top: 22px; }
+.logo-wall__stats span {
+  display: inline-flex; align-items: baseline; gap: 8px; padding: 9px 16px; border-radius: 999px;
+  background: #fff; border: 1px solid var(--line); color: var(--muted); font-size: 14px;
+}
+.logo-wall__stats b { color: var(--brand); font: 700 18px/1 var(--font-head); }
+.logo-wall__rows { display: grid; gap: 18px; }
+.logo-row {
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent);
+}
+.logo-row__track { display: flex; gap: 18px; width: max-content; margin: 0; padding: 6px 0; list-style: none; animation: logoLeft 46s linear infinite; }
+.logo-row--right .logo-row__track { animation-name: logoRight; animation-duration: 52s; }
+.logo-row:hover .logo-row__track, .logo-row:focus-within .logo-row__track { animation-play-state: paused; }
+@keyframes logoLeft { to { transform: translateX(-50%); } }
+@keyframes logoRight { from { transform: translateX(-50%); } to { transform: translateX(0); } }
+.logo-row__track li { flex: none; }
+.logo-tile {
+  display: grid; place-items: center; width: 220px; height: 104px; padding: 18px 26px;
+  background: #fff; border: 1px solid var(--line); border-radius: 18px; text-decoration: none;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+  transition: transform 0.35s var(--ease), box-shadow 0.35s var(--ease), border-color 0.3s;
+}
+.logo-tile .pl-img, .logo-tile .pl-badge { filter: grayscale(1) contrast(1.05); opacity: 0.72; transition: filter 0.35s, opacity 0.35s, transform 0.35s var(--ease); }
+.logo-tile .pl-img { max-height: 46px; max-width: 150px; }
+.logo-tile .pl-badge { border-color: #94a3b8; color: #64748b; font-size: 15px; min-height: 0; padding: 8px 14px; }
+.logo-tile:hover { transform: translateY(-4px); border-color: var(--brand); box-shadow: 0 18px 36px rgba(11, 27, 58, 0.14); }
+.logo-tile:hover .pl-img, .logo-tile:hover .pl-badge { filter: none; opacity: 1; transform: scale(1.06); }
+.logo-tile:hover .pl-badge { border-color: var(--brand); color: var(--brand); }
+.logo-wall__cta { text-align: center; margin-top: 36px; }
+@media (max-width: 640px) { .logo-tile { width: 168px; height: 88px; padding: 14px 18px; } .logo-wall { padding: 64px 0; } }
+@media (prefers-reduced-motion: reduce) { .logo-row { overflow-x: auto; } .logo-row__track { animation: none; } }
+
+/* ---- Page partenaires : cartes affinées ------------------------------- */
+.page-hero { background: radial-gradient(900px 360px at 88% -20%, rgba(215, 25, 32, 0.22), transparent 60%), linear-gradient(135deg, var(--navy) 0%, var(--navy-2) 55%, var(--brand) 100%); }
+.partner-card__logo { background: linear-gradient(180deg, #fff, var(--sky-2)); }
+.partner-card__logo .pl-img { max-height: 56px; }
+.partner-card:hover { border-color: var(--brand); }
+.partners-filters button.is-on { background: var(--navy); border-color: var(--navy); }
+.chip { background: var(--sky); color: var(--brand-600); }
+.kicker { color: var(--red); }
+
+/* ---- Pages services : titres marine, filets rouges conservés ----------- */
+html body .service-intro h2, html body .service-card h3, html body .service-details-content h3 { color: var(--navy); }
+html body .service-hero h1 { color: #fff; }
+html body .lang-switcher--nav { margin-top: 20px; }
+
+/* =========================================================================
+   Surcharges prioritaires : les feuilles de page Nicepage fixent des couleurs,
+   des dégradés de texte et des polices propres à chaque section.
+   ========================================================================= */
+html body p, html body li, html body span, html body a, html body label, html body input,
+html body textarea, html body select, html body td, html body th, html body blockquote {
+  font-family: var(--font-body) !important;
+}
+html body h1, html body h2, html body h3, html body h4, html body h5, html body h6,
+html body .u-btn, html body .btn-pill, html body .kicker, html body .chip, html body .u-nav-link, html body .lang-switcher a {
+  font-family: var(--font-head) !important;
+}
+/* titres de sections : marine, sans dégradé de texte */
+html body h1.u-text, html body h2.u-text {
+  color: var(--navy) !important;
+  -webkit-text-fill-color: currentColor !important;
+  background: none !important;
+}
+/* ... sauf sur fond sombre / image : blanc */
+html body .u-section-1 h1.u-text, html body .u-section-1 h2.u-text,
+html body section[class*="u-image"] h1.u-text, html body section[class*="u-image"] h2.u-text,
+html body section[class*="u-shading"] h1.u-text, html body section[class*="u-shading"] h2.u-text,
+html body section[class*="u-black"] h2.u-text, html body section[class*="u-palette-1-dark"] h2.u-text,
+html body footer h1, html body footer h2, html body footer h3,
+html body .service-hero h1, html body .service-cta-section h2, html body .supervision-section.is-dark h2 {
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
+  text-shadow: 0 4px 24px rgba(0, 0, 0, 0.35);
+}
+/* accent rouge : uniquement le filet sous les titres */
+html body h2.u-text::after, html body .service-intro h2::after { background: var(--red); }
+
+/* ---- Sections sur image : voile marine (au lieu du gris neutre) -------- */
+html body section.u-shading::before, html body .u-shading::before {
+  background: linear-gradient(180deg, rgba(8, 20, 45, 0.80) 0%, rgba(11, 27, 58, 0.66) 100%) !important;
+  opacity: 1 !important;
+}
+html body section.u-shading p.u-text, html body section.u-shading .u-text-default { color: #e8eefb !important; text-shadow: 0 2px 14px rgba(0, 0, 0, 0.4); }
+
+/* ---- Surfaces rouges -> marine / bleu (le rouge reste un accent) -------- */
+html body .supervision-cta { background: linear-gradient(135deg, var(--navy) 0%, var(--navy-2) 60%, var(--brand) 100%) !important; box-shadow: 0 24px 60px rgba(11, 27, 58, 0.28) !important; }
+html body .supervision-cta-btn { color: var(--navy) !important; }
+html body .supervision-cta-btn:hover { color: var(--brand) !important; }
+html body .add-review-btn { background: var(--brand) !important; border-color: var(--brand) !important; box-shadow: 0 10px 24px rgba(46, 90, 172, 0.3) !important; }
+html body .add-review-btn:hover { background: var(--brand-600) !important; }
+/* titres h3 des sections contact / supervision */
+html body .u-section-10 .u-text-1, html body .u-section-11 .u-text-1, html body .u-section-12 .u-text-1, html body .u-section-9 .u-text-1 {
+  color: var(--navy) !important; -webkit-text-fill-color: currentColor !important; background: none !important;
+}
+header.u-header .u-nav-container .u-nav-item:last-child { margin-left: 8px; }

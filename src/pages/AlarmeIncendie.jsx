@@ -1,6 +1,7 @@
 // Généré par scripts/convert.mjs depuis legacy/Alarme-incendie.html : contenu d'origine conservé.
 import PageShell from '../components/PageShell.jsx';
 import { useT } from '../i18n/index.jsx';
+import { brandTitle } from '../seo.js';
 import fr from '../i18n/fr/AlarmeIncendie.json';
 import en from '../i18n/en/AlarmeIncendie.json';
 import Link from '../components/LocLink.jsx';
@@ -12,7 +13,7 @@ export default function AlarmeIncendie() {
     <PageShell htmlAttrs={{"style":"font-size: 16px;","lang":"fr"}} bodyAttrs={{"data-path-to-root":"./","data-include-products":"false","class":"u-body u-xl-mode","data-lang":"fr"}}>
       <meta name="keywords" content="Alarme incendie, Détection incendie, Sécurité, Protection, SSI, SISIA, Cameroun" />
       <meta name="description" content={t("k1i9ak9c")} />
-      <title>{t("k3d3vdb")}</title>
+      <title>{brandTitle(t("k3d3vdb"))}</title>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\"@context\":\"http://schema.org\",\"@type\":\"Organization\",\"name\":\"SISIA SARL\",\"logo\":\"images/logo-smart3.png\",\"sameAs\":[\"https://facebook.com/sisiasarl\",\"https://www.linkedin.com/company/1188846\"]}" }} />
       <meta name="theme-color" content="#2E5AAC" />
       <meta name="twitter:card" content="summary_large_image" />

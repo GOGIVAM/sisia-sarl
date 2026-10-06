@@ -1,6 +1,7 @@
 // Généré par scripts/convert.mjs depuis legacy/blog/blog.html : contenu d'origine conservé.
 import PageShell from '../components/PageShell.jsx';
 import { useT } from '../i18n/index.jsx';
+import { brandTitle } from '../seo.js';
 import fr from '../i18n/fr/BlogArticles.json';
 import en from '../i18n/en/BlogArticles.json';
 import Link from '../components/LocLink.jsx';
@@ -12,7 +13,7 @@ export default function BlogArticles() {
     <PageShell htmlAttrs={{"style":"font-size: 16px;","lang":"fr"}} bodyAttrs={{"data-path-to-root":"./","data-include-products":"false","class":"u-body u-xl-mode","data-lang":"fr"}}>
       <meta name="keywords" content="Automatisation Industrielle, Industrie 4.0, SISIA" />
       <meta name="description" content={t("k1pv2mso")} />
-      <title>{t("k1expc3t")}</title>
+      <title>{brandTitle(t("k1expc3t"))}</title>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\"@context\":\"http://schema.org\",\"@type\":\"Organization\",\"name\":\"sissia-sarl\",\"logo\":\"images/logo-smart3.png\",\"sameAs\":[\"https://facebook.com/sisiasarl\",\"https://www.linkedin.com/company/1188846\"]}" }} />
       <meta name="theme-color" content="#DC2F3C" />
       <meta name="twitter:site" content="@" />

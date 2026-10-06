@@ -1,6 +1,7 @@
 // Généré par scripts/convert.mjs depuis legacy/Composants-hydrauliques.html : contenu d'origine conservé.
 import PageShell from '../components/PageShell.jsx';
 import { useT } from '../i18n/index.jsx';
+import { brandTitle } from '../seo.js';
 import fr from '../i18n/fr/ComposantsHydrauliques.json';
 import en from '../i18n/en/ComposantsHydrauliques.json';
 import Link from '../components/LocLink.jsx';
@@ -12,7 +13,7 @@ export default function ComposantsHydrauliques() {
     <PageShell htmlAttrs={{"style":"font-size: 16px;","lang":"fr"}} bodyAttrs={{"data-path-to-root":"./","data-include-products":"false","class":"u-body u-xl-mode","data-lang":"fr"}}>
       <meta name="keywords" content="Composants hydrauliques, Pneumatique, Vérins, Pompes, SISIA, Cameroun" />
       <meta name="description" content={t("k1dazdep")} />
-      <title>{t("k1js38ii")}</title>
+      <title>{brandTitle(t("k1js38ii"))}</title>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\"@context\":\"http://schema.org\",\"@type\":\"Organization\",\"name\":\"SISIA SARL\",\"logo\":\"images/logo-smart3.png\",\"sameAs\":[\"https://facebook.com/sisiasarl\",\"https://www.linkedin.com/company/1188846\"]}" }} />
       <meta name="theme-color" content="#2E5AAC" />
       <meta name="twitter:card" content="summary_large_image" />

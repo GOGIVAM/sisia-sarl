@@ -1,6 +1,7 @@
 // Généré par scripts/convert.mjs depuis legacy/Untitled-2.html : contenu d'origine conservé.
 import PageShell from '../components/PageShell.jsx';
 import { useT } from '../i18n/index.jsx';
+import { brandTitle } from '../seo.js';
 import fr from '../i18n/fr/Maquette.json';
 import en from '../i18n/en/Maquette.json';
 import Link from '../components/LocLink.jsx';
@@ -10,7 +11,7 @@ export default function Maquette() {
   const t = useT(fr, en);
   return (
     <PageShell htmlAttrs={{"lang":"fr"}} bodyAttrs={{}}>
-      <title>{t("k1f5e4n1")}</title>
+      <title>{brandTitle(t("k1f5e4n1"))}</title>
       <style data-source="Untitled-1.css" dangerouslySetInnerHTML={{ __html: css0 }} />
 
       <header className="header">

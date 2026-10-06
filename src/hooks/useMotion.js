@@ -25,8 +25,12 @@ function setupReveal(signal) {
     const parent = el.parentElement;
     const i = seen.get(parent) ?? 0;
     seen.set(parent, i + 1);
-    el.style.setProperty('--mo-delay', `${Math.min(i, 5) * 70}ms`);
+    el.style.setProperty('--mo-delay', `${Math.min(i, 5) * 90}ms`);
     el.classList.add('mo');
+    // variantes : deux colonnes face a face entrent par les cotes, les images zooment
+    const sibs = [...parent.children].filter((c) => set.has(c));
+    if (el.matches('.u-layout-cell') && sibs.length === 2) el.classList.add(i === 0 ? 'mo-left' : 'mo-right');
+    else if (el.matches('img')) el.classList.add('mo-zoom');
   });
   const io = new IntersectionObserver((entries) => {
     entries.forEach((en) => {
@@ -34,9 +38,16 @@ function setupReveal(signal) {
       io.unobserve(en.target);
       en.target.classList.add('mo-in');
     });
-  }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
+  }, { threshold: 0, rootMargin: '0px 0px -8% 0px' });
   targets.forEach((el) => io.observe(el));
+  // filet de securite : un element deja au-dessus du bas de la fenetre ne reste jamais cache
+  const sweep = () => targets.forEach((el) => {
+    if (!el.classList.contains('mo-in') && el.getBoundingClientRect().top < window.innerHeight) { io.unobserve(el); el.classList.add('mo-in'); }
+  });
+  const t = setTimeout(sweep, 1200);
+  window.addEventListener('scroll', sweep, { signal, passive: true });
   signal.addEventListener('abort', () => {
+    clearTimeout(t);
     io.disconnect();
     targets.forEach((el) => el.classList.remove('mo', 'mo-in'));
   });
@@ -62,6 +73,7 @@ function setupScrollUi(bar, topBtn, signal) {
     const p = max > 0 ? Math.min(1, window.scrollY / max) : 0;
     if (bar) bar.style.transform = `scaleX(${p})`;
     if (topBtn) topBtn.classList.toggle('is-visible', window.scrollY > 600);
+    document.body.classList.toggle('is-scrolled', window.scrollY > 24);
   };
   window.addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(update); } }, { signal, passive: true });
   window.addEventListener('resize', update, { signal });

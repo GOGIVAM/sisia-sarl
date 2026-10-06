@@ -3,6 +3,7 @@ import { createRoot, hydrateRoot } from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import './styles/nicepage.css';
 import './styles/site.css';
+import './styles/theme.css';
 import './components/LangSwitcher.css';
 import App from './App.jsx';
 

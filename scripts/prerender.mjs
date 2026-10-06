@@ -8,7 +8,7 @@ import { PAGES } from './convert.mjs';
 const ROOT = path.resolve(import.meta.dirname, '..');
 const DIST = path.join(ROOT, 'dist');
 const SSR = path.join(ROOT, 'dist-ssr');
-const SITE = (process.env.VITE_SITE_URL || 'https://sissia-sarl.cm').replace(/\/$/, '');
+const SITE = (process.env.VITE_SITE_URL || 'https://sisia-sarl.com').replace(/\/$/, '');
 const NOINDEX = ['/landing', '/maquette', '/recherche', '/blog/articles'];
 
 const { PARTNERS } = await import(pathToFileURL(path.join(ROOT, 'src', 'data', 'partners.js')).href);

@@ -22,7 +22,7 @@ export default function PartnerDetail() {
   const same = PARTNERS.filter((x) => x.slug !== p.slug && x.category === p.category);
   const rest = PARTNERS.filter((x) => x.slug !== p.slug && x.category !== p.category);
   const more = [...same, ...rest].slice(0, 4);
-  const title = lang === 'en' ? `${p.name}, partner of SISIA SARL` : `${p.name}, partenaire de SISIA SARL`;
+  const title = lang === 'en' ? `SISIA | ${p.name}, partner` : `SISIA | ${p.name}, partenaire`;
   return (
     <PageShell htmlAttrs={{}} bodyAttrs={BODY}>
       <title>{title}</title>

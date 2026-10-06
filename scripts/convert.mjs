@@ -343,7 +343,7 @@ function convertHead(head, ctx) {
     if (n.type !== 'tag') continue;
     if (n.name === 'title') {
       title = txt(n).trim();
-      out.push(`      <title>{${ctx.tr(title) ?? JSON.stringify(title)}}</title>`);
+      out.push(`      <title>{brandTitle(${ctx.tr(title) ?? JSON.stringify(title)})}</title>`);
       continue;
     }
     if (n.name === 'meta') {
@@ -479,6 +479,7 @@ function main() {
     const imports = [
       `import PageShell from '../components/PageShell.jsx';`,
       `import { useT } from '../i18n/index.jsx';`,
+      `import { brandTitle } from '../seo.js';`,
       `import fr from '../i18n/fr/${name}.json';`,
       `import en from '../i18n/en/${name}.json';`,
     ];

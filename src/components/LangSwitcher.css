@@ -1,31 +1,33 @@
+/* Sélecteur de langue : intégré à la rangée de navigation */
 .lang-switcher {
-  position: absolute;
-  top: 6px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 2000;
   display: inline-flex;
   gap: 2px;
-  padding: 2px;
+  padding: 3px;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.12);
-  letter-spacing: 0.06em;
+  background: #eef2f9;
+  border: 1px solid #dbe3f0;
+  z-index: 2000;
 }
 .lang-switcher a {
-  font: 600 12px/1 Ubuntu, 'Open Sans', sans-serif !important;
-  padding: 6px 11px;
+  font: 700 11px/1 Ubuntu, 'Open Sans', sans-serif !important;
+  letter-spacing: 0.08em;
+  padding: 7px 10px;
   border-radius: 999px;
-  color: #fff;
+  color: #2e5aac;
   text-decoration: none;
-  transition: background 0.25s, color 0.25s;
+  transition: background 0.25s, color 0.25s, box-shadow 0.25s;
 }
-.lang-switcher a:hover { background: rgba(255, 255, 255, 0.22); }
-.lang-switcher a.is-active { background: #fff; color: #1e2a35; }
-.lang-switcher a:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
-/* Mobile : pastille flottante en bas à gauche (le haut de page est occupé par le téléphone) */
-@media (max-width: 767px) {
-  .lang-switcher {
-    position: fixed; top: auto; bottom: 18px; left: 14px; transform: none;
-    background: #1e2a35; box-shadow: 0 8px 22px rgba(0, 0, 0, 0.25);
-  }
-}
+.lang-switcher a:hover { background: #dfe8f7; }
+.lang-switcher a.is-active { background: #2e5aac; color: #fff; box-shadow: 0 4px 12px rgba(46, 90, 172, 0.35); }
+.lang-switcher a:focus-visible { outline: 2px solid #2e5aac; outline-offset: 2px; }
+
+.u-section-row-2 .u-sheet { position: relative; }
+.lang-switcher--nav { position: absolute; right: 0; top: 50%; transform: translateY(-50%); }
+/* menu hamburger (< 940px) : le sélecteur se place à gauche de l'icône */
+@media (max-width: 939px) { .lang-switcher--nav { right: 58px; } }
+@media (max-width: 400px) { .lang-switcher a { padding: 6px 8px; } }
+
+/* Repli sans en-tête : pastille flottante */
+.lang-switcher:not(.lang-switcher--nav) { position: fixed; left: 14px; bottom: 18px; background: #1e2a35; border-color: #1e2a35; box-shadow: 0 8px 22px rgba(0, 0, 0, 0.25); }
+.lang-switcher:not(.lang-switcher--nav) a { color: #fff; }
+.lang-switcher:not(.lang-switcher--nav) a.is-active { background: #fff; color: #1e2a35; box-shadow: none; }

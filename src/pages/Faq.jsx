@@ -1,6 +1,7 @@
 // Généré par scripts/convert.mjs depuis legacy/FAQ-Page.html : contenu d'origine conservé.
 import PageShell from '../components/PageShell.jsx';
 import { useT } from '../i18n/index.jsx';
+import { brandTitle } from '../seo.js';
 import fr from '../i18n/fr/Faq.json';
 import en from '../i18n/en/Faq.json';
 import Link from '../components/LocLink.jsx';
@@ -13,7 +14,7 @@ export default function Faq() {
     <PageShell htmlAttrs={{"lang":"en","style":"font-size: 16px;"}} bodyAttrs={{"data-path-to-root":"./","data-include-products":"false","class":"u-body u-xl-mode","data-lang":"en"}}>
       <meta name="keywords" content="FAQ, Facts & Questions" />
       <meta name="description" content="" />
-      <title>{t("k1kdedcy")}</title>
+      <title>{brandTitle(t("k1kdedcy"))}</title>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\"@context\":\"http://schema.org\",\"@type\":\"Organization\",\"name\":\"sissia-sarl\",\"logo\":\"images/logo-smart3.png\",\"sameAs\":[\"https://facebook.com/sisiasarl\",\"https://www.linkedin.com/company/1188846\"]}" }} />
       <meta name="theme-color" content="#2E5AAC" />
       <meta name="twitter:site" content="@" />
@@ -274,24 +275,24 @@ export default function Faq() {
                         {" "}
                         <input type="checkbox" name="botcheck" className="botcheck" style={{ display: "none" }} />
                         <div className="u-form-group u-form-name">
-                          <label htmlFor="name-b064" className="u-label">{t("k4el6o6")}</label>
-                          <input type="text" placeholder={t("kp2tbqf")} id="name-b064" name="name" className="u-border-none u-input u-input-rectangle u-radius-20" required />
+                          <label htmlFor="name-b064" className="u-label">{t("k15eqct1")}</label>
+                          <input type="text" placeholder={t("kx48531")} id="name-b064" name="name" className="u-border-none u-input u-input-rectangle u-radius-20" required />
                         </div>
                         <div className="u-form-email u-form-group">
                           <label htmlFor="email-b064" className="u-label">{t("kinbfc7")}</label>
-                          <input type="email" placeholder={t("k1itsg8w")} id="email-b064" name="email" className="u-border-none u-input u-input-rectangle u-radius-20" required />
+                          <input type="email" placeholder={t("k9h14e2")} id="email-b064" name="email" className="u-border-none u-input u-input-rectangle u-radius-20" required />
                         </div>
                         <div className="u-form-group u-form-message">
                           <label htmlFor="message-b064" className="u-label">{t("k1cam7ic")}</label>
-                          <textarea placeholder={t("k1c4mtvv")} rows="4" cols="50" id="message-b064" name="message" className="u-border-none u-input u-input-rectangle u-radius-20" required />
+                          <textarea placeholder={t("k13fmxqk")} rows="4" cols="50" id="message-b064" name="message" className="u-border-none u-input u-input-rectangle u-radius-20" required />
                         </div>
                         <div className="u-align-left u-form-group u-form-submit">
-                          <a href="#" className="u-border-none u-btn u-btn-submit u-button-style u-palette-1-base u-radius-30 u-btn-1">{t("k1vatbdb")}</a>
+                          <a href="#" className="u-border-none u-btn u-btn-submit u-button-style u-palette-1-base u-radius-30 u-btn-1">{t("ku2s3wf")}</a>
                           {" "}
                           <input type="submit" value="submit" className="u-form-control-hidden" />
                         </div>
-                        <div className="u-form-send-message u-form-send-success">{t("kyzmf2p")}</div>
-                        <div className="u-form-send-error u-form-send-message">{t("k1aaa7th")}</div>
+                        <div className="u-form-send-message u-form-send-success">{t("kl685o9")}</div>
+                        <div className="u-form-send-error u-form-send-message">{t("kwsvzq4")}</div>
                       </Web3Form>
                     </div>
                   </div>
