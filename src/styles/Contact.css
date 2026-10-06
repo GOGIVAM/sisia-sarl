@@ -1,0 +1,752 @@
+/* ====================================
+   SISIA SARL - Contact Page Styles
+   Palette UI/UX: 60-30-10 Rule
+   60% = Blanc/Gris clair (#FFFFFF, #F8F9FA)
+   30% = Rouge (#DC0000) - Logo brand color DOMINANT
+   10% = Bleu-gris (#5A7C8E) - Accent subtil
+   ==================================== */
+
+/* Section 1 - Hero Banner */
+.u-section-1 {
+  background-image: linear-gradient(0deg, rgba(90, 124, 142, 0.4), rgba(90, 124, 142, 0.2)), url('/images/53e3dc404b5bad14f6da8c7dda793678153bdee757596c48732e7bdd9244cd5ab0_1280.jpg');
+  background-position: 50% 50%;
+  background-size: cover;
+}
+
+.u-section-1 .u-sheet-1 {
+  min-height: 380px;
+}
+
+.u-section-1 .u-text-1 {
+  font-weight: 800;
+  font-size: 3.5rem;
+  letter-spacing: -0.5px;
+  text-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
+  --animation-custom_in-translate_x: 0px;
+  --animation-custom_in-translate_y: 0px;
+  --animation-custom_in-opacity: 0;
+  --animation-custom_in-rotate: 0deg;
+  --animation-custom_in-scale: 0.3;
+  margin: 60px auto 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #ffffff, rgba(255, 255, 255, 0.9));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.u-section-1 .u-text-2 {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  --animation-custom_in-translate_x: 0px;
+  --animation-custom_in-translate_y: 0px;
+  --animation-custom_in-opacity: 0;
+  --animation-custom_in-rotate: 0deg;
+  --animation-custom_in-scale: 0.3;
+  margin: 20px auto 60px;
+}
+
+@media (max-width: 1199px) {
+  .u-section-1 .u-sheet-1 {
+    min-height: 320px;
+  }
+}
+
+@media (max-width: 991px) {
+  .u-section-1 .u-sheet-1 {
+    min-height: 260px;
+  }
+}
+
+@media (max-width: 767px) {
+  .u-section-1 .u-sheet-1 {
+    min-height: 200px;
+  }
+
+  .u-section-1 .u-text-2 {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 575px) {
+  .u-section-1 .u-sheet-1 {
+    min-height: 150px;
+  }
+}
+
+/* Section 2 - Coordonnées (60% Neutre) */
+.u-section-2 {
+  background-image: none;
+  background-color: #ffffff;
+  padding: 80px 0;
+}
+
+.u-section-2 .u-sheet-1 {
+  min-height: auto;
+}
+
+.u-section-2 .u-text-1 {
+  color: #DC0000;
+  font-size: 2.8rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  --animation-custom_in-translate_x: 0px;
+  --animation-custom_in-translate_y: 0px;
+  --animation-custom_in-opacity: 0;
+  --animation-custom_in-rotate: 0deg;
+  --animation-custom_in-scale: 0.3;
+  margin: 0 auto 60px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.u-section-2 .u-text-1::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, #DC0000, transparent);
+  border-radius: 2px;
+}
+
+.u-section-2 .u-list-1 {
+  grid-template-rows: repeat(2, auto);
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.u-section-2 .u-repeater-1 {
+  grid-template-columns: repeat(2, calc(50% - 25px));
+  min-height: 320px;
+  grid-gap: 50px;
+  justify-content: center;
+}
+
+/* Carte SISIA SARL (30% Rouge) */
+.u-section-2 .u-list-item-1 {
+  --animation-custom_in-translate_x: -50px;
+  --animation-custom_in-translate_y: 0px;
+  --animation-custom_in-opacity: 0;
+  --animation-custom_in-rotate: 0deg;
+  --animation-custom_in-scale: 1;
+  background-color: #ffffff;
+  border: 2px solid #f5f5f5;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.u-section-2 .u-list-item-1::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #DC0000, #ff3333);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.u-section-2 .u-list-item-1:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px rgba(220, 0, 0, 0.15);
+  border-color: #DC0000;
+}
+
+.u-section-2 .u-list-item-1:hover::before {
+  transform: scaleX(1);
+}
+
+.u-section-2 .u-container-layout-1 {
+  padding: 40px 35px;
+}
+
+.u-section-2 .u-text-2 {
+  text-transform: uppercase;
+  margin: 0 auto 0 0;
+  color: #DC0000;
+  font-weight: 700;
+  font-size: 1.4rem;
+  letter-spacing: 0.5px;
+}
+
+.u-section-2 .u-btn-1 {
+  border-style: none;
+  background: none;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+  margin: 16px auto 0 0;
+  padding: 8px 0;
+  color: #333333;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.u-section-2 .u-btn-1::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #DC0000;
+  transition: width 0.3s ease;
+}
+
+.u-section-2 .u-btn-1:hover {
+  color: #DC0000;
+  transform: translateX(5px);
+}
+
+.u-section-2 .u-btn-1:hover::after {
+  width: 100%;
+}
+
+.u-section-2 .u-text-3 {
+  margin: 20px auto 0 0;
+  color: #666666;
+  line-height: 1.7;
+  font-size: 0.95rem;
+}
+
+.u-section-2 .u-btn-2 {
+  letter-spacing: 1px;
+  font-size: 0.85rem;
+  background: #5A7C8E;
+  --radius: 30px;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin: 28px auto 0 0;
+  padding: 14px 32px;
+  border: none;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 15px rgba(90, 124, 142, 0.15);
+  color: white;
+}
+
+.u-section-2 .u-btn-2:hover {
+  background: #DC0000;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(220, 0, 0, 0.25);
+  color: white;
+}
+
+/* Carte Téléphone (10% Bleu) */
+.u-section-2 .u-list-item-2 {
+  --animation-custom_in-translate_x: 50px;
+  --animation-custom_in-translate_y: 0px;
+  --animation-custom_in-opacity: 0;
+  --animation-custom_in-rotate: 0deg;
+  --animation-custom_in-scale: 1;
+  background-color: #ffffff;
+  border: 2px solid #f5f5f5;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.u-section-2 .u-list-item-2::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: #DC0000;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.u-section-2 .u-list-item-2:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px rgba(90, 124, 142, 0.12);
+  border-color: #DC0000;
+}
+
+.u-section-2 .u-list-item-2:hover::before {
+  transform: scaleX(1);
+}
+
+.u-section-2 .u-container-layout-2 {
+  padding: 40px 35px;
+}
+
+.u-section-2 .u-text-4 {
+  text-transform: uppercase;
+  margin: 0 auto 0 0;
+  color: #DC0000;
+  font-weight: 700;
+  font-size: 1.4rem;
+  letter-spacing: 0.5px;
+}
+
+.u-section-2 .u-btn-3 {
+  border-style: none;
+  background: none;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+  margin: 16px auto 0 0;
+  padding: 8px 0;
+  color: #333333;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.u-section-2 .u-btn-3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #DC0000;
+  transition: width 0.3s ease;
+}
+
+.u-section-2 .u-btn-3:hover {
+  color: #DC0000;
+  transform: translateX(5px);
+}
+
+.u-section-2 .u-btn-3:hover::after {
+  width: 100%;
+}
+
+.u-section-2 .u-text-5 {
+  margin: 20px auto 0 0;
+  color: #666666;
+  line-height: 1.7;
+  font-size: 0.95rem;
+}
+
+.u-section-2 .u-btn-4 {
+  letter-spacing: 1px;
+  font-size: 0.85rem;
+  background: #5A7C8E;
+  --radius: 30px;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin: 28px auto 0 0;
+  padding: 14px 32px;
+  border: none;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 15px rgba(90, 124, 142, 0.15);
+  color: white;
+}
+
+.u-section-2 .u-btn-4:hover {
+  background: #DC0000;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(220, 0, 0, 0.25);
+  color: white;
+}
+
+/* Responsive - Section 2 */
+@media (max-width: 1199px) {
+  .u-section-2 .u-repeater-1 {
+    grid-template-columns: repeat(2, calc(50% - 20px));
+    grid-gap: 40px;
+    min-height: 300px;
+  }
+}
+
+@media (max-width: 991px) {
+  .u-section-2 {
+    padding: 60px 0;
+  }
+
+  .u-section-2 .u-text-1 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+  }
+
+  .u-section-2 .u-repeater-1 {
+    grid-template-columns: 100%;
+    grid-gap: 30px;
+    min-height: auto;
+  }
+
+  .u-section-2 .u-container-layout-1,
+  .u-section-2 .u-container-layout-2 {
+    padding: 35px 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  .u-section-2 {
+    padding: 50px 0;
+  }
+
+  .u-section-2 .u-text-1 {
+    font-size: 1.75rem;
+  }
+
+  .u-section-2 .u-container-layout-1,
+  .u-section-2 .u-container-layout-2 {
+    padding: 30px 25px;
+  }
+}
+
+@media (max-width: 575px) {
+  .u-section-2 {
+    padding: 40px 0;
+  }
+
+  .u-section-2 .u-text-2,
+  .u-section-2 .u-text-4 {
+    font-size: 1.2rem;
+  }
+}
+
+/* Override Nicepage hover styles for buttons */
+.u-section-2 .u-btn-2:hover,
+.u-section-2 .u-btn-4:hover {
+  background-color: #DC0000 !important;
+  color: white !important;
+  box-shadow: 0 8px 25px rgba(220, 0, 0, 0.25) !important;
+}
+
+/* Forcer le titre "Nous contacter" à être centré */
+.u-section-3 .u-text-1 {
+  text-align: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  display: block !important;
+}
+
+/* Forcer le titre centré - très spécifique */
+.u-section-3 .u-layout-cell-1 h3 {
+  text-align: center !important;
+}
+
+.u-section-3 .u-layout-cell-1 p.u-text-2 {
+  text-align: center !important;
+}
+
+/* Section 3 - Formulaire de contact */
+.u-section-3 {
+  background-color: #f8f9fa;
+  padding: 80px 0;
+}
+
+.u-section-3 .u-sheet-1 {
+  min-height: auto;
+}
+
+.u-section-3 .u-layout-wrap-1 {
+  width: 1140px;
+  margin: 0 auto;
+}
+
+.u-section-3 .u-layout-cell-1 {
+  min-height: auto;
+  --animation-custom_in-translate_x: -300px;
+  --animation-custom_in-translate_y: 0px;
+  --animation-custom_in-opacity: 0;
+  --animation-custom_in-rotate: 0deg;
+  --animation-custom_in-scale: 1;
+}
+
+.u-section-3 .u-container-layout-1 {
+  padding: 30px 40px;
+  text-align: center;
+}
+
+.u-section-3 .u-text-1 {
+  margin: 0 auto 0 auto;
+  color: #DC0000;
+  font-weight: 800;
+  font-size: 2.8rem;
+  text-align: center;
+  letter-spacing: -0.5px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.u-section-3 .u-text-1::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, #DC0000, transparent);
+  border-radius: 2px;
+}
+
+.u-section-3 .u-text-2 {
+  margin: 15px auto 0 auto;
+  color: #666666;
+  line-height: 1.7;
+  font-size: 1.05rem;
+  text-align: center;
+}
+
+.u-section-3 .u-form-1 {
+  background-color: #ffffff;
+  height: auto;
+  margin: 35px auto 0 auto;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  border: 2px solid #f5f5f5;
+  transition: all 0.3s ease;
+  max-width: 500px;
+}
+
+.u-section-3 .u-form-1:hover {
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+}
+
+.u-section-3 .u-form-1 input,
+.u-section-3 .u-form-1 textarea {
+  border: 2px solid #e8e8e8;
+  transition: all 0.3s ease;
+  border-radius: 10px;
+  padding: 12px 18px;
+  font-size: 0.95rem;
+}
+
+.u-section-3 .u-form-1 input:focus,
+.u-section-3 .u-form-1 textarea:focus {
+  border-color: #DC0000;
+  box-shadow: 0 0 0 4px rgba(220, 0, 0, 0.08);
+  outline: none;
+}
+
+.u-section-3 .u-form-1 label {
+  color: #333333;
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.u-section-3 .u-btn-1 {
+  background: #5A7C8E;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px;
+  padding: 16px 48px;
+  border: none;
+  border-radius: 50px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 6px 20px rgba(90, 124, 142, 0.15);
+  cursor: pointer;
+  color: white;
+}
+
+.u-section-3 .u-btn-1:hover {
+  background: #DC0000;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(220, 0, 0, 0.25);
+  color: white;
+}
+
+.u-section-3 .u-btn-1:active {
+  transform: translateY(-1px);
+}
+
+.u-section-3 .u-layout-cell-2 {
+  min-height: auto;
+  --animation-custom_in-translate_x: 300px;
+  --animation-custom_in-translate_y: 0px;
+  --animation-custom_in-opacity: 0;
+  --animation-custom_in-rotate: 0deg;
+  --animation-custom_in-scale: 1;
+}
+
+.u-section-3 .u-container-layout-2 {
+  padding: 30px 0;
+  display: flex;
+  align-items: center;
+}
+
+.u-section-3 .u-image-1 {
+  width: 100%;
+  max-width: 550px;
+  height: auto;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  border-radius: 20px;
+  margin: 0 auto 0 0;
+  border: none;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease;
+}
+
+.u-section-3 .u-image-1:hover {
+  transform: scale(1.02);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive - Section 3 */
+@media (max-width: 1199px) {
+  .u-section-3 .u-layout-wrap-1 {
+    width: 940px;
+  }
+
+  .u-section-3 .u-image-1 {
+    max-width: 450px;
+  }
+}
+
+@media (max-width: 991px) {
+  .u-section-3 {
+    padding: 60px 0;
+  }
+
+  .u-section-3 .u-layout-wrap-1 {
+    width: 720px;
+  }
+
+  .u-section-3 .u-container-layout-1 {
+    padding: 30px 20px;
+  }
+
+  .u-section-3 .u-form-1 {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .u-section-3 .u-layout-wrap-1 {
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  .u-section-3 .u-text-1 {
+    font-size: 1.8rem;
+  }
+
+  .u-section-3 .u-form-1 {
+    margin-right: 0;
+  }
+
+  .u-section-3 .u-image-1 {
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 575px) {
+  .u-section-3 {
+    padding: 40px 0;
+  }
+
+  .u-section-3 .u-text-1 {
+    font-size: 1.5rem;
+  }
+
+  .u-section-3 .u-btn-1 {
+    padding: 14px 36px;
+    font-size: 1rem;
+  }
+}
+
+/* Section 4 - Carte Google Maps */
+.u-section-4 {
+  min-height: 500px;
+  padding: 0;
+}
+
+.u-section-4 iframe {
+  border: 4px solid #DC0000;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.u-section-4 iframe:hover {
+  box-shadow: 0 15px 50px rgba(220, 0, 0, 0.15);
+}
+
+/* Animations personnalisées */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Améliorations d'accessibilité */
+.u-section-2 .u-btn-1:focus,
+.u-section-2 .u-btn-2:focus,
+.u-section-2 .u-btn-3:focus,
+.u-section-2 .u-btn-4:focus,
+.u-section-3 .u-btn-1:focus {
+  outline: 3px solid rgba(220, 0, 0, 0.6);
+  outline-offset: 2px;
+}
+
+/* Optimisations de performance */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.u-section-2 .u-list-item-1,
+.u-section-2 .u-list-item-2 {
+  will-change: transform, box-shadow;
+}
+
+/* ===== HEADER PHONE NUMBER RED ===== */
+.u-header .u-btn-1 {
+  color: var(--brand-red) !important;
+}
+
+/* ===== FOOTER PHONE NUMBER RED ===== */
+.u-layout-cell-4 .u-btn-3 {
+  color: var(--brand-red) !important;
+}
+
+/* ===== NAVBAR LINKS HOVER ===== */
+.u-menu-1 .u-nav-link,
+.u-menu-1 .u-nav-2 .u-nav-link {
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.u-menu-1 .u-nav-link:hover,
+.u-menu-1 .u-nav-link:focus,
+.u-menu-1 .u-nav-2 .u-nav-link:hover,
+.u-menu-1 .u-nav-2 .u-nav-link:focus {
+  color: var(--brand-red) !important;
+  text-decoration: underline;
+  text-decoration-color: var(--brand-red);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 5px;
+}
+
+/* ===== FOOTER QUICK LINKS HOVER ===== */
+.u-layout-cell-5 .u-text-11 a,
+.u-layout-cell-5 .u-text-11 li a {
+  position: relative;
+  transition: all 0.3s ease;
+  padding-bottom: 2px;
+  border-bottom: 2px solid transparent;
+}
+
+.u-layout-cell-5 .u-text-11 a:hover,
+.u-layout-cell-5 .u-text-11 li a:hover {
+  border-bottom-color: var(--brand-red);
+  color: var(--brand-red) !important;
+}

@@ -1,0 +1,31 @@
+.lang-switcher {
+  position: absolute;
+  top: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2000;
+  display: inline-flex;
+  gap: 2px;
+  padding: 2px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  letter-spacing: 0.06em;
+}
+.lang-switcher a {
+  font: 600 12px/1 Ubuntu, 'Open Sans', sans-serif !important;
+  padding: 6px 11px;
+  border-radius: 999px;
+  color: #fff;
+  text-decoration: none;
+  transition: background 0.25s, color 0.25s;
+}
+.lang-switcher a:hover { background: rgba(255, 255, 255, 0.22); }
+.lang-switcher a.is-active { background: #fff; color: #1e2a35; }
+.lang-switcher a:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
+/* Mobile : pastille flottante en bas à gauche (le haut de page est occupé par le téléphone) */
+@media (max-width: 767px) {
+  .lang-switcher {
+    position: fixed; top: auto; bottom: 18px; left: 14px; transform: none;
+    background: #1e2a35; box-shadow: 0 8px 22px rgba(0, 0, 0, 0.25);
+  }
+}
