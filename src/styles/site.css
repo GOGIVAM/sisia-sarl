@@ -213,12 +213,8 @@ header.u-header .u-logo-image { transition: transform 0.4s var(--ease); transfor
 body.is-scrolled header.u-header .u-logo-image { transform: scale(0.82); }
 @keyframes navDrop { from { opacity: 0; transform: translateY(-14px); } to { opacity: 1; transform: none; } }
 header.u-header .u-section-row-2 { animation: pageFade 0.7s var(--ease) both; } /* opacité seule : une animation de transform ferait de la barre le bloc conteneur du menu mobile */
-header.u-header .u-nav-item { animation: navDrop 0.6s var(--ease) both; }
-header.u-header .u-nav-item:nth-child(1) { animation-delay: 0.15s; }
-header.u-header .u-nav-item:nth-child(2) { animation-delay: 0.22s; }
-header.u-header .u-nav-item:nth-child(3) { animation-delay: 0.29s; }
-header.u-header .u-nav-item:nth-child(4) { animation-delay: 0.36s; }
-header.u-header .u-nav-item:nth-child(5) { animation-delay: 0.43s; }
+header.u-header .u-nav-item { animation: pageFade 0.45s var(--ease) both; }
+header.u-header .u-nav-item:nth-child(n) { animation-delay: 0.05s; }
 /* la page ne glisse plus sous l en-tete collant */
 #root > section:first-of-type { scroll-margin-top: 90px; }
 [id] { scroll-margin-top: 96px; }

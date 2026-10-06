@@ -9,7 +9,7 @@ const pg = await b.newPage(); await pg.setViewport({ width: Number(w) || 1440, h
 await pg.goto('http://localhost:4117' + url, { waitUntil: 'networkidle2' });
 const out = await pg.evaluate((s) => [...document.querySelectorAll(s)].slice(0, 8).map((e) => {
   const cs = getComputedStyle(e);
-  return `${e.tagName}.${e.className.toString().replace(/\s+/g, ' ').slice(0, 90)} | "${e.textContent.trim().slice(0, 24)}" | color=${cs.color} bg=${cs.backgroundColor} bi=${cs.backgroundImage.slice(0, 30)} bd=${cs.borderTopWidth} ${cs.borderTopColor} r=${cs.borderRadius} font=${cs.fontFamily.slice(0, 14)} style=${(e.getAttribute('style') || '').slice(0, 60)}`;
+  const rc = e.getBoundingClientRect(); return `[${Math.round(rc.width)}x${Math.round(rc.height)} @${Math.round(rc.top)}] ${e.tagName}.${e.className.toString().replace(/\s+/g, ' ').slice(0, 90)} | "${e.textContent.trim().slice(0, 24)}" | color=${cs.color} bg=${cs.backgroundColor} bi=${cs.backgroundImage.slice(0, 30)} bd=${cs.borderTopWidth} ${cs.borderTopColor} r=${cs.borderRadius} font=${cs.fontFamily.slice(0, 14)} pad=${cs.padding} mar=${cs.margin} style=${(e.getAttribute('style') || '').slice(0, 60)}`;
 }), sel);
 console.log(out.join('\n'));
 await b.close(); srv.close();

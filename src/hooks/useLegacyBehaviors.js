@@ -97,7 +97,14 @@ function setupServicesCarousel(signal) {
     slides[(i - 1 + slides.length) % slides.length]?.classList.add('prev');
   };
   const go = (i) => { current = (i + slides.length) % slides.length; show(current); };
-  const start = () => { clearInterval(timer); timer = setInterval(() => go(current + 1), 6000); };
+  const restartBar = () => {
+    const ind = indicators[current];
+    if (!ind) return;
+    ind.classList.remove('active');
+    void ind.offsetWidth;
+    ind.classList.add('active');
+  };
+  const start = () => { clearInterval(timer); restartBar(); timer = setInterval(() => go(current + 1), 6000); };
   root.querySelector('.next-btn')?.addEventListener('click', () => { go(current + 1); start(); }, { signal });
   root.querySelector('.prev-btn')?.addEventListener('click', () => { go(current - 1); start(); }, { signal });
   indicators.forEach((ind, i) => ind.addEventListener('click', () => { go(i); start(); }, { signal }));
@@ -110,9 +117,10 @@ function setupServicesCarousel(signal) {
     if (x1 < x0 - 50) { go(current + 1); start(); }
     if (x1 > x0 + 50) { go(current - 1); start(); }
   }, { signal });
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'ArrowLeft') go(current - 1);
-    if (e.key === 'ArrowRight') go(current + 1);
+  root.setAttribute('tabindex', '0');
+  root.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowLeft') { go(current - 1); start(); }
+    if (e.key === 'ArrowRight') { go(current + 1); start(); }
   }, { signal });
   start();
   signal.addEventListener('abort', () => clearInterval(timer));

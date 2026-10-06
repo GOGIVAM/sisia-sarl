@@ -6,5 +6,14 @@
  "Entrez votre message": "Enter your message",
  "Envoyer": "Send",
  "Merci ! Votre message a bien été envoyé.": "Thank you! Your message has been sent.",
- "Impossible d'envoyer votre message. Veuillez corriger les erreurs puis réessayer.": "Unable to send your message. Please fix errors then try again."
+ "Impossible d'envoyer votre message. Veuillez corriger les erreurs puis réessayer.": "Unable to send your message. Please fix errors then try again.",
+ "Nos métiers": "Our services",
+ "Précédent": "Previous",
+ "Suivant": "Next",
+ "Diapositive 1": "Slide 1",
+ "Diapositive 2": "Slide 2",
+ "Diapositive 3": "Slide 3",
+ "Diapositive 4": "Slide 4",
+ "Diapositive 5": "Slide 5",
+ "Diapositive 6": "Slide 6"
 }

@@ -1,0 +1,13 @@
+import http from 'node:http'; import fs from 'node:fs'; import path from 'node:path'; import puppeteer from 'puppeteer-core';
+const dist = path.resolve(import.meta.dirname, '..', 'dist');
+const MIME = { '.html': 'text/html', '.css': 'text/css', '.js': 'text/javascript', '.png': 'image/png', '.jpg': 'image/jpeg', '.svg': 'image/svg+xml', '.webp': 'image/webp' };
+const srv = http.createServer((req, res) => { const p = decodeURIComponent(req.url.split('?')[0]); let f = path.join(dist, p); if (!fs.existsSync(f) || fs.statSync(f).isDirectory()) { const i = path.join(f, 'index.html'); f = fs.existsSync(i) ? i : path.join(dist, '404.html'); } res.writeHead(200, { 'content-type': MIME[path.extname(f)] || 'application/octet-stream' }); fs.createReadStream(f).pipe(res); }).listen(4121);
+const b = await puppeteer.launch({ executablePath: 'C:/Program Files/Google/Chrome/Application/chrome.exe', headless: 'new', args: ['--no-sandbox'] });
+const pg = await b.newPage(); await pg.setViewport({ width: 1440, height: 900 });
+await pg.goto('http://localhost:4121' + (process.argv[2] || '/contact'), { waitUntil: 'networkidle2' });
+await pg.evaluate(async () => { const h = document.documentElement.scrollHeight; for (let y = 0; y <= h; y += 300) { window.scrollTo(0, y); await new Promise((r) => setTimeout(r, 120)); } });
+await new Promise((r) => setTimeout(r, 1200));
+const rows = await pg.evaluate(() => [...document.querySelectorAll('footer h1,footer h2,footer h3,footer p,footer a')].slice(0, 14).map((e) => { const cs = getComputedStyle(e); const r = e.getBoundingClientRect(); return `${e.tagName}.${e.className.toString().split(' ').slice(0, 3).join('.')} "${e.textContent.trim().slice(0, 20)}" color=${cs.color} op=${cs.opacity} vis=${cs.visibility} mo=${e.classList.contains('mo')}/${e.classList.contains('mo-in')} y=${Math.round(r.top)}`; }));
+console.log(rows.join('\n'));
+await pg.screenshot({ path: path.join(dist, '..', '.shots', 'foot-now.png') });
+await b.close(); srv.close();

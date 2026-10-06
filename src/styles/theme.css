@@ -60,7 +60,6 @@ header.u-header .u-section-row-2 {
   box-shadow: none;
 }
 body.is-scrolled header.u-header .u-section-row-2 { box-shadow: 0 12px 32px rgba(11, 27, 58, 0.12); }
-header.u-header .u-menu { margin-right: 96px; }
 header.u-header .u-nav-container .u-nav { gap: 4px; }
 header.u-header .u-nav-container .u-nav-link {
   font-family: var(--font-head) !important;
@@ -82,14 +81,13 @@ header.u-header .u-nav-container .u-nav-item:last-child .u-nav-link.active {
   background: var(--brand); color: #fff !important; box-shadow: 0 6px 16px rgba(46, 90, 172, 0.32);
 }
 header.u-header .u-nav-container .u-nav-item:last-child .u-nav-link:hover { background: var(--brand-600); color: #fff !important; transform: translateY(-1px); }
-.lang-switcher--nav { margin-top: 20px; }
 
 /* menu mobile */
 header.u-header .u-hamburger-link { color: var(--navy) !important; }
 .u-sidenav { background: linear-gradient(160deg, var(--navy), var(--navy-2)) !important; }
 .u-sidenav .u-nav-link { font-family: var(--font-head) !important; font-size: 20px !important; color: #fff !important; padding: 14px 24px !important; }
 .u-sidenav .u-nav-link:hover { color: #9fc2ff !important; }
-@media (max-width: 939px) { header.u-header .u-menu { margin-right: 0; } }
+@media (max-width: 991px) { header.u-header .u-menu { margin-right: 0; } }
 
 /* ---- Boutons ---------------------------------------------------------- */
 .u-btn.u-palette-1-base, .u-btn.u-btn-submit, .u-btn.u-btn-1 {
@@ -164,8 +162,7 @@ footer.u-footer a:hover { color: #fff; }
 /* ---- Pages services : titres marine, filets rouges conservés ----------- */
 html body .service-intro h2, html body .service-card h3, html body .service-details-content h3 { color: var(--navy); }
 html body .service-hero h1 { color: #fff; }
-html body .lang-switcher--nav { margin-top: 20px; }
-
+html body 
 /* =========================================================================
    Surcharges prioritaires : les feuilles de page Nicepage fixent des couleurs,
    des dégradés de texte et des polices propres à chaque section.
@@ -184,13 +181,10 @@ html body h1.u-text, html body h2.u-text {
   -webkit-text-fill-color: currentColor !important;
   background: none !important;
 }
-/* ... sauf sur fond sombre / image : blanc */
-html body .u-section-1 h1.u-text, html body .u-section-1 h2.u-text,
-html body section[class*="u-image"] h1.u-text, html body section[class*="u-image"] h2.u-text,
-html body section[class*="u-shading"] h1.u-text, html body section[class*="u-shading"] h2.u-text,
-html body section[class*="u-black"] h2.u-text, html body section[class*="u-palette-1-dark"] h2.u-text,
-html body footer h1, html body footer h2, html body footer h3,
-html body .service-hero h1, html body .service-cta-section h2, html body .supervision-section.is-dark h2 {
+/* ... sauf dans les blocs sombres (voile, noir, parallaxe, pied de page) : blanc */
+html body :is(.u-shading, .u-black, .u-parallax) :is(h1, h2, h3).u-text,
+html body footer :is(h1, h2, h3, h4),
+html body .service-hero h1, html body .service-cta-section h2 {
   color: #fff !important;
   -webkit-text-fill-color: #fff !important;
   text-shadow: 0 4px 24px rgba(0, 0, 0, 0.35);
@@ -220,7 +214,7 @@ header.u-header .u-nav-container .u-nav-item:last-child { margin-left: 8px; }
 /* =========================================================================
    Menu mobile : panneau latéral + voile (la feuille Nicepage de l en-tête n est pas embarquée)
    ========================================================================= */
-@media (max-width: 939px) {
+@media (max-width: 991px) {
   html body .u-menu .u-nav-container-collapse { display: flex !important; }
   html body .u-menu.u-offcanvas .u-sidenav {
     position: fixed !important; top: 0; bottom: 0; left: 0; width: min(86vw, 340px) !important; height: 100% !important;
@@ -261,14 +255,14 @@ header.u-header .u-nav-container .u-nav-item:last-child { margin-left: 8px; }
   /* le sélecteur de langue reste au-dessus du voile fermé, derrière quand le menu est ouvert */
   html body .u-menu.open ~ * .lang-switcher { z-index: 1; }
 }
-@media (max-width: 939px) {
+@media (max-width: 991px) {
   html body .u-menu.u-offcanvas .u-sidenav.u-black, html body .u-menu.u-offcanvas .u-sidenav.u-opacity-95 {
     background: linear-gradient(165deg, var(--black) 0%, var(--navy) 100%) !important; background-color: var(--black) !important;
   }
   html body .u-menu.open ~ .lang-switcher { opacity: 0; pointer-events: none; }
   header.u-header .u-section-row-1 { z-index: 1; }
 }
-@media (max-width: 939px) {
+@media (max-width: 991px) {
   html body .u-menu.u-offcanvas .u-sidenav::before, html body .u-menu.u-offcanvas .u-sidenav > .u-inner-container-layout::before { background: transparent !important; background-color: transparent !important; }
 }
 
@@ -279,3 +273,52 @@ html body .u-palette-1-dark-3, html body footer.u-palette-1-dark-3 { background-
 html body header.u-header .u-section-row-1.u-palette-1-dark-3 { background-color: var(--black) !important; }
 html body h1, html body h2 { letter-spacing: -0.025em; }
 html body { font-feature-settings: 'cv11', 'ss01'; }
+
+/* ---- Pied de page : liens et icônes lisibles sur noir ------------------- */
+html body footer.u-footer p, html body footer.u-footer li { color: #cdd9f2; }
+html body footer.u-footer a:not(.u-btn-round):not(.u-social-url):not(.u-logo) { color: #dbe6fb !important; }
+html body footer.u-footer a:not(.u-btn-round):not(.u-social-url):hover { color: #fff !important; }
+html body footer.u-footer a.u-border-1, html body footer.u-footer p.u-text-palette-1-light-1 { color: #9fc2ff !important; border-color: rgba(159, 194, 255, 0.45) !important; }
+html body footer.u-footer .u-text-palette-1-base, html body footer.u-footer .u-btn.u-button-link { color: #fff !important; }
+html body footer.u-footer .u-social-icons .u-icon, html body footer.u-footer .u-social-url .u-icon { color: #cfdcf7 !important; }
+html body footer.u-footer .u-social-url:hover .u-icon { color: #fff !important; }
+/* bandeau gris vide ajouté par l'éditeur Nicepage en bas de page */
+html body section.u-backlink { display: none !important; }
+/* titres du pied de page : blanc (spécificité supérieure aux titres de section) */
+html body footer.u-footer h1.u-text, html body footer.u-footer h2.u-text, html body footer.u-footer h3.u-text, html body footer.u-footer h4.u-text,
+html body footer.u-footer :is(h1, h2, h3, h4) { color: #fff !important; -webkit-text-fill-color: #fff !important; }
+
+/* =========================================================================
+   Navigation : rangée flex  logo | menu | langue  (hauteur stable, alignement centré)
+   ========================================================================= */
+header.u-header .u-section-row-2 .u-sheet {
+  display: flex !important; align-items: center; justify-content: flex-start; gap: 20px;
+  min-height: 84px; padding-top: 0 !important; padding-bottom: 0 !important;
+  transition: min-height 0.35s var(--ease);
+}
+body.is-scrolled header.u-header .u-section-row-2 .u-sheet { min-height: 66px; }
+header.u-header .u-section-row-2 .u-logo { order: 1; flex: none; margin: 0 auto 0 0 !important; position: relative !important; display: block; }
+header.u-header .u-section-row-2 .u-logo-image { display: block; max-height: 60px; width: auto; }
+header.u-header .u-menu { order: 2; flex: none; margin: 0 !important; height: auto !important; position: static !important; display: flex; align-items: center; }
+header.u-header .u-menu .u-nav-container { display: block; }
+header.u-header .u-menu .u-nav { display: flex; align-items: center; }
+header.u-header .lang-switcher--nav { order: 3; position: static !important; transform: none !important; margin: 0 !important; }
+header.u-header .u-menu .u-nav-link { display: flex !important; align-items: center; }
+
+/* tablette et mobile : le menu devient une icône, la langue se place juste à sa gauche */
+@media (max-width: 991px) {
+  header.u-header .u-section-row-2 .u-sheet { min-height: 68px; gap: 12px; }
+  header.u-header .lang-switcher--nav { order: 2; margin-left: auto !important; }
+  header.u-header .u-menu { order: 3; }
+  header.u-header .u-menu .menu-collapse { display: block; }
+  header.u-header .u-hamburger-link { display: grid !important; place-items: center; width: 46px; height: 46px; padding: 0 !important; border-radius: var(--r-md); border: 1px solid var(--line); background: #fff; }
+  header.u-header .u-hamburger-link svg { width: 22px; height: 22px; }
+  header.u-header .u-section-row-2 .u-logo-image { max-height: 48px; }
+}
+header.u-header .u-section-row-2 .u-sheet { flex-direction: row !important; flex-wrap: nowrap !important; justify-content: flex-start !important; }
+header.u-header .u-section-row-2 .u-logo { margin-left: 0 !important; }
+@media (max-width: 991px) {
+  header.u-header .u-menu .u-nav-container { display: none !important; }
+}
+header.u-header .u-section-row-2 .u-logo { left: 0 !important; top: 0 !important; transform: none !important; }
+header.u-header .u-section-row-2 .u-sheet::before, header.u-header .u-section-row-2 .u-sheet::after { display: none !important; content: none !important; }

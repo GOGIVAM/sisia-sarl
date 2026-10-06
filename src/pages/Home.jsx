@@ -218,94 +218,104 @@ export default function Home() {
       <section className="u-clearfix u-container-align-center u-section-3" id="carousel_1fd3" style={{ minHeight: "700px", padding: "80px 20px", background: "linear-gradient(135deg, #ffffff 0%, #f8f8f8 100%)" }}>
         <div className="u-clearfix u-sheet u-valign-middle u-sheet-1" style={{ width: "100%", maxWidth: "1200px", margin: "0 auto" }}>
           <h2 className="u-align-center u-text u-text-default u-text-1" data-animation-name="customAnimationIn" data-animation-duration="1500">{t("k11u49ca")}</h2>
-          <div className="services-carousel" style={{ minHeight: "600px", background: "#e9e9e9", borderRadius: "20px", overflow: "hidden", position: "relative" }}>
-            <div className="carousel-wrapper" style={{ height: "600px", position: "relative" }}>
-              <div className="carousel-slide active" style={{ position: "absolute", inset: "0", width: "100%", height: "100%" }}>
-                <div className="carousel-image" style={{ width: "100%", height: "100%", position: "relative" }}>
-                  <img src="/images/electriciteindustrielle.avif" alt={t("k1ey7ofs")} style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
-                  <div className="carousel-overlay" style={{ position: "absolute", inset: "0", background: "linear-gradient(to top, rgba(0,0,0,0.75), rgba(0,0,0,0.35))" }}></div>
+          <div className="services-carousel" role="region" aria-roledescription="carousel" aria-label={t("kg2dkg1")}>
+            <div className="carousel-wrapper">
+              <div className="carousel-slide active">
+                <div className="carousel-image">
+                  <img src="/images/electriciteindustrielle.avif" alt={t("k1ey7ofs")} />
+                  <div className="carousel-overlay"></div>
                 </div>
-                <div className="carousel-caption" style={{ position: "absolute", left: "0", right: "0", bottom: "0", padding: "48px 32px", textAlign: "center", zIndex: "2", color: "#fff" }}>
-                  <h3 style={{ fontSize: "2rem", margin: "0 0 8px", fontWeight: "700" }}>{t("kayf5me")}</h3>
-                  <p style={{ margin: "0", opacity: "0.95" }}>{t("k1e32cgb")}</p>
-                </div>
-              </div>
-              <div className="carousel-slide" style={{ position: "absolute", inset: "0", width: "100%", height: "100%", opacity: "0" }}>
-                <div className="carousel-image" style={{ width: "100%", height: "100%", position: "relative" }}>
-                  <img src="/images/automatisme.avif" alt={t("klcb7ip")} style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
-                  <div className="carousel-overlay" style={{ position: "absolute", inset: "0", background: "linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0.25))" }}></div>
-                </div>
-                <div className="carousel-caption" style={{ position: "absolute", left: "0", right: "0", bottom: "0", padding: "48px 32px", textAlign: "center", zIndex: "2", color: "#fff" }}>
-                  <h3 style={{ fontSize: "2rem", margin: "0 0 8px", fontWeight: "700" }}>{t("klpw4l3")}</h3>
-                  <p style={{ margin: "0", opacity: "0.95" }}>{t("kxtn8yb")}</p>
+                <div className="carousel-caption">
+                  <span className="carousel-count">01 / 06</span>
+                  <h3>{t("kayf5me")}</h3>
+                  <p>{t("k1e32cgb")}</p>
+                  <Link className="carousel-cta" to="/services/electricite-industrielle">{t("k1rlv4uu")}</Link>
                 </div>
               </div>
-              <div className="carousel-slide" style={{ position: "absolute", inset: "0", width: "100%", height: "100%", opacity: "0" }}>
-                <div className="carousel-image" style={{ width: "100%", height: "100%", position: "relative" }}>
-                  <img src="/images/videosurveillance.avif" alt={t("knw42do")} style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
-                  <div className="carousel-overlay" style={{ position: "absolute", inset: "0", background: "linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0.25))" }}></div>
+              <div className="carousel-slide">
+                <div className="carousel-image">
+                  <img src="/images/automatisme.avif" alt={t("klcb7ip")} />
+                  <div className="carousel-overlay"></div>
                 </div>
-                <div className="carousel-caption" style={{ position: "absolute", left: "0", right: "0", bottom: "0", padding: "48px 32px", textAlign: "center", zIndex: "2", color: "#fff" }}>
-                  <h3 style={{ fontSize: "2rem", margin: "0 0 8px", fontWeight: "700" }}>{t("k1067bq6")}</h3>
-                  <p style={{ margin: "0", opacity: "0.95" }}>{t("k6d1msf")}</p>
-                </div>
-              </div>
-              <div className="carousel-slide" style={{ position: "absolute", inset: "0", width: "100%", height: "100%", opacity: "0" }}>
-                <div className="carousel-image" style={{ width: "100%", height: "100%", position: "relative" }}>
-                  <img src="/images/photo-1621905251189-08b45d6a269e.avif" alt={t("k5s1ek0")} style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
-                  <div className="carousel-overlay" style={{ position: "absolute", inset: "0", background: "linear-gradient(to top, rgba(0,0,0,0.5), rgba(0,0,0,0.15))" }}></div>
-                </div>
-                <div className="carousel-caption" style={{ position: "absolute", left: "0", right: "0", bottom: "0", padding: "48px 32px", textAlign: "center", zIndex: "2", color: "#fff" }}>
-                  <h3 style={{ fontSize: "2rem", margin: "0 0 8px", fontWeight: "700" }}>{t("k18lz767")}</h3>
-                  <p style={{ margin: "0", opacity: "0.95" }}>{t("kmf8ii7")}</p>
+                <div className="carousel-caption">
+                  <span className="carousel-count">02 / 06</span>
+                  <h3>{t("klpw4l3")}</h3>
+                  <p>{t("kxtn8yb")}</p>
+                  <Link className="carousel-cta" to="/services/automatisme-et-instrumentation">{t("k1rlv4uu")}</Link>
                 </div>
               </div>
-              <div className="carousel-slide" style={{ position: "absolute", inset: "0", width: "100%", height: "100%", opacity: "0" }}>
-                <div className="carousel-image" style={{ width: "100%", height: "100%", position: "relative" }}>
-                  <img src="/images/premium_photo-1679607691186-4550451e13b7.avif" alt={t("k1xn5kri")} style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
-                  <div className="carousel-overlay" style={{ position: "absolute", inset: "0", background: "linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0.2))" }}></div>
+              <div className="carousel-slide">
+                <div className="carousel-image">
+                  <img src="/images/videosurveillance.avif" alt={t("knw42do")} />
+                  <div className="carousel-overlay"></div>
                 </div>
-                <div className="carousel-caption" style={{ position: "absolute", left: "0", right: "0", bottom: "0", padding: "48px 32px", textAlign: "center", zIndex: "2", color: "#fff" }}>
-                  <h3 style={{ fontSize: "2rem", margin: "0 0 8px", fontWeight: "700" }}>{t("k1d4rbcj")}</h3>
-                  <p style={{ margin: "0", opacity: "0.95" }}>{t("k2f00rm")}</p>
+                <div className="carousel-caption">
+                  <span className="carousel-count">03 / 06</span>
+                  <h3>{t("k1067bq6")}</h3>
+                  <p>{t("k6d1msf")}</p>
+                  <Link className="carousel-cta" to="/services/video-surveillances">{t("k1rlv4uu")}</Link>
                 </div>
               </div>
-              <div className="carousel-slide" style={{ position: "absolute", inset: "0", width: "100%", height: "100%", opacity: "0" }}>
-                <div className="carousel-image" style={{ width: "100%", height: "100%", position: "relative" }}>
-                  <img src="/images/acces.avif" alt={t("k1dwjci5")} style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
-                  <div className="carousel-overlay" style={{ position: "absolute", inset: "0", background: "linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0.2))" }}></div>
+              <div className="carousel-slide">
+                <div className="carousel-image">
+                  <img src="/images/photo-1621905251189-08b45d6a269e.avif" alt={t("k5s1ek0")} />
+                  <div className="carousel-overlay"></div>
                 </div>
-                <div className="carousel-caption" style={{ position: "absolute", left: "0", right: "0", bottom: "0", padding: "48px 32px", textAlign: "center", zIndex: "2", color: "#fff" }}>
-                  <h3 style={{ fontSize: "2rem", margin: "0 0 8px", fontWeight: "700" }}>{t("k1769hkc")}</h3>
-                  <p style={{ margin: "0", opacity: "0.95" }}>{t("kndz12r")}</p>
+                <div className="carousel-caption">
+                  <span className="carousel-count">04 / 06</span>
+                  <h3>{t("k18lz767")}</h3>
+                  <p>{t("kmf8ii7")}</p>
+                  <Link className="carousel-cta" to="/services/energie-solaire">{t("k1rlv4uu")}</Link>
+                </div>
+              </div>
+              <div className="carousel-slide">
+                <div className="carousel-image">
+                  <img src="/images/premium_photo-1679607691186-4550451e13b7.avif" alt={t("k1xn5kri")} />
+                  <div className="carousel-overlay"></div>
+                </div>
+                <div className="carousel-caption">
+                  <span className="carousel-count">05 / 06</span>
+                  <h3>{t("k1d4rbcj")}</h3>
+                  <p>{t("k2f00rm")}</p>
+                  <Link className="carousel-cta" to="/services">{t("k1rlv4uu")}</Link>
+                </div>
+              </div>
+              <div className="carousel-slide">
+                <div className="carousel-image">
+                  <img src="/images/acces.avif" alt={t("k1dwjci5")} />
+                  <div className="carousel-overlay"></div>
+                </div>
+                <div className="carousel-caption">
+                  <span className="carousel-count">06 / 06</span>
+                  <h3>{t("k1769hkc")}</h3>
+                  <p>{t("kndz12r")}</p>
+                  <Link className="carousel-cta" to="/services/controleur-acces">{t("k1rlv4uu")}</Link>
                 </div>
               </div>
             </div>
-            {" "}
-            <button className="carousel-btn prev-btn" aria-label={t("k102kipp")} style={{ position: "absolute", top: "50%", left: "30px", transform: "translateY(-50%)", width: "60px", height: "60px", background: "rgba(255,255,255,0.95)", border: "none", borderRadius: "50%", zIndex: "10", display: "flex", alignItems: "center", justifyContent: "center", boxShadow: "0 5px 20px rgba(0,0,0,0.2)" }}>
-              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style={{ width: "30px", height: "30px", fill: "var(--brand)" }}>
+            <button className="carousel-btn prev-btn" aria-label={t("kgw5m5h")}>
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
               </svg>
             </button>
             {" "}
-            <button className="carousel-btn next-btn" aria-label={t("k1g4x8fx")} style={{ position: "absolute", top: "50%", right: "30px", transform: "translateY(-50%)", width: "60px", height: "60px", background: "rgba(255,255,255,0.95)", border: "none", borderRadius: "50%", zIndex: "10", display: "flex", alignItems: "center", justifyContent: "center", boxShadow: "0 5px 20px rgba(0,0,0,0.2)" }}>
-              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style={{ width: "30px", height: "30px", fill: "var(--brand)" }}>
+            <button className="carousel-btn next-btn" aria-label={t("k182am67")}>
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
               </svg>
             </button>
-            {" "}
-            <div className="carousel-indicators" style={{ position: "absolute", bottom: "24px", left: "50%", transform: "translateX(-50%)", display: "flex", gap: "12px", zIndex: "10" }}>
-              <button className="indicator active" data-slide="0" style={{ width: "40px", height: "12px", borderRadius: "10px", border: "2px solid white", background: "#DC2F3C", padding: "0", cursor: "pointer" }}></button>
+            <div className="carousel-indicators">
+              <button className="indicator active" data-slide="0" aria-label={t("kea9nw5")}></button>
               {" "}
-              <button className="indicator" data-slide="1" style={{ width: "12px", height: "12px", borderRadius: "50%", border: "2px solid white", background: "transparent", cursor: "pointer", padding: "0" }}></button>
+              <button className="indicator" data-slide="1" aria-label={t("kdgaut8")}></button>
               {" "}
-              <button className="indicator" data-slide="2" style={{ width: "12px", height: "12px", borderRadius: "50%", border: "2px solid white", background: "transparent", cursor: "pointer", padding: "0" }}></button>
+              <button className="indicator" data-slide="2" aria-label={t("kdqagi7")}></button>
               {" "}
-              <button className="indicator" data-slide="3" style={{ width: "12px", height: "12px", borderRadius: "50%", border: "2px solid white", background: "transparent", cursor: "pointer", padding: "0" }}></button>
+              <button className="indicator" data-slide="3" aria-label={t("kcwbnfa")}></button>
               {" "}
-              <button className="indicator" data-slide="4" style={{ width: "12px", height: "12px", borderRadius: "50%", border: "2px solid white", background: "transparent", cursor: "pointer", padding: "0" }}></button>
+              <button className="indicator" data-slide="4" aria-label={t("kd6b949")}></button>
               {" "}
-              <button className="indicator" data-slide="5" style={{ width: "12px", height: "12px", borderRadius: "50%", border: "2px solid white", background: "transparent", cursor: "pointer", padding: "0" }}></button>
+              <button className="indicator" data-slide="5" aria-label={t("kcccg1c")}></button>
             </div>
           </div>
         </div>
