@@ -44,9 +44,9 @@ export default function SiteHeader() {
           </div>
           <div className="u-clearfix u-section-row u-section-row-2" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">
             <div className="u-clearfix u-sheet u-valign-middle u-valign-middle-xxl u-sheet-2">
-              <a href="#" className="u-image u-logo u-image-1" data-image-width="581" data-image-height="268">
+              <Link to="/" className="u-image u-logo u-image-1" data-image-width="581" data-image-height="268">
                 <img src="/images/logo-smart3.png" className="u-logo-image u-logo-image-1" />
-              </a>
+              </Link>
               <nav className="u-dropdown-icon u-menu u-menu-dropdown u-offcanvas u-menu-1" data-responsive-from="MD" role="navigation">
                 <div className="menu-collapse" style={{ fontSize: "1rem", letterSpacing: "0px", fontWeight: "700" }}>
                   <a className="u-button-style u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-text-hover-color u-custom-top-bottom-menu-spacing u-hamburger-link u-nav-link u-text-active-palette-1-base u-text-hover-palette-1-base u-hamburger-link-1" href="#" tabIndex="-1" aria-label={t("k1ey0tzw")} aria-controls="07e9">

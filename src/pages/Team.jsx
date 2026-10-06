@@ -63,9 +63,9 @@ export default function Team() {
           </div>
           <div className="u-clearfix u-section-row u-section-row-2" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">
             <div className="u-clearfix u-sheet u-valign-middle u-valign-middle-xxl u-sheet-2">
-              <a href="#" className="u-image u-logo u-image-1" data-image-width="581" data-image-height="268">
+              <Link to="/" className="u-image u-logo u-image-1" data-image-width="581" data-image-height="268">
                 <img src="/images/logo-smart3.png" className="u-logo-image u-logo-image-1" />
-              </a>
+              </Link>
               <nav className="u-dropdown-icon u-menu u-menu-dropdown u-offcanvas u-menu-1" data-responsive-from="MD" role="navigation">
                 <div className="menu-collapse" style={{ fontSize: "1rem", letterSpacing: "0px", fontWeight: "700" }}>
                   <a className="u-button-style u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-text-hover-color u-custom-top-bottom-menu-spacing u-hamburger-link u-nav-link u-text-active-palette-1-base u-text-hover-palette-1-base u-hamburger-link-1" href="#" tabIndex="-1" aria-label={t("k1ey0tzw")} aria-controls="07e9">
@@ -336,7 +336,7 @@ export default function Team() {
                 </div>
                 <div className="u-container-align-left u-container-style u-layout-cell u-size-24-lg u-size-28-xl u-size-60-md u-size-60-sm u-size-60-xs u-layout-cell-2">
                   <div className="u-container-layout u-valign-middle u-container-layout-2">
-                    <a href="#" className="u-active-white u-align-left u-border-active-white u-border-hover-white u-border-none u-btn u-btn-round u-button-style u-hover-white u-palette-1-base u-radius-50 u-text-active-black u-text-body-alt-color u-text-hover-black u-btn-1" data-animation-name="customAnimationIn" data-animation-duration="1000" data-animation-delay="700">{t("k1y0xgct")}</a>
+                    <Link to="/contact" className="u-active-white u-align-left u-border-active-white u-border-hover-white u-border-none u-btn u-btn-round u-button-style u-hover-white u-palette-1-base u-radius-50 u-text-active-black u-text-body-alt-color u-text-hover-black u-btn-1" data-animation-name="customAnimationIn" data-animation-duration="1000" data-animation-delay="700">{t("k1y0xgct")}</Link>
                   </div>
                 </div>
               </div>
@@ -348,9 +348,9 @@ export default function Team() {
               <div className="u-layout-row">
                 <div className="u-container-style u-layout-cell u-size-20-lg u-size-20-xl u-size-30-md u-size-30-sm u-size-30-xs u-layout-cell-3">
                   <div className="u-container-layout u-valign-top u-container-layout-3">
-                    <a href="" className="u-image u-logo u-image-1" data-image-width="581" data-image-height="268">
+                    <Link to="/" className="u-image u-logo u-image-1" data-image-width="581" data-image-height="268">
                       <img src="/images/logo-smart-white.png" className="u-logo-image u-logo-image-1" alt={t("kufdz22")} />
-                    </a>
+                    </Link>
                     <p className="u-text u-text-default u-text-3">{t("kslsd0i")}</p>
                     <p className="u-text u-text-default u-text-4">
                       <span className="u-file-icon u-icon u-text-white u-icon-1">
@@ -361,7 +361,7 @@ export default function Team() {
                       {t("keasi26")}
                     </p>
                     <p className="u-text u-text-default u-text-palette-1-light-1 u-text-5">
-                      <a href="#" className="u-active-none u-border-1 u-border-active-white u-border-hover-white u-border-no-left u-border-no-right u-border-no-top u-border-palette-1-dark-1 u-btn u-button-link u-button-style u-hover-none u-none u-text-active-white u-text-hover-white u-text-palette-1-base u-btn-2">{t("k1j7wnjb")}</a>
+                      <a href="https://www.google.com/maps/search/?api=1&query=Douala+3e+Ngodi-Bakoko+Chefferie+Cameroun" target="_blank" rel="noopener noreferrer" className="u-active-none u-border-1 u-border-active-white u-border-hover-white u-border-no-left u-border-no-right u-border-no-top u-border-palette-1-dark-1 u-btn u-button-link u-button-style u-hover-none u-none u-text-active-white u-text-hover-white u-text-palette-1-base u-btn-2">{t("k1j7wnjb")}</a>
                     </p>
                     <div className="u-social-icons u-social-icons-1">
                       <a className="u-social-url" title={t("kpn9s1d")} target="_blank" rel="noopener" href="https://facebook.com/sisiasarl">

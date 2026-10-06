@@ -72,9 +72,9 @@ export default function About() {
           </div>
           <div className="u-clearfix u-section-row u-section-row-2" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">
             <div className="u-clearfix u-sheet u-valign-middle u-valign-middle-xxl u-sheet-2">
-              <a href="#" className="u-image u-logo u-image-1" data-image-width="581" data-image-height="268">
+              <Link to="/" className="u-image u-logo u-image-1" data-image-width="581" data-image-height="268">
                 <img src="/images/logo-smart3.png" className="u-logo-image u-logo-image-1" />
-              </a>
+              </Link>
               <nav className="u-dropdown-icon u-menu u-menu-dropdown u-offcanvas u-menu-1" data-responsive-from="MD" role="navigation">
                 <div className="menu-collapse" style={{ fontSize: "1rem", letterSpacing: "0px", fontWeight: "700" }}>
                   <a className="u-button-style u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-text-hover-color u-custom-top-bottom-menu-spacing u-hamburger-link u-nav-link u-text-active-palette-1-base u-text-hover-palette-1-base u-hamburger-link-1" href="#" tabIndex="-1" aria-label={t("k1ey0tzw")} aria-controls="07e9">
@@ -193,25 +193,25 @@ export default function About() {
             <div className="u-repeater u-repeater-1" style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", gap: "24px" }}>
               <div className="u-container-align-center u-container-style u-list-item u-radius-50 u-repeater-item u-shape-round u-white" data-animation-direction="Up" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="250" style={{ width: "300px", minWidth: "250px" }}>
                 <div className="u-container-layout u-similar-container u-valign-top">
-                  <h4 className="u-align-center u-text u-text-palette-1-base" style={{ color: "#DC2F3C !important", fontWeight: "500 !important" }}>{t("k1rkb06b")}</h4>
+                  <h4 className="u-align-center u-text u-text-palette-1-base" style={{ color: "var(--accent-text, #DC2F3C)", fontWeight: "500" }}>{t("k1rkb06b")}</h4>
                   <p className="u-align-center u-text">{t("k1wqgs7q")}</p>
                 </div>
               </div>
               <div className="u-container-align-center u-container-style u-list-item u-radius-50 u-repeater-item u-shape-round u-white" data-animation-direction="Up" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="400" style={{ width: "300px", minWidth: "250px" }}>
                 <div className="u-container-layout u-similar-container u-valign-top">
-                  <h4 className="u-align-center u-text u-text-palette-1-base" style={{ color: "#DC2F3C !important", fontWeight: "500 !important" }}>{t("k9os8r0")}</h4>
+                  <h4 className="u-align-center u-text u-text-palette-1-base" style={{ color: "var(--accent-text, #DC2F3C)", fontWeight: "500" }}>{t("k9os8r0")}</h4>
                   <p className="u-align-center u-text">{t("khufwmt")}</p>
                 </div>
               </div>
               <div className="u-container-align-center u-container-style u-list-item u-radius-50 u-repeater-item u-shape-round u-white" data-animation-direction="Up" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="550" style={{ width: "300px", minWidth: "250px" }}>
                 <div className="u-container-layout u-similar-container u-valign-top">
-                  <h4 className="u-align-center u-text u-text-palette-1-base" style={{ color: "#DC2F3C !important", fontWeight: "500 !important" }}>{t("k1172jzf")}</h4>
+                  <h4 className="u-align-center u-text u-text-palette-1-base" style={{ color: "var(--accent-text, #DC2F3C)", fontWeight: "500" }}>{t("k1172jzf")}</h4>
                   <p className="u-align-center u-text">{t("kfhvmov")}</p>
                 </div>
               </div>
               <div className="u-container-align-center u-container-style u-list-item u-radius-50 u-repeater-item u-shape-round u-white" data-animation-direction="Up" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="700" style={{ width: "300px", minWidth: "250px" }}>
                 <div className="u-container-layout u-similar-container u-valign-top">
-                  <h4 className="u-align-center u-text u-text-palette-1-base" style={{ color: "#DC2F3C !important", fontWeight: "500 !important" }}>{t("kc72sgk")}</h4>
+                  <h4 className="u-align-center u-text u-text-palette-1-base" style={{ color: "var(--accent-text, #DC2F3C)", fontWeight: "500" }}>{t("kc72sgk")}</h4>
                   <p className="u-align-center u-text">{t("k1awqjyj")}</p>
                 </div>
               </div>
@@ -327,7 +327,7 @@ export default function About() {
                 <div className="u-container-layout u-similar-container u-valign-bottom u-container-layout-1">
                   <div className="u-black u-container-align-left u-container-style u-expanded-width u-group u-opacity u-opacity-55 u-group-1">
                     <div className="u-container-layout u-valign-top u-container-layout-2">
-                      <h3 className="u-align-left u-text u-text-default u-text-3" style={{ color: "#DC2F3C !important", fontWeight: "500 !important" }} data-animation-name="customAnimationIn" data-animation-duration="1750" data-animation-delay="500">{t("klcb7ip")}</h3>
+                      <h3 className="u-align-left u-text u-text-default u-text-3" style={{ color: "var(--accent-text, #DC2F3C)", fontWeight: "500" }} data-animation-name="customAnimationIn" data-animation-duration="1750" data-animation-delay="500">{t("klcb7ip")}</h3>
                       <p className="u-align-left u-text u-text-default u-text-4" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500">{t("kanl74b")}</p>
                     </div>
                   </div>
@@ -337,7 +337,7 @@ export default function About() {
                 <div className="u-container-layout u-similar-container u-valign-bottom u-container-layout-3">
                   <div className="u-black u-container-style u-expanded-width u-group u-opacity u-opacity-55 u-group-2">
                     <div className="u-container-layout u-valign-top u-container-layout-4">
-                      <h3 className="u-align-left u-text u-text-default u-text-5" style={{ color: "#DC2F3C !important", fontWeight: "500 !important" }} data-animation-name="customAnimationIn" data-animation-duration="1750" data-animation-delay="500">{t("k1067bq6")}</h3>
+                      <h3 className="u-align-left u-text u-text-default u-text-5" style={{ color: "var(--accent-text, #DC2F3C)", fontWeight: "500" }} data-animation-name="customAnimationIn" data-animation-duration="1750" data-animation-delay="500">{t("k1067bq6")}</h3>
                       <p className="u-align-left u-text u-text-default u-text-6" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500">{t("kr3hli")}</p>
                     </div>
                   </div>
@@ -347,7 +347,7 @@ export default function About() {
                 <div className="u-container-layout u-similar-container u-valign-bottom u-container-layout-5">
                   <div className="u-black u-container-style u-expanded-width u-group u-opacity u-opacity-55 u-group-3">
                     <div className="u-container-layout u-valign-top u-container-layout-6">
-                      <h3 className="u-align-left u-text u-text-default u-text-7" style={{ color: "#DC2F3C !important", fontWeight: "500 !important" }} data-animation-name="customAnimationIn" data-animation-duration="1750" data-animation-delay="500">{t("k1aovx25")}</h3>
+                      <h3 className="u-align-left u-text u-text-default u-text-7" style={{ color: "var(--accent-text, #DC2F3C)", fontWeight: "500" }} data-animation-name="customAnimationIn" data-animation-duration="1750" data-animation-delay="500">{t("k1aovx25")}</h3>
                       <p className="u-align-left u-text u-text-default u-text-8" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500">{t("kfzndaj")}</p>
                     </div>
                   </div>
@@ -357,7 +357,7 @@ export default function About() {
                 <div className="u-container-layout u-similar-container u-valign-bottom u-container-layout-7">
                   <div className="u-black u-container-style u-expanded-width u-group u-opacity u-opacity-55 u-group-4">
                     <div className="u-container-layout u-valign-top u-container-layout-8">
-                      <h3 className="u-align-left u-text u-text-default u-text-9" style={{ color: "#DC2F3C !important", fontWeight: "500 !important" }} data-animation-name="customAnimationIn" data-animation-duration="1750" data-animation-delay="500">{t("k5s1ek0")}</h3>
+                      <h3 className="u-align-left u-text u-text-default u-text-9" style={{ color: "var(--accent-text, #DC2F3C)", fontWeight: "500" }} data-animation-name="customAnimationIn" data-animation-duration="1750" data-animation-delay="500">{t("k5s1ek0")}</h3>
                       <p className="u-align-left u-text u-text-default u-text-10" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500">{t("k1umlnn8")}</p>
                     </div>
                   </div>
@@ -367,7 +367,7 @@ export default function About() {
                 <div className="u-container-layout u-similar-container u-valign-bottom u-container-layout-9">
                   <div className="u-black u-container-style u-expanded-width u-group u-opacity u-opacity-55 u-group-5">
                     <div className="u-container-layout u-valign-top u-container-layout-10">
-                      <h3 className="u-align-left u-text u-text-default u-text-11" style={{ color: "#DC2F3C !important", fontWeight: "500 !important" }} data-animation-name="customAnimationIn" data-animation-duration="1750" data-animation-delay="500">{t("k1ey7ofs")}</h3>
+                      <h3 className="u-align-left u-text u-text-default u-text-11" style={{ color: "var(--accent-text, #DC2F3C)", fontWeight: "500" }} data-animation-name="customAnimationIn" data-animation-duration="1750" data-animation-delay="500">{t("k1ey7ofs")}</h3>
                       <p className="u-align-left u-text u-text-default u-text-12" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500">{t("k1ok2kvu")}</p>
                     </div>
                   </div>
@@ -377,7 +377,7 @@ export default function About() {
                 <div className="u-container-layout u-similar-container u-valign-bottom u-container-layout-11">
                   <div className="u-black u-container-style u-expanded-width u-group u-opacity u-opacity-55 u-group-6">
                     <div className="u-container-layout u-valign-top u-container-layout-12">
-                      <h3 className="u-align-left u-text u-text-default u-text-13" style={{ color: "#DC2F3C !important", fontWeight: "500 !important" }} data-animation-name="customAnimationIn" data-animation-duration="1750" data-animation-delay="500">{t("k1dwjci5")}</h3>
+                      <h3 className="u-align-left u-text u-text-default u-text-13" style={{ color: "var(--accent-text, #DC2F3C)", fontWeight: "500" }} data-animation-name="customAnimationIn" data-animation-duration="1750" data-animation-delay="500">{t("k1dwjci5")}</h3>
                       <p className="u-align-left u-text u-text-default u-text-14" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500">{t("k1rzeii7")}</p>
                     </div>
                   </div>
@@ -474,7 +474,7 @@ export default function About() {
                           {t("k1meojr6")}
                         </li>
                       </ul>
-                      <a href="#" className="u-active-grey-80 u-align-center u-border-2 u-border-active-grey-80 u-border-hover-grey-80 u-border-palette-1-light-1 u-btn u-btn-round u-button-style u-hover-grey-80 u-none u-radius u-btn-1" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">{t("kh03c8o")}</a>
+                      <Link to="/services" className="u-active-grey-80 u-align-center u-border-2 u-border-active-grey-80 u-border-hover-grey-80 u-border-palette-1-light-1 u-btn u-btn-round u-button-style u-hover-grey-80 u-none u-radius u-btn-1" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">{t("kh03c8o")}</Link>
                     </div>
                   </div>
                 </div>
@@ -547,7 +547,7 @@ export default function About() {
                   </div>
                   <div className="u-container-align-left u-container-style u-layout-cell u-size-24-lg u-size-28-xl u-size-60-md u-size-60-sm u-size-60-xs u-layout-cell-2">
                     <div className="u-container-layout u-valign-middle u-container-layout-2">
-                      <a href="#" className="u-active-white u-align-left u-border-active-white u-border-hover-white u-border-none u-btn u-btn-round u-button-style u-hover-white u-palette-1-base u-radius-50 u-text-active-black u-text-body-alt-color u-text-hover-black u-btn-1" data-animation-name="customAnimationIn" data-animation-duration="1000" data-animation-delay="700">{" " + t("k1y0xgct") + ""}</a>
+                      <Link to="/contact" className="u-active-white u-align-left u-border-active-white u-border-hover-white u-border-none u-btn u-btn-round u-button-style u-hover-white u-palette-1-base u-radius-50 u-text-active-black u-text-body-alt-color u-text-hover-black u-btn-1" data-animation-name="customAnimationIn" data-animation-duration="1000" data-animation-delay="700">{" " + t("k1y0xgct") + ""}</Link>
                     </div>
                   </div>
                 </div>
@@ -559,9 +559,9 @@ export default function About() {
                 <div className="u-layout-row">
                   <div className="u-container-style u-layout-cell u-size-20-lg u-size-20-xl u-size-30-md u-size-30-sm u-size-30-xs u-layout-cell-3">
                     <div className="u-container-layout u-valign-top u-container-layout-3">
-                      <a href="" className="u-image u-logo u-image-1" data-image-width="581" data-image-height="268">
+                      <Link to="/" className="u-image u-logo u-image-1" data-image-width="581" data-image-height="268">
                         <img src="/images/logo-smart-white.png" className="u-logo-image u-logo-image-1" />
-                      </a>
+                      </Link>
                       <p className="u-text u-text-default u-text-3">{t("kslsd0i")}</p>
                       <p className="u-text u-text-default u-text-4">
                         <span className="u-file-icon u-icon u-text-white u-icon-1">
@@ -572,7 +572,7 @@ export default function About() {
                         {t("keasi26")}
                       </p>
                       <p className="u-text u-text-default u-text-palette-1-light-1 u-text-5">
-                        <a href="#" className="u-active-none u-border-1 u-border-active-white u-border-hover-white u-border-no-left u-border-no-right u-border-no-top u-border-palette-1-dark-1 u-btn u-button-link u-button-style u-hover-none u-none u-text-active-white u-text-hover-white u-text-palette-1-base u-btn-2">{t("k1j7wnjb")}</a>
+                        <a href="https://www.google.com/maps/search/?api=1&query=Douala+3e+Ngodi-Bakoko+Chefferie+Cameroun" target="_blank" rel="noopener noreferrer" className="u-active-none u-border-1 u-border-active-white u-border-hover-white u-border-no-left u-border-no-right u-border-no-top u-border-palette-1-dark-1 u-btn u-button-link u-button-style u-hover-none u-none u-text-active-white u-text-hover-white u-text-palette-1-base u-btn-2">{t("k1j7wnjb")}</a>
                       </p>
                       <div className="u-social-icons u-social-icons-1">
                         <a className="u-social-url" title={t("kpn9s1d")} target="_blank" href="https://www.facebook.com/profile.php?id=100064127498498">

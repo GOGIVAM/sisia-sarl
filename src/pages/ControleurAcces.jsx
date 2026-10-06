@@ -282,9 +282,9 @@ export default function ControleurAcces() {
               <div className="u-layout-row">
                 <div className="u-container-style u-layout-cell u-size-20-lg u-size-20-xl u-size-30-md u-size-30-sm u-size-30-xs u-layout-cell-3">
                   <div className="u-container-layout u-valign-top u-container-layout-3">
-                    <a href="" className="u-image u-logo u-image-1" data-image-width="581" data-image-height="268">
+                    <Link to="/" className="u-image u-logo u-image-1" data-image-width="581" data-image-height="268">
                       <img src="/images/logo-smart-white.png" className="u-logo-image u-logo-image-1" alt={t("kufdz22")} />
-                    </a>
+                    </Link>
                     <p className="u-text u-text-default u-text-3">{t("kslsd0i")}</p>
                     <p className="u-text u-text-default u-text-4">
                       <span className="u-file-icon u-icon u-text-white u-icon-1">
@@ -295,7 +295,7 @@ export default function ControleurAcces() {
                       {t("keasi26")}
                     </p>
                     <p className="u-text u-text-default u-text-palette-1-light-1 u-text-5">
-                      <a href="#" className="u-active-none u-border-1 u-border-active-white u-border-hover-white u-border-no-left u-border-no-right u-border-no-top u-border-palette-1-dark-1 u-btn u-button-link u-button-style u-hover-none u-none u-text-active-white u-text-hover-white u-text-palette-1-base u-btn-2">{t("k1j7wnjb")}</a>
+                      <a href="https://www.google.com/maps/search/?api=1&query=Douala+3e+Ngodi-Bakoko+Chefferie+Cameroun" target="_blank" rel="noopener noreferrer" className="u-active-none u-border-1 u-border-active-white u-border-hover-white u-border-no-left u-border-no-right u-border-no-top u-border-palette-1-dark-1 u-btn u-button-link u-button-style u-hover-none u-none u-text-active-white u-text-hover-white u-text-palette-1-base u-btn-2">{t("k1j7wnjb")}</a>
                     </p>
                     <div className="u-social-icons u-social-icons-1">
                       <a className="u-social-url" title={t("kpn9s1d")} target="_blank" href="https://www.facebook.com/profile.php?id=100064127498498">

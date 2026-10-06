@@ -1,12 +1,14 @@
 import { useEffect, useLayoutEffect } from 'react';
+import { setupGallery } from './gallery.js';
+import { setupAccordion, setupListNav } from './widgets.js';
 
 const ANIM_ALIASES = { flipIn: (el) => 'flipIn' + (el.getAttribute('data-animation-direction') || 'X') };
 
-/** Menu hors-champ (hamburger) : reprise du comportement de nicepage.js. */
+/** Menu hors-champ (hamburger) : la classe open se pose sur le <nav class=u-menu>, comme nicepage.js. */
 function setupMenu(signal) {
   const body = document.body;
-  const open = (panel) => { panel.classList.add('open'); body.classList.add('u-offcanvas-opened'); };
-  const close = (panel) => { panel.classList.remove('open'); body.classList.remove('u-offcanvas-opened'); };
+  const open = (nav) => { nav.classList.add('open'); body.classList.add('u-offcanvas-opened'); document.body.style.overflow = 'hidden'; };
+  const close = (nav) => { nav.classList.remove('open'); body.classList.remove('u-offcanvas-opened'); document.body.style.overflow = ''; };
 
   document.addEventListener('click', (e) => {
     const t = e.target;
@@ -14,19 +16,18 @@ function setupMenu(signal) {
     const burger = t.closest('.u-hamburger-link');
     if (burger) {
       e.preventDefault();
-      const nav = burger.closest('nav');
-      const panel = nav && nav.querySelector('.u-nav-container-collapse');
-      if (panel) panel.classList.contains('open') ? close(panel) : open(panel);
+      const nav = burger.closest('.u-menu');
+      if (nav) nav.classList.contains('open') ? close(nav) : open(nav);
       return;
     }
-    const opened = document.querySelector('.u-nav-container-collapse.open');
+    const opened = document.querySelector('.u-menu.open');
     if (!opened) return;
     if (t.closest('.u-menu-close') || t.closest('.u-menu-overlay') || t.closest('.u-sidenav a[href]:not([href="#"])')) close(opened);
   }, { signal });
 
   document.addEventListener('keydown', (e) => {
     if (e.key !== 'Escape') return;
-    const opened = document.querySelector('.u-nav-container-collapse.open');
+    const opened = document.querySelector('.u-menu.open');
     if (opened) close(opened);
   }, { signal });
 }
@@ -204,9 +205,13 @@ export function useLegacyBehaviors() {
     setupMenu(c.signal);
     setupServicesCarousel(c.signal);
     setupTestimonials(c.signal);
+    setupGallery(c.signal);
+    setupAccordion(c.signal);
+    setupListNav(c.signal);
     return () => {
       c.abort();
       document.body.classList.remove('u-offcanvas-opened');
+      document.body.style.overflow = '';
     };
   }, []);
 }

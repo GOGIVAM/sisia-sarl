@@ -1,0 +1,150 @@
+/* =========================================================================
+   SISIA : formes et composants (boutons, cartes, champs, pastilles)
+   Langage visuel unique : pilule pour les actions, 24 px pour les cartes,
+   ombres douces teintées marine, un seul bleu d'action.
+   ========================================================================= */
+:root {
+  --r-xs: 6px;
+  --r-sm: 8px;
+  --r-md: 12px;
+  --r-lg: 16px;
+  --r-btn: 10px;
+  --r-pill: 999px;
+  --sh-1: 0 1px 2px rgba(15, 23, 42, 0.05), 0 8px 22px rgba(11, 27, 58, 0.07);
+  --sh-2: 0 2px 4px rgba(15, 23, 42, 0.06), 0 22px 46px rgba(11, 27, 58, 0.16);
+  --ring: 0 0 0 4px rgba(46, 90, 172, 0.25);
+}
+
+/* ---- Boutons : une seule forme ---------------------------------------- */
+html body .u-btn:not(.u-button-link):not(.u-hamburger-link):not(.u-nav-link):not(.u-accordion-link):not(.u-gallery-nav),
+html body .btn-pill, html body .service-cta-btn, html body .supervision-btn, html body .supervision-cta-btn,
+html body .submit-review-btn, html body .add-review-btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+  min-height: 50px; padding: 0 30px !important; border-radius: var(--r-btn) !important;
+  font: 600 15px/1 var(--font-head) !important; letter-spacing: 0.02em !important; text-transform: none !important;
+  border-width: 2px; border-style: solid; text-decoration: none; cursor: pointer;
+  transition: background-color 0.25s, color 0.25s, border-color 0.25s, box-shadow 0.35s var(--ease), transform 0.35s var(--ease);
+}
+html body .u-btn:not(.u-button-link):not(.u-hamburger-link):not(.u-nav-link):not(.u-accordion-link):not(.u-gallery-nav):hover,
+html body .btn-pill:hover, html body .service-cta-btn:hover, html body .supervision-btn:hover, html body .supervision-cta-btn:hover,
+html body .submit-review-btn:hover, html body .add-review-btn:hover { transform: translateY(-2px); box-shadow: var(--sh-2); }
+html body .u-btn:not(.u-button-link):active, html body .btn-pill:active, html body .service-cta-btn:active { transform: translateY(0); box-shadow: var(--sh-1); }
+html body .u-btn:focus-visible, html body .btn-pill:focus-visible, html body .service-cta-btn:focus-visible { outline: 0; box-shadow: var(--ring); }
+
+/* principal : bleu plein */
+html body .u-btn.u-btn-1.u-btn-round.u-none:not(.u-btn-submit):not([class*="u-text-"]),
+html body .u-btn.u-palette-1-base, html body .u-btn.u-btn-submit, html body .btn-pill:not(.btn-pill--ghost),
+html body .service-cta-btn, html body .submit-review-btn, html body .add-review-btn {
+  background: linear-gradient(135deg, var(--brand), var(--brand-600)) !important; background-color: var(--brand) !important;
+  border-color: var(--brand) !important; color: #fff !important;
+  box-shadow: 0 10px 24px rgba(46, 90, 172, 0.28);
+}
+html body .u-btn.u-btn-1.u-btn-round.u-none:not(.u-btn-submit):not([class*="u-text-"]):hover,
+html body .u-btn.u-palette-1-base:hover, html body .u-btn.u-btn-submit:hover, html body .btn-pill:not(.btn-pill--ghost):hover,
+html body .service-cta-btn:hover, html body .submit-review-btn:hover, html body .add-review-btn:hover {
+  background: linear-gradient(135deg, var(--brand-600), var(--navy-2)) !important; border-color: var(--brand-600) !important; color: #fff !important;
+}
+/* secondaire : contour bleu qui se remplit */
+html body .btn-pill--ghost, html body .u-btn.u-palette-1-light-1 {
+  background: transparent !important; background-image: none !important; color: var(--brand) !important; border-color: var(--brand) !important; box-shadow: none;
+}
+html body .btn-pill--ghost:hover, html body .u-btn.u-palette-1-light-1:hover { background: var(--brand) !important; color: #fff !important; }
+/* boutons sur fond sombre : blanc */
+html body .service-cta-section .service-cta-btn, html body .supervision-cta .supervision-btn, html body .supervision-cta-btn {
+  background: #fff !important; background-image: none !important; color: var(--navy) !important; border-color: #fff !important; box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+}
+html body .service-cta-section .service-cta-btn:hover, html body .supervision-cta .supervision-btn:hover, html body .supervision-cta-btn:hover {
+  background: var(--sky) !important; border-color: var(--sky) !important; color: var(--brand-600) !important;
+}
+/* "En savoir plus" : lien fléché */
+html body .u-layout-cell .u-btn.u-btn-round.u-none.u-text-body-a {
+  min-height: 0; padding: 6px 4px !important; border-color: transparent !important; border-bottom: 2px solid var(--brand) !important; border-radius: 0 !important;
+  color: var(--brand) !important; background: none !important; box-shadow: none !important;
+}
+
+/* ---- Cartes : même rayon, même ombre ---------------------------------- */
+html body .u-layout-cell.u-shape-round, html body .u-layout-cell.u-radius {
+  border: 0 !important; border-radius: var(--r-lg) !important; box-shadow: var(--sh-1) !important;
+  transition: transform 0.4s var(--ease), box-shadow 0.4s var(--ease);
+}
+html body .u-layout-cell.u-shape-round:hover { transform: translateY(-6px); box-shadow: var(--sh-2) !important; }
+html body .u-layout-cell.u-shape-round .u-image, html body .u-layout-cell.u-shape-round img { border-radius: var(--r-md); }
+html body .u-radius, html body .u-radius-50, html body .u-radius-30, html body .u-radius-20, html body .u-radius-10 { --radius: var(--r-btn) !important; }
+html body .u-list-item.u-repeater-item.u-container-style, html body .service-card, html body .testimonial-card,
+html body .supervision-card, html body .contact-card { border-radius: var(--r-lg); }
+html body .u-list-item.u-repeater-item.u-white, html body .service-card { border: 1px solid var(--line); box-shadow: var(--sh-1); }
+html body .u-list-item.u-repeater-item:hover, html body .service-card:hover { box-shadow: var(--sh-2); }
+html body .u-group.u-radius, html body .u-container-style.u-radius { border-radius: var(--r-lg); }
+html body .u-image.u-radius, html body img.u-radius, html body .u-image-round { border-radius: var(--r-lg); }
+
+/* ---- Icônes en pastille ------------------------------------------------ */
+html body .u-icon.u-icon-circle.u-palette-1-light-1 { background: linear-gradient(135deg, var(--brand), var(--brand-600)) !important; color: #fff !important; box-shadow: 0 10px 22px rgba(46, 90, 172, 0.3); }
+html body .service-card-icon, html body .service-highlight-icon { background: linear-gradient(135deg, var(--brand), var(--brand-600)) !important; border-radius: var(--r-md) !important; }
+
+/* ---- Intertitres h3 : bleu sur fond clair, blanc sur fond sombre ------- */
+html body section:not([class*="u-image"]):not([class*="u-shading"]) h3.u-text:not(.u-text-palette-1-base) { color: var(--brand-600) !important; }
+html body .u-black h3.u-text, html body .u-shading h3.u-text, html body [class*="u-image"] > .u-container-layout h3.u-text { color: #fff !important; }
+
+/* ---- Champs de formulaire ---------------------------------------------- */
+html body .u-input, html body input.u-input, html body textarea.u-input, html body select.u-input {
+  border-radius: var(--r-sm) !important; border: 1.5px solid var(--line) !important; background: #fff !important;
+  min-height: 50px; padding: 12px 16px !important; font: 400 16px/1.4 var(--font-body) !important; color: var(--ink) !important;
+  transition: border-color 0.25s, box-shadow 0.25s;
+}
+html body textarea.u-input { min-height: 130px; }
+html body .u-input:hover { border-color: #b8c5dc !important; }
+html body .u-input:focus { outline: 0; border-color: var(--brand) !important; box-shadow: var(--ring); }
+html body .u-form-group .u-label, html body .u-label { font: 600 14px/1.3 var(--font-head) !important; color: var(--navy) !important; margin-bottom: 8px; }
+html body .u-form { border-radius: var(--r-lg) !important; }
+html body .u-form-send-success, html body .u-form-send-error { border-radius: var(--r-sm); padding: 14px 18px; font-weight: 600; margin-top: 14px; }
+html body .u-form-send-success { background: #e8f7ee; color: #15663a; }
+html body .u-form-send-error { background: #fdecec; color: #a32020; }
+
+/* ---- Pastilles, badges, flèches de carrousel -------------------------- */
+html body .service-hero-badge, html body .testimonials-badge, html body .section-badge {
+  border-radius: var(--r-xs) !important; padding: 8px 14px; letter-spacing: 0.12em; font: 700 12px/1 var(--font-head);
+}
+html body .carousel-btn, html body .testimonial-nav, html body .u-gallery-nav { border-radius: var(--r-md) !important; box-shadow: var(--sh-1); transition: transform 0.3s var(--ease), box-shadow 0.3s, background 0.2s; }
+html body .carousel-btn:hover, html body .testimonial-nav:hover, html body .u-gallery-nav:hover { transform: scale(1.08); box-shadow: var(--sh-2); }
+html body .u-gallery-nav { background: rgba(255, 255, 255, 0.9) !important; }
+
+/* ---- Liste horizontale (À propos) : sans barre, avec accroche ---------- */
+html body .u-layout-horizontal .u-repeater { scrollbar-width: none; scroll-snap-type: x mandatory; -ms-overflow-style: none; }
+html body .u-layout-horizontal .u-repeater::-webkit-scrollbar { display: none; }
+html body .u-layout-horizontal .u-repeater-item { scroll-snap-align: start; }
+
+/* ---- Accordéon FAQ ----------------------------------------------------- */
+html body .u-accordion-link { border-radius: var(--r-md) !important; cursor: pointer; transition: background 0.25s, color 0.25s, box-shadow 0.3s; font-family: var(--font-head) !important; font-weight: 500; }
+html body .u-accordion-link.active { background: var(--sky) !important; color: var(--brand) !important; box-shadow: var(--sh-1); }
+html body .u-accordion-pane { border-radius: 0 0 var(--r-md) var(--r-md); }
+html body .u-accordion-link .u-accordion-link-icon { transition: transform 0.35s var(--ease); }
+html body .u-accordion-link.active .u-accordion-link-icon { transform: rotate(180deg); }
+
+/* ---- Séparateurs et filets -------------------------------------------- */
+html body hr { border: 0; height: 1px; background: var(--line); }
+
+/* ---- Variable de couleur d'intertitre (remplace les rouges codés en dur) -- */
+:root { --accent-text: var(--brand-600); }
+.u-black, .u-shading, .u-image, section[class*="u-image"], footer, .service-hero, .service-cta-section { --accent-text: #ffffff; }
+
+/* ---- Boutons clairs du gabarit (bleu-gris) -> bleu de marque ------------- */
+html body a.u-btn.u-btn.u-palette-1-light-1, html body .u-btn.u-btn.u-btn-round.u-palette-1-light-1 {
+  background: var(--sky) !important; background-color: var(--sky) !important; background-image: none !important;
+  color: var(--brand-600) !important; border: 2px solid var(--sky) !important; box-shadow: none !important;
+}
+html body a.u-btn.u-btn.u-palette-1-light-1:hover { background: var(--brand) !important; background-color: var(--brand) !important; border-color: var(--brand) !important; color: #fff !important; }
+
+/* ---- Boutons contour (email, téléphone, "En savoir plus") : bleu --------- */
+html body .u-layout-cell .u-btn.u-none:not(.u-button-link):not([class*="u-palette-"]),
+html body .u-container-style .u-btn.u-btn-round.u-none.u-btn-1:not([class*="u-palette-"]),
+html body .u-section-5 .u-btn.u-none:not(.u-button-link) {
+  color: var(--brand) !important; border-color: var(--brand) !important; background: transparent !important;
+}
+html body .u-layout-cell .u-btn.u-none:not(.u-button-link):not([class*="u-palette-"]):hover { background: var(--brand) !important; color: #fff !important; }
+/* sur fond sombre : contour blanc */
+html body .u-black .u-btn.u-none:not(.u-button-link), html body .u-shading .u-btn.u-none:not(.u-button-link), html body [class*="u-image"] > .u-container-layout .u-btn.u-none:not(.u-button-link) {
+  color: #fff !important; border-color: #fff !important;
+}
+
+/* ---- Titres en capitales : interlettrage neutre (le serrage nuit à la lisibilité) */
+html body .u-section-1 h1, html body h1.u-text[class*="u-text-"] { letter-spacing: 0 !important; }

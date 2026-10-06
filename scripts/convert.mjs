@@ -91,6 +91,16 @@ function fnv(str) {
   for (const ch of Buffer.from(str, 'utf8')) { h ^= ch; h = Math.imul(h, 0x01000193) >>> 0; }
   return h.toString(36);
 }
+// Boutons du gabarit Nicepage laissés en href="#" : [libellé, destination]
+const MAPS = 'https://www.google.com/maps/search/?api=1&query=Douala+3e+Ngodi-Bakoko+Chefferie+Cameroun';
+const HASH_LINKS = [
+  [/talk to an expert|parler à un expert/, '/contact'],
+  [/show on map|voir la carte|voir sur la carte/, MAPS],
+  [/découvrir sisia/, '/services'],
+  [/demander un devis|nous contacter|contactez-nous/, '/contact'],
+  [/découvrir nos solutions|voir nos services|en savoir plus|voir plus/, '/services'],
+  [/appeler/, 'tel:+237676246478'],
+];
 const TR_ATTRS = new Set(['alt', 'title', 'placeholder', 'aria-label']);
 
 // ------------------------------------------------------------ attributs ----
@@ -147,7 +157,10 @@ function parseStyle(str) {
     const prop = d.slice(0, i).trim();
     let val = d.slice(i + 1).trim();
     if (!prop || !val) continue;
-    val = fixCssUrls(val);
+    val = fixCssUrls(val).replace(/\s*!important\s*$/i, '');
+    // titres rouges codés en dur dans le gabarit : couleur pilotée par --accent-text (bleu sur fond clair, blanc sur fond sombre)
+    if (prop === 'color' && /^#(dc2f3c|d42027|e63946|b8232f)$/i.test(val) && !decls.some((x) => /^\s*background/i.test(x))) val = 'var(--accent-text, ' + val + ')';
+    if (prop === 'fill' && /^#(dc2f3c|d42027)$/i.test(val)) val = 'var(--brand)';
     let key;
     if (prop.startsWith('--')) key = JSON.stringify(prop);
     else if (prop.startsWith('-ms-')) key = camel(prop.slice(1));
@@ -185,6 +198,18 @@ function attrString(el, ctx, tag) {
     if (lname.startsWith('on')) { ctx.warnings.push(`attribut ${name} ignoré sur <${tag}>`); continue; }
     if (lname === 'style') { if (val.trim()) out.push(`style=${parseStyle(val)}`); continue; }
 
+    // liens vides ("#", "") : cible déduite du libellé, le logo ramène à l'accueil
+    if (tag === 'a' && lname === 'href' && (val === '#' || val === '')) {
+      const label = DomUtils.textContent(el).replace(/\s+/g, ' ').trim().toLowerCase();
+      const cls = a.class || '';
+      if (/\bu-logo\b/.test(cls)) { out.push('to="/"'); ctx.usesLink = true; ctx.isLink = true; continue; }
+      const hit = HASH_LINKS.find(([re]) => re.test(label));
+      if (hit) {
+        if (hit[1].startsWith('/')) { out.push(`to=${JSON.stringify(hit[1])}`); ctx.usesLink = true; ctx.isLink = true; }
+        else out.push(`href=${JSON.stringify(hit[1])} target="_blank" rel="noopener noreferrer"`);
+        continue;
+      }
+    }
     // liens internes -> routes
     if (tag === 'a' && lname === 'href') {
       const r = toRoute(val, ctx.file);
@@ -391,10 +416,12 @@ function preprocess(html) {
 /** Injections propres à certaines pages (bandeau de logos partenaires sur l'accueil). */
 function inject(name, bodyLines, ctx) {
   if (name !== 'Home') return bodyLines;
-  const i = bodyLines.findIndex((l) => l.trim().startsWith('<footer'));
-  if (i < 0) { ctx.warnings.push('footer introuvable pour PartnersStrip'); return bodyLines; }
-  const pad = bodyLines[i].match(/^\s*/)[0];
-  return [...bodyLines.slice(0, i), pad + '<PartnersStrip />', ...bodyLines.slice(i)];
+  const start = bodyLines.findIndex((l) => /^\s*<section\b/.test(l) && !/<header/.test(l));
+  if (start < 0) { ctx.warnings.push('premiere section introuvable pour PartnersStrip'); return bodyLines; }
+  const pad = bodyLines[start].match(/^\s*/)[0];
+  const end = bodyLines.findIndex((l, i) => i > start && l === pad + '</section>');
+  if (end < 0) { ctx.warnings.push('fin de la premiere section introuvable'); return bodyLines; }
+  return [...bodyLines.slice(0, end + 1), pad + '<PartnersStrip />', ...bodyLines.slice(end + 1)];
 }
 
 /** En-tête et pied de page partagés, générés depuis la page Contact (pour les pages créées à la main). */

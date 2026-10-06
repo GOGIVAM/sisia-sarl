@@ -293,7 +293,7 @@ export default function EnergieSolaire() {
                       {t("keasi26")}
                     </p>
                     <p className="u-text u-text-default u-text-palette-1-light-1 u-text-5">
-                      <a href="#" className="u-active-none u-border-1 u-border-active-white u-border-hover-white u-border-no-left u-border-no-right u-border-no-top u-border-palette-1-dark-1 u-btn u-button-link u-button-style u-hover-none u-none u-text-active-white u-text-hover-white u-text-palette-1-base u-btn-2">{t("k1j7wnjb")}</a>
+                      <a href="https://www.google.com/maps/search/?api=1&query=Douala+3e+Ngodi-Bakoko+Chefferie+Cameroun" target="_blank" rel="noopener noreferrer" className="u-active-none u-border-1 u-border-active-white u-border-hover-white u-border-no-left u-border-no-right u-border-no-top u-border-palette-1-dark-1 u-btn u-button-link u-button-style u-hover-none u-none u-text-active-white u-text-hover-white u-text-palette-1-base u-btn-2">{t("k1j7wnjb")}</a>
                     </p>
                     <div className="u-social-icons u-social-icons-1">
                       <a className="u-social-url" title={t("kpn9s1d")} target="_blank" href="https://www.facebook.com/profile.php?id=100064127498498">

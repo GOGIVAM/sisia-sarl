@@ -214,6 +214,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <PartnersStrip />
       <section className="u-clearfix u-container-align-center u-section-3" id="carousel_1fd3" style={{ minHeight: "700px", padding: "80px 20px", background: "linear-gradient(135deg, #ffffff 0%, #f8f8f8 100%)" }}>
         <div className="u-clearfix u-sheet u-valign-middle u-sheet-1" style={{ width: "100%", maxWidth: "1200px", margin: "0 auto" }}>
           <h2 className="u-align-center u-text u-text-default u-text-1" data-animation-name="customAnimationIn" data-animation-duration="1500">{t("k11u49ca")}</h2>
@@ -282,13 +283,13 @@ export default function Home() {
             </div>
             {" "}
             <button className="carousel-btn prev-btn" aria-label={t("k102kipp")} style={{ position: "absolute", top: "50%", left: "30px", transform: "translateY(-50%)", width: "60px", height: "60px", background: "rgba(255,255,255,0.95)", border: "none", borderRadius: "50%", zIndex: "10", display: "flex", alignItems: "center", justifyContent: "center", boxShadow: "0 5px 20px rgba(0,0,0,0.2)" }}>
-              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style={{ width: "30px", height: "30px", fill: "#DC2F3C" }}>
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style={{ width: "30px", height: "30px", fill: "var(--brand)" }}>
                 <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
               </svg>
             </button>
             {" "}
             <button className="carousel-btn next-btn" aria-label={t("k1g4x8fx")} style={{ position: "absolute", top: "50%", right: "30px", transform: "translateY(-50%)", width: "60px", height: "60px", background: "rgba(255,255,255,0.95)", border: "none", borderRadius: "50%", zIndex: "10", display: "flex", alignItems: "center", justifyContent: "center", boxShadow: "0 5px 20px rgba(0,0,0,0.2)" }}>
-              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style={{ width: "30px", height: "30px", fill: "#DC2F3C" }}>
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style={{ width: "30px", height: "30px", fill: "var(--brand)" }}>
                 <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
               </svg>
             </button>
@@ -787,7 +788,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <PartnersStrip />
       <footer className="u-align-center u-clearfix u-container-align-center u-footer u-palette-1-dark-3 u-footer" id="sec-143b">
         <div className="u-clearfix u-sheet u-valign-middle u-sheet-1">
           <div className="data-layout-selected u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">

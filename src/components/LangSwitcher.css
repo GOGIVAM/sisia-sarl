@@ -3,7 +3,7 @@
   display: inline-flex;
   gap: 2px;
   padding: 3px;
-  border-radius: 999px;
+  border-radius: 10px;
   background: #eef2f9;
   border: 1px solid #dbe3f0;
   z-index: 2000;
@@ -12,7 +12,7 @@
   font: 700 11px/1 Ubuntu, 'Open Sans', sans-serif !important;
   letter-spacing: 0.08em;
   padding: 7px 10px;
-  border-radius: 999px;
+  border-radius: 7px;
   color: #2e5aac;
   text-decoration: none;
   transition: background 0.25s, color 0.25s, box-shadow 0.25s;
@@ -23,8 +23,8 @@
 
 .u-section-row-2 .u-sheet { position: relative; }
 .lang-switcher--nav { position: absolute; right: 0; top: 50%; transform: translateY(-50%); }
-/* menu hamburger (< 940px) : le sélecteur se place à gauche de l'icône */
-@media (max-width: 939px) { .lang-switcher--nav { right: 58px; } }
+/* menu hamburger (< 940px) : le selecteur se centre entre le logo et l icone */
+@media (max-width: 939px) { .lang-switcher--nav { right: auto; left: 50%; transform: translate(-50%, -50%); } }
 @media (max-width: 400px) { .lang-switcher a { padding: 6px 8px; } }
 
 /* Repli sans en-tête : pastille flottante */
