@@ -85,3 +85,27 @@ export function trackSteps(sections, onChange, signal) {
   window.addEventListener('resize', update, { signal });
   update();
 }
+
+/** Parallaxe douce des images de contenu : l'image dérive à l'intérieur de son cadre. */
+export function setupImageParallax(signal) {
+  if (reduced()) return;
+  const frames = [...document.querySelectorAll('.sd-details__img, #sec-31fd .u-layout-row > .u-layout-cell:first-child, #sec-faec .u-layout-row > div:last-child, #carousel_4581 .u-layout-row > div:last-child, .svc-row__img')]
+    .filter((f) => f.querySelector('img'));
+  if (!frames.length) return;
+  frames.forEach((f) => f.setAttribute('data-px', ''));
+  let ticking = false;
+  const update = () => {
+    ticking = false;
+    const vh = window.innerHeight;
+    frames.forEach((f) => {
+      const r = f.getBoundingClientRect();
+      if (r.bottom < -80 || r.top > vh + 80) return;
+      const p = (r.top + r.height / 2 - vh / 2) / vh; // -1..1
+      const img = f.querySelector('img');
+      img.style.setProperty('--ty', Math.round(p * -26) + 'px');
+    });
+  };
+  window.addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(update); } }, { signal, passive: true });
+  update();
+  signal.addEventListener('abort', () => frames.forEach((f) => { f.removeAttribute('data-px'); f.querySelector('img')?.style.removeProperty('--ty'); }));
+}

@@ -34,7 +34,7 @@ export default function PartnersStrip() {
       <div className="logo-wall__inner">
         <div className="logo-wall__head">
           <h2 id="partenaires-titre">
-            <b>{PARTNERS.length}</b> {u('statBrands')} · <b>{countries}</b> {u('statCountries')}
+            <b data-animation-name="counter" data-animation-duration="1800">{PARTNERS.length}</b> {u('statBrands')} · <b data-animation-name="counter" data-animation-duration="1800">{countries}</b> {u('statCountries')}
           </h2>
           <Link to="/partenaires" className="logo-wall__more">{u('partnersStripCta')}</Link>
         </div>

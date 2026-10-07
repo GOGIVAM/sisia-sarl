@@ -4,12 +4,9 @@
 .rw { display: inline-block; opacity: 0; transform: translateY(0.6em); animation: rwIn 0.7s cubic-bezier(0.16, 0.84, 0.44, 1) forwards; will-change: transform, opacity; }
 @keyframes rwIn { to { opacity: 1; transform: none; } }
 
-/* surlignage rouge du hero : se trace de gauche a droite */
-html body #carousel_3dba .hero-slide.is-active .hero-title {
-  background-image: linear-gradient(var(--brand), var(--brand)) !important; background-repeat: no-repeat !important; background-color: transparent !important;
-  background-size: 0% 100% !important; animation: hlDraw 0.9s 0.15s var(--ease) forwards;
-}
-@keyframes hlDraw { to { background-size: 100% 100% !important; } }
+/* surlignage rouge du hero : balayage de gauche a droite (clip-path, sans !important pour que l animation s applique) */
+html body #carousel_3dba .hero-slide.is-active .hero-title { animation: hlSweep 0.9s 0.15s var(--ease) both; }
+@keyframes hlSweep { from { clip-path: inset(0 100% 0 0); } to { clip-path: inset(0 0 0 0); } }
 
 /* parallaxe de l'image de fond des heros */
 html body .page-hero, html body .sd-hero { background-position: center, center calc(50% + var(--py, 0px)) !important; will-change: background-position; }
@@ -47,4 +44,7 @@ html body .page-hero__inner, html body .sd-hero__inner { will-change: transform,
   .jrail a b { width: 20px; height: 20px; font-size: 8.5px; border-width: 1.5px; }
 }
 @media (prefers-reduced-motion: reduce) { .rw { opacity: 1; transform: none; animation: none; } .line::before { transform: translateX(-50%) scaleX(1); transition: none; } }
-@media (prefers-reduced-motion: reduce) { html body #carousel_3dba .hero-slide.is-active .hero-title { background-size: 100% 100% !important; animation: none; } }
+
+/* parallaxe douce des images (cadre qui rogne, image qui derive) */
+[data-px] { overflow: hidden; }
+[data-px] img { transform: translate3d(0, var(--ty, 0px), 0) scale(1.14); will-change: transform; }

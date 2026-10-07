@@ -1,4 +1,5 @@
 import RevealText from '../components/RevealText.jsx';
+import JourneyRail from '../components/JourneyRail.jsx';
 import PageShell from '../components/PageShell.jsx';
 import SiteHeader from '../components/SiteHeader.jsx';
 import SiteFooter from '../components/SiteFooter.jsx';
@@ -23,6 +24,7 @@ export default function Partners() {
       <title>{u('metaPartnersTitle')}</title>
       <meta name="description" content={u('metaPartnersDesc')} />
       <SiteHeader />
+      <JourneyRail steps={groups.map((g) => ({ id: g.key, label: g.c[lang] }))} />
       <main id="contenu">
         <section className="page-hero" style={{ '--hero': 'url(/images/lukas-hron-Gz5eVQzkNrs-unsplash.jpg)' }}>
           <div className="page-hero__inner">

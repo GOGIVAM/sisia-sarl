@@ -7,6 +7,7 @@ import en from '../i18n/en/Home.json';
 import Link from '../components/LocLink.jsx';
 import Web3Form from '../components/Web3Form.jsx';
 import PartnersStrip from '../components/PartnersStrip.jsx';
+import HomeRail from '../components/HomeRail.jsx';
 import css0 from '../styles/index.css?inline';
 import css1 from '../styles/carousel.css?inline';
 import css2 from '../styles/service-page.css?inline';
@@ -239,6 +240,7 @@ export default function Home() {
         </div>
       </section>
       <PartnersStrip />
+      <HomeRail />
       <section className="u-clearfix u-container-align-center u-section-3" id="carousel_1fd3" style={{ minHeight: "700px", padding: "80px 20px", background: "linear-gradient(135deg, #ffffff 0%, #f8f8f8 100%)" }}>
         <div className="u-clearfix u-sheet u-valign-middle u-sheet-1" style={{ width: "100%", maxWidth: "1200px", margin: "0 auto" }}>
           <h2 className="u-align-center u-text u-text-default u-text-1" data-animation-name="customAnimationIn" data-animation-duration="1500">{t("k11u49ca")}</h2>

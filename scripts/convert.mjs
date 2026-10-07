@@ -437,7 +437,7 @@ function inject(name, bodyLines, ctx) {
   const pad = bodyLines[start].match(/^\s*/)[0];
   const end = bodyLines.findIndex((l, i) => i > start && l === pad + '</section>');
   if (end < 0) { ctx.warnings.push('fin de la premiere section introuvable'); return bodyLines; }
-  return [...bodyLines.slice(0, end + 1), pad + '<PartnersStrip />', ...bodyLines.slice(end + 1)];
+  return [...bodyLines.slice(0, end + 1), pad + '<PartnersStrip />', pad + '<HomeRail />', ...bodyLines.slice(end + 1)];
 }
 
 /** En-tête et pied de page partagés, générés depuis la page Contact (pour les pages créées à la main). */
@@ -528,7 +528,7 @@ function main() {
     ];
     if (ctx.usesLink) imports.push(`import Link from '../components/LocLink.jsx';`);
     if (ctx.usesForm) imports.push(`import Web3Form from '../components/Web3Form.jsx';`);
-    if (name === 'Home') imports.push(`import PartnersStrip from '../components/PartnersStrip.jsx';`);
+    if (name === 'Home') imports.push(`import PartnersStrip from '../components/PartnersStrip.jsx';`, `import HomeRail from '../components/HomeRail.jsx';`);
     imports.push(...cssImports);
 
     const jsx = `// Généré par scripts/convert.mjs depuis legacy/${file} : contenu d'origine conservé.
