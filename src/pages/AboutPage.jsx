@@ -1,3 +1,5 @@
+import RevealText from '../components/RevealText.jsx';
+import JourneyRail from '../components/JourneyRail.jsx';
 import PageShell from '../components/PageShell.jsx';
 import SiteHeader from '../components/SiteHeader.jsx';
 import SiteFooter from '../components/SiteFooter.jsx';
@@ -71,6 +73,14 @@ const C = {
   discover: { fr: 'Découvrir SISIA', en: 'Discover SISIA' },
 };
 
+const STEPS = [
+  { id: 's1', fr: 'Présentation', en: 'Overview' },
+  { id: 's2', fr: 'Nos atouts', en: 'Our strengths' },
+  { id: 's3', fr: 'Méthode et chiffres', en: 'Method and figures' },
+  { id: 's5', fr: 'Savoir-faire', en: 'Expertise' },
+  { id: 's6', fr: 'Sur le terrain', en: 'In the field' },
+];
+
 /** À propos : présentation, atouts, missions, chiffres, services résumés, formulaire. Contenu d'origine conservé. */
 export default function AboutPage() {
   const lang = useLang();
@@ -79,16 +89,17 @@ export default function AboutPage() {
       <title>{C.title[lang]}</title>
       <meta name="description" content={C.desc[lang]} />
       <SiteHeader />
+      <JourneyRail steps={STEPS.map((x) => ({ id: x.id, label: x[lang] }))} />
       <main id="contenu">
         <section className="page-hero ab-hero" style={{ '--hero': 'url(/images/marque.jpg)' }}>
           <div className="page-hero__inner">
             <span className="kicker">{C.kicker[lang]}</span>
-            <h1>{C.h1[lang]}</h1>
+            <RevealText as="h1" text={C.h1[lang]} />
             <p>{C.lead[lang]}</p>
           </div>
         </section>
 
-        <section className="ab-intro">
+        <section className="ab-intro" id="s1">
           <div className="ab-intro__inner">
             <div className="ab-intro__text" data-mo="left">
               <span className="ab-eyebrow">01 · {C.eyebrows[0][lang]}</span>
@@ -102,7 +113,7 @@ export default function AboutPage() {
           </div>
         </section>
 
-        <section className="ab-block">
+        <section className="ab-block" id="s2">
           <div className="ab-block__inner">
             <span className="ab-eyebrow" data-mo>02 · {C.eyebrows[1][lang]}</span>
             <h2 data-mo>{C.assetsTitle[lang]}</h2>
@@ -112,7 +123,7 @@ export default function AboutPage() {
           </div>
         </section>
 
-        <section className="ab-block ab-block--photo" style={{ '--bg': 'url(/images/IMG_20190506_145257.jpg)' }}>
+        <section id="s3" className="ab-block ab-block--photo" style={{ '--bg': 'url(/images/IMG_20190506_145257.jpg)' }}>
           <div className="ab-block__inner ab-split">
             <div data-mo="left">
               <span className="ab-eyebrow">03 · {C.eyebrows[2][lang]}</span>
@@ -131,7 +142,7 @@ export default function AboutPage() {
           </div>
         </section>
 
-        <section className="ab-block">
+        <section className="ab-block" id="s5">
           <div className="ab-block__inner">
             <span className="ab-eyebrow" data-mo>05 · {C.eyebrows[4][lang]}</span>
             <h2 data-mo>{C.servicesTitle[lang]}</h2>
@@ -146,7 +157,7 @@ export default function AboutPage() {
           </div>
         </section>
 
-        <section className="ab-block ab-block--gray">
+        <section className="ab-block ab-block--gray" id="s6">
           <div className="ab-block__inner ab-split">
             <div data-mo="left">
               <span className="ab-eyebrow">06 · {C.eyebrows[5][lang]}</span>

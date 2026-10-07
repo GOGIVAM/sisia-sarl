@@ -1,3 +1,4 @@
+import RevealText from '../components/RevealText.jsx';
 import PageShell from '../components/PageShell.jsx';
 import SiteHeader from '../components/SiteHeader.jsx';
 import SiteFooter from '../components/SiteFooter.jsx';
@@ -23,7 +24,7 @@ export default function ServicesPage() {
         <section className="page-hero" style={{ '--hero': 'url(/images/lukas-hron-Gz5eVQzkNrs-unsplash.jpg)' }}>
           <div className="page-hero__inner">
             <span className="kicker">{u('servicesKicker')}</span>
-            <h1>{u('servicesTitle')}</h1>
+            <RevealText as="h1" text={u('servicesTitle')} />
             <p>{SERVICES_HERO_SUB[lang]}. {SERVICES_LEAD[lang]}.</p>
             <nav className="svc-jump" aria-label={u('servicesTitle')}>
               {ORDER.map((g) => <a key={g} href={`#${g}`}>{SERVICE_GROUPS[g].title[lang]}</a>)}

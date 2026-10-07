@@ -1,3 +1,4 @@
+import RevealText from '../components/RevealText.jsx';
 import PageShell from '../components/PageShell.jsx';
 import SiteHeader from '../components/SiteHeader.jsx';
 import SiteFooter from '../components/SiteFooter.jsx';
@@ -42,7 +43,7 @@ export default function ServiceDetailPage({ route }) {
               <Link to="/">SISIA</Link> <span aria-hidden="true">/</span> <Link to="/services">{u('servicesTitle')}</Link> <span aria-hidden="true">/</span> <span>{meta.name[lang]}</span>
             </nav>
             <span className="kicker">{d.badge[lang]}</span>
-            <h1>{d.h1[lang]}</h1>
+            <RevealText as="h1" text={d.h1[lang]} />
             <p>{d.sub[lang]}</p>
             <div className="sd-hero__actions">
               <Link to="/contact" className="hero-btn hero-btn--primary">{d.details ? d.details.cta[lang] : d.ctaBtn[lang]}</Link>

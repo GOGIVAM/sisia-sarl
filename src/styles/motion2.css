@@ -1,0 +1,50 @@
+/* Effets de defilement (inspires de WinPlus) : titres mot par mot, parallaxe, filets traces, boutons magnetiques, rail de parcours */
+
+/* titres mot par mot */
+.rw { display: inline-block; opacity: 0; transform: translateY(0.6em); animation: rwIn 0.7s cubic-bezier(0.16, 0.84, 0.44, 1) forwards; will-change: transform, opacity; }
+@keyframes rwIn { to { opacity: 1; transform: none; } }
+
+/* surlignage rouge du hero : se trace de gauche a droite */
+html body #carousel_3dba .hero-slide.is-active .hero-title {
+  background-image: linear-gradient(var(--brand), var(--brand)) !important; background-repeat: no-repeat !important; background-color: transparent !important;
+  background-size: 0% 100% !important; animation: hlDraw 0.9s 0.15s var(--ease) forwards;
+}
+@keyframes hlDraw { to { background-size: 100% 100% !important; } }
+
+/* parallaxe de l'image de fond des heros */
+html body .page-hero, html body .sd-hero { background-position: center, center calc(50% + var(--py, 0px)) !important; will-change: background-position; }
+html body .page-hero__inner, html body .sd-hero__inner { will-change: transform, opacity; }
+
+/* filets de section qui se tracent */
+.line { position: relative; }
+.line::before { content: ''; position: absolute; top: 0; left: 50%; width: min(1140px, calc(100% - 40px)); height: 1px; background: var(--frame); transform: translateX(-50%) scaleX(0); transform-origin: 0 50%; transition: transform 1.1s var(--ease); pointer-events: none; z-index: 1; }
+.line.line-in::before { transform: translateX(-50%) scaleX(1); }
+
+/* boutons magnetiques : propriete `translate` independante du transform de survol */
+.btn-pill, .hero-btn, .nav-cta, .carousel-cta, .supervision-btn { translate: var(--mx, 0) var(--my, 0); transition: translate 0.35s cubic-bezier(0.22, 1, 0.36, 1), background-color 0.25s, color 0.25s, box-shadow 0.3s, transform 0.3s; }
+
+/* rail de parcours (page A propos) */
+.jrail { position: fixed; z-index: 900; right: 22px; top: 50%; transform: translate(14px, -50%); opacity: 0; pointer-events: none; transition: opacity 0.4s, transform 0.5s var(--ease); display: none; }
+.jrail.is-on { opacity: 1; transform: translate(0, -50%); pointer-events: auto; }
+.jrail ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; position: relative; }
+.jrail__line { position: absolute; right: 13px; top: 14px; bottom: 14px; width: 2px; background: rgba(120, 120, 130, 0.35); border-radius: 2px; overflow: hidden; }
+.jrail__line i { display: block; width: 100%; background: var(--brand); transition: height 0.5s var(--ease); }
+.jrail a { display: block; width: 28px; height: 28px; margin-left: auto; text-decoration: none; position: relative; }
+.jrail a span { position: absolute; right: 38px; top: 50%; margin-top: -14px; font: 600 13px/1 var(--font-head); color: var(--ink); background: rgba(255, 255, 255, 0.92); padding: 7px 10px; border-radius: 6px; box-shadow: 0 6px 18px rgba(10, 10, 10, 0.12); opacity: 0; transform: translateX(8px); transition: opacity 0.25s, transform 0.3s var(--ease); white-space: nowrap; }
+.jrail li.is-active a span, .jrail a:hover span, .jrail a:focus-visible span { opacity: 1; transform: none; }
+.jrail a b { display: grid; place-items: center; width: 28px; height: 28px; border-radius: 50%; background: #fff; border: 2px solid #c9c9cf; font: 700 10px/1 var(--font-head); color: #6b6b72; position: relative; z-index: 1; transition: background 0.3s, color 0.3s, border-color 0.3s, transform 0.3s var(--ease); }
+.jrail li.is-done a b { border-color: var(--brand); color: var(--brand); }
+.jrail li.is-active a b { background: var(--brand); border-color: var(--brand); color: #fff; transform: scale(1.18); }
+@media (min-width: 1100px) { .jrail { display: block; } }
+
+/* mobile : mini-parcours en pastille compacte, en haut a droite sous l'en-tete */
+@media (max-width: 1099px) {
+  .jrail { display: block; right: 10px; top: 92px; transform: translateY(-8px); }
+  .jrail.is-on { transform: none; }
+  .jrail ol { display: flex; gap: 5px; background: rgba(255, 255, 255, 0.92); padding: 6px 8px; border-radius: 999px; box-shadow: 0 6px 18px rgba(10, 10, 10, 0.14); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); }
+  .jrail__line { display: none; }
+  .jrail a span { display: none; }
+  .jrail a b { width: 20px; height: 20px; font-size: 8.5px; border-width: 1.5px; }
+}
+@media (prefers-reduced-motion: reduce) { .rw { opacity: 1; transform: none; animation: none; } .line::before { transform: translateX(-50%) scaleX(1); transition: none; } }
+@media (prefers-reduced-motion: reduce) { html body #carousel_3dba .hero-slide.is-active .hero-title { background-size: 100% 100% !important; animation: none; } }

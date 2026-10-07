@@ -171,7 +171,7 @@ export default function Home() {
             <div className="hero-slides">
               <div className="hero-slide is-active">
                 <h1 className="hero-title u-align-center u-text u-text-body-alt-color u-text-default u-text-1">{t("k6fywqz")}</h1>
-                <p className="hero-sub">{t("kmakeo2")}</p>
+                <p className="hero-sub">{t("kqcezsg")}</p>
                 <div className="hero-actions">
                   <Link className="hero-btn hero-btn--primary" to="/contact">{t("k1ovdr4p")}</Link>
                   {" "}
@@ -180,7 +180,7 @@ export default function Home() {
               </div>
               <div className="hero-slide">
                 <h2 className="hero-title u-align-center u-text u-text-body-alt-color u-text-default">{t("k12db5u1")}</h2>
-                <p className="hero-sub">{t("kpv3449")}</p>
+                <p className="hero-sub">{t("k19bnkzx")}</p>
                 <div className="hero-actions">
                   <Link className="hero-btn hero-btn--primary" to="/contact">{t("k1ovdr4p")}</Link>
                   {" "}

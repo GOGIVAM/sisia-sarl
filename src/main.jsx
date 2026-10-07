@@ -13,6 +13,7 @@ import './styles/partners.css';
 import './styles/pages.css';
 import './styles/refine.css';
 import './styles/mobile.css';
+import './styles/motion2.css';
 import './components/LangSwitcher.css';
 import App from './App.jsx';
 

@@ -1,3 +1,4 @@
+import RevealText from '../components/RevealText.jsx';
 import PageShell from '../components/PageShell.jsx';
 import SiteHeader from '../components/SiteHeader.jsx';
 import SiteFooter from '../components/SiteFooter.jsx';
@@ -39,7 +40,7 @@ export default function ContactPage() {
         <section className="page-hero" style={{ '--hero': 'url(/images/53e3dc404b5bad14f6da8c7dda793678153bdee757596c48732e7bdd9244cd5ab0_1280.jpg)' }}>
           <div className="page-hero__inner">
             <span className="kicker">{C.kicker[lang]}</span>
-            <h1>{C.h1[lang]}</h1>
+            <RevealText as="h1" text={C.h1[lang]} />
             <p>{C.lead[lang]}</p>
           </div>
         </section>

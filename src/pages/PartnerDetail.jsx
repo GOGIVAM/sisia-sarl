@@ -1,4 +1,5 @@
 import { useParams } from 'react-router-dom';
+import RevealText from '../components/RevealText.jsx';
 import PageShell from '../components/PageShell.jsx';
 import SiteHeader from '../components/SiteHeader.jsx';
 import SiteFooter from '../components/SiteFooter.jsx';
@@ -36,7 +37,7 @@ export default function PartnerDetail() {
               <Link to="/">SISIA</Link> <span aria-hidden="true">/</span> <Link to="/partenaires">{u('partnersTitle')}</Link> <span aria-hidden="true">/</span> <span>{p.name}</span>
             </nav>
             <span className="kicker">{cat[lang]}</span>
-            <h1>{p.name}</h1>
+            <RevealText as="h1" text={p.name} />
             <p>{p.tagline[lang]}</p>
           </div>
         </section>

@@ -1,4 +1,5 @@
 import { useEffect, useLayoutEffect } from 'react';
+import { setupHeroScroll, setupLineDraw, setupMagnetic } from './scrollFx.js';
 
 const SELECTOR = [
   '.u-list-item', '.u-layout-cell', '.testimonial-card', '.supervision-section .u-text',
@@ -113,6 +114,9 @@ export function useMotion(barRef, topRef) {
     setupLazyImages();
     setupScrollUi(barRef.current, topRef.current, c.signal);
     setupParallax(c.signal);
+    setupHeroScroll(c.signal);
+    setupLineDraw(c.signal);
+    setupMagnetic(c.signal);
     return () => c.abort();
   }, [barRef, topRef]);
 }
