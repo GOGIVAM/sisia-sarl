@@ -1,0 +1,105 @@
+/* =========================================================================
+   Mobile : proportions pensées pour le téléphone (pas un bureau réduit),
+   barre d'action en bas, animations de défilement douces
+   ========================================================================= */
+.mbar { display: none; }
+
+@media (max-width: 767px) {
+  html { font-size: 15.5px; }
+  body { padding-bottom: 68px; }
+
+  /* rythme vertical et gouttières */
+  html body section, html body .supervision-section, html body .testimonials-section { scroll-margin-top: 70px; }
+  html body #carousel_1fd3 { padding: 40px 16px 24px !important; }
+  html body #sec-31fd, html body #sec-faec, html body #carousel_4581, html body .u-section-7, html body .supervision-section { padding-top: 40px !important; padding-bottom: 40px !important; padding-left: 16px !important; padding-right: 16px !important; }
+  html body .testimonials-section { padding: 40px 0 !important; }
+  html body .logo-wall { padding: 28px 0 44px !important; }
+  html body .logo-wall__inner, html body .testimonials-section .testimonials-container { padding: 0 16px; }
+
+  /* titres : échelle mobile */
+  html body h1, html body .page-hero h1, html body .sd-hero h1 { font-size: clamp(27px, 8vw, 34px) !important; line-height: 1.15 !important; }
+  html body h2, html body .u-section-7 .u-text-1, html body .supervision-section .supervision-title { font-size: clamp(22px, 6.4vw, 27px) !important; line-height: 1.2 !important; }
+  html body h3.u-text, html body .partner-row__main h3 { font-size: 17px !important; }
+  html body p, html body li { font-size: 15px; }
+  html body #carousel_3dba h1.u-text-1 { font-size: clamp(24px, 7.2vw, 30px) !important; line-height: 1.55 !important; }
+  html body .page-hero, html body .sd-hero { padding: 40px 16px 36px !important; }
+  html body .page-hero p, html body .sd-hero p { font-size: 16px; }
+
+  /* hero accueil : boutons pleine largeur */
+  html body #carousel_3dba .u-container-layout-1 { padding: 36px 16px 40px !important; }
+  html body .hero-actions { flex-direction: column; align-items: stretch; }
+  html body .hero-btn, html body .sd-hero__actions .hero-btn { width: 100%; min-height: 48px; }
+  html body #carousel_3dba .u-layout-wrap-1 { padding: 0 16px 40px !important; }
+  html body #carousel_3dba .u-layout-cell img { height: 150px !important; }
+
+  /* vitrine des métiers : onglets compacts, visuel au-dessus */
+  html body #carousel_1fd3 .services-showcase { gap: 14px; margin-top: 18px; }
+  html body #carousel_1fd3 .services-showcase .carousel-wrapper { min-height: 230px !important; height: 230px !important; border-radius: 12px; }
+  html body #carousel_1fd3 .services-showcase .showcase-tabs { flex-direction: column !important; overflow: visible !important; gap: 6px; }
+  html body #carousel_1fd3 .services-showcase .indicator { width: 100% !important; padding: 12px 14px !important; }
+  html body #carousel_1fd3 .services-showcase .tab-title { font-size: 15px; }
+  html body #carousel_1fd3 .services-showcase .tab-desc { font-size: 13.5px; }
+  html body #carousel_1fd3 .services-showcase .carousel-btn { width: 40px !important; height: 40px !important; bottom: 12px !important; }
+  html body #carousel_1fd3 .services-showcase .carousel-btn.next-btn { right: 12px !important; }
+  html body #carousel_1fd3 .services-showcase .carousel-btn.prev-btn { right: 60px !important; }
+  html body #carousel_1fd3 .services-showcase .carousel-caption { left: 12px !important; bottom: 12px !important; }
+  html body .carousel-cta { min-height: 40px; padding: 0 16px; font-size: 13.5px; }
+
+  /* à propos accueil : image courte */
+  html body #sec-31fd .u-layout-row > .u-layout-cell:first-child img { min-height: 180px; max-height: 210px; }
+  html body #sec-31fd .u-repeater { gap: 8px; }
+  html body #sec-31fd h3.u-text { font-size: 24px !important; }
+  html body #sec-31fd h6.u-text { font-size: 10.5px !important; letter-spacing: 0.04em; }
+
+  /* avis */
+  html body .testimonial-card { padding: 18px !important; }
+  html body .testimonials-header { gap: 10px; margin-bottom: 18px !important; }
+  html body .testimonials-header .add-review-btn { width: 100%; }
+
+  /* réalisations */
+  html body .u-section-7 .u-gallery-inner-1 { grid-auto-rows: 118px !important; gap: 8px !important; }
+  html body .u-section-7 .u-gallery-item:nth-child(1) { grid-row: span 2; }
+
+  /* supervision */
+  html body .supervision-section .supervision-card { padding: 18px !important; }
+  html body .supervision-section .supervision-cta { padding: 20px !important; }
+  html body .supervision-section .supervision-btn { width: 100%; justify-content: center; }
+
+  /* formulaire section + pages */
+  html body #sec-faec .u-container-layout, html body #carousel_4581 .u-container-layout { padding: 20px !important; }
+  .cf__form { padding: 18px; }
+  .ct-main, .ab-block, .ab-intro, .sd-main, .svc-why { padding-top: 36px; padding-bottom: 36px; }
+  .ab-stats { grid-template-columns: repeat(3, 1fr); }
+  .ab-stats li { padding: 16px 10px; }
+  .ab-stats b { font-size: 26px; }
+  .ab-stats span { font-size: 9.5px; letter-spacing: 0.04em; }
+  .svc-stats { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .svc-group { padding-top: 34px; }
+  .svc-cta__inner, .sd-highlight { padding: 20px; flex-direction: column; align-items: flex-start; }
+  .svc-cta .btn-pill { width: 100%; justify-content: center; }
+  .partner-groups { padding: 8px 16px 48px; }
+  .partner-row__main p { font-size: 14px; }
+
+  /* pied de page */
+  html body footer.u-footer .u-sheet-1 { padding: 0 16px !important; }
+  html body footer.u-footer .u-layout-wrap-2 .u-container-layout { padding: 18px 0 !important; }
+  html body footer.u-footer .u-layout-wrap-1 .u-container-layout { padding: 22px 0 !important; }
+
+  /* retours en haut : au-dessus de la barre d'action */
+  .to-top { bottom: 80px; right: 12px; width: 42px; height: 42px; }
+
+  /* barre d'action fixe : appeler / contact */
+  .mbar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 3500; display: grid; grid-template-columns: 1fr 1fr; gap: 8px; padding: 8px 12px calc(8px + env(safe-area-inset-bottom)); background: rgba(255, 255, 255, 0.94); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); border-top: 1px solid var(--frame); transform: translateY(0); transition: transform 0.35s var(--ease); }
+  .mbar a { display: flex; align-items: center; justify-content: center; gap: 8px; min-height: 46px; border-radius: 999px; font: 700 14.5px/1 var(--font-head); text-decoration: none; }
+  .mbar__call { background: var(--gray-2); color: var(--ink); }
+  .mbar__cta { background: var(--black); color: #fff; }
+  body.menu-open .mbar, body.u-offcanvas-opened .mbar { transform: translateY(110%); }
+
+  /* animations de défilement : montée douce, sans décalage latéral (pas de débordement) */
+  .mo, .mo.mo-left, .mo.mo-right { transform: translateY(28px); }
+  .mo.mo-zoom { transform: translateY(20px) scale(0.96); }
+  .mo.mo-in { transform: none; }
+  .mo { transition-duration: 0.7s; }
+}
+
+@media (max-width: 767px) and (prefers-reduced-motion: reduce) { .mo { transform: none; opacity: 1; } }

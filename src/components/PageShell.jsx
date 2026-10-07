@@ -5,6 +5,7 @@ import LangSwitcher from './LangSwitcher.jsx';
 import { useLang, useUi } from '../i18n/index.jsx';
 import { UI } from '../i18n/ui.js';
 import SeoJsonLd from './SeoJsonLd.jsx';
+import MobileBar from './MobileBar.jsx';
 
 /**
  * Enveloppe commune des pages.
@@ -42,6 +43,7 @@ export default function PageShell({ htmlAttrs = {}, bodyAttrs = {}, children }) 
       <LangSwitcher />
       <SeoJsonLd />
       {children}
+      <MobileBar />
       <button type="button" className="to-top" ref={topRef} aria-label={u('top')} onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
         <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M12 5l-7 7m7-7l7 7M12 5v14" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" /></svg>
       </button>

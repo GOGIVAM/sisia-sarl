@@ -3,7 +3,7 @@ import { useEffect, useLayoutEffect } from 'react';
 const SELECTOR = [
   '.u-list-item', '.u-layout-cell', '.testimonial-card', '.supervision-section .u-text',
   'section h1.u-text', 'section h2.u-text', 'section h3.u-text',
-  'section img.u-image:not(.u-logo-image)', '[data-mo]',
+  'section img.u-image:not(.u-logo-image)', '.supervision-card', '.testimonials-header', '.supervision-cta', '.u-gallery-item', '.logo-wall__head', '.lm-rows', '[data-mo]',
 ].join(',');
 const EXCLUDE = '.services-carousel, .u-menu, .u-sidenav, .review-modal, header, [data-animation-name]:not([data-animation-name=""]), .u-section-1 .u-parallax';
 

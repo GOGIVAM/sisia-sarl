@@ -12,6 +12,7 @@ import './styles/reference.css';
 import './styles/partners.css';
 import './styles/pages.css';
 import './styles/refine.css';
+import './styles/mobile.css';
 import './components/LangSwitcher.css';
 import App from './App.jsx';
 
