@@ -199,6 +199,30 @@ function setupTestimonials(signal) {
   signal.addEventListener('abort', () => { document.body.style.overflow = ''; });
 }
 
+/** Hero de l'accueil : deux diapositives, rotation automatique, points cliquables, pause au survol. */
+function setupHero(signal) {
+  const root = document.querySelector('#carousel_3dba');
+  const slides = root ? [...root.querySelectorAll('.hero-slide')] : [];
+  const dots = root ? [...root.querySelectorAll('.hero-dot')] : [];
+  if (slides.length < 2) return;
+  let cur = 0;
+  let timer;
+  const show = (i) => {
+    cur = (i + slides.length) % slides.length;
+    slides.forEach((x, k) => x.classList.toggle('is-active', k === cur));
+    dots.forEach((x, k) => { x.classList.remove('is-active'); if (k === cur) { void x.offsetWidth; x.classList.add('is-active'); } });
+  };
+  const start = () => { clearInterval(timer); timer = setInterval(() => show(cur + 1), 7000); };
+  dots.forEach((d, i) => d.addEventListener('click', () => { show(i); start(); }, { signal }));
+  root.addEventListener('mouseenter', () => clearInterval(timer), { signal });
+  root.addEventListener('mouseleave', start, { signal });
+  let x0 = 0;
+  root.addEventListener('touchstart', (e) => { x0 = e.changedTouches[0].screenX; }, { signal, passive: true });
+  root.addEventListener('touchend', (e) => { const dx = e.changedTouches[0].screenX - x0; if (Math.abs(dx) > 50) { show(cur + (dx < 0 ? 1 : -1)); start(); } }, { signal });
+  start();
+  signal.addEventListener('abort', () => clearInterval(timer));
+}
+
 /** Active tous les comportements historiques sur la page montée. */
 export function useLegacyBehaviors() {
   // masque les éléments animés avant la première peinture (évite le flash)
@@ -214,6 +238,7 @@ export function useLegacyBehaviors() {
     setupServicesCarousel(c.signal);
     setupTestimonials(c.signal);
     setupGallery(c.signal);
+    setupHero(c.signal);
     setupAccordion(c.signal);
     setupListNav(c.signal);
     return () => {

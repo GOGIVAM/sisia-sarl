@@ -168,12 +168,30 @@ export default function Home() {
       <section className="u-align-center u-clearfix u-container-align-center u-grey-5 u-valign-top-lg u-valign-top-xl u-section-1" id="carousel_3dba">
         <div className="u-container-align-center u-container-style u-expanded-width u-group u-image u-shading u-image-1" data-image-width="1980" data-image-height="1033" data-animation-name="flipIn" data-animation-duration="1500" data-animation-delay="0" data-animation-direction="X">
           <div className="u-container-layout u-valign-top u-container-layout-1">
-            <h1 className="u-align-center u-text u-text-body-alt-color u-text-default u-text-1">{t("k12db5u1")}</h1>
-            <p className="hero-sub">{t("kpv3449")}</p>
-            <div className="hero-actions">
-              <Link className="hero-btn hero-btn--primary" to="/contact">{t("k1ovdr4p")}</Link>
+            <div className="hero-slides">
+              <div className="hero-slide is-active">
+                <h1 className="hero-title u-align-center u-text u-text-body-alt-color u-text-default u-text-1">{t("k6fywqz")}</h1>
+                <p className="hero-sub">{t("kmakeo2")}</p>
+                <div className="hero-actions">
+                  <Link className="hero-btn hero-btn--primary" to="/contact">{t("k1ovdr4p")}</Link>
+                  {" "}
+                  <Link className="hero-btn hero-btn--ghost" to="/services">{t("k1vwqky5")}</Link>
+                </div>
+              </div>
+              <div className="hero-slide">
+                <h2 className="hero-title u-align-center u-text u-text-body-alt-color u-text-default">{t("k12db5u1")}</h2>
+                <p className="hero-sub">{t("kpv3449")}</p>
+                <div className="hero-actions">
+                  <Link className="hero-btn hero-btn--primary" to="/contact">{t("k1ovdr4p")}</Link>
+                  {" "}
+                  <Link className="hero-btn hero-btn--ghost" to="/services">{t("k1vwqky5")}</Link>
+                </div>
+              </div>
+            </div>
+            <div className="hero-dots" role="tablist" aria-label={t("k1qnkn7n")}>
+              <button type="button" className="hero-dot is-active" aria-label={t("kea9nw5")}></button>
               {" "}
-              <Link className="hero-btn hero-btn--ghost" to="/services">{t("k1vwqky5")}</Link>
+              <button type="button" className="hero-dot" aria-label={t("kdgaut8")}></button>
             </div>
           </div>
         </div>

@@ -115,3 +115,24 @@ html body footer.u-footer .u-btn-1 { margin-top: 0 !important; }
 html body .testimonials-header .section-badge { flex: 0 0 auto; width: auto !important; display: inline-block; align-self: flex-start; }
 html body .testimonials-header { flex-direction: row; }
 html body .testimonials-header .section-badge { order: -1; margin-right: auto; }
+
+/* ---- Hero : diapositives ------------------------------------------------------ */
+html body #carousel_3dba .hero-slide { display: none; }
+html body #carousel_3dba .hero-slide.is-active { display: block; animation: heroSlide 0.7s var(--ease) both; }
+@keyframes heroSlide { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
+html body #carousel_3dba .hero-title,
+html body #carousel_3dba h2.hero-title.u-text {
+  display: inline !important; margin: 0 !important; width: auto !important; max-width: none !important;
+  background: var(--brand) !important; color: #fff !important; -webkit-text-fill-color: #fff !important; text-shadow: none !important;
+  font: 700 clamp(28px, 4.1vw, 52px)/1.5 var(--font-head) !important; letter-spacing: -0.02em !important; text-transform: none !important; text-align: center;
+  padding: 0.06em 0.34em; -webkit-box-decoration-break: clone; box-decoration-break: clone;
+}
+html body #carousel_3dba .hero-title::after { display: none !important; }
+html body .hero-dots { display: flex; justify-content: center; gap: 8px; margin-top: 30px; }
+html body .hero-dot { width: 28px; height: 4px; padding: 0; border: 0; border-radius: 4px; background: rgba(255, 255, 255, 0.3); cursor: pointer; position: relative; overflow: hidden; transition: width 0.3s var(--ease), background 0.3s; }
+html body .hero-dot::before { content: ''; position: absolute; inset: -12px 0; }
+html body .hero-dot.is-active { width: 52px; background: rgba(255, 255, 255, 0.3); }
+html body .hero-dot.is-active::after { content: ''; position: absolute; inset: 0; background: #fff; transform-origin: 0 50%; animation: carFill 7000ms linear forwards; }
+html body .hero-dots:hover .hero-dot.is-active::after { animation-play-state: paused; }
+@media (max-width: 767px) { html body #carousel_3dba .hero-title, html body #carousel_3dba h2.hero-title.u-text { font-size: clamp(23px, 7vw, 29px) !important; } }
+@media (prefers-reduced-motion: reduce) { html body .hero-dot.is-active::after { animation: none; transform: none; } }
