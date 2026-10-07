@@ -10,6 +10,7 @@ import './styles/modern-carousels.css';
 import './styles/nav.css';
 import './styles/reference.css';
 import './styles/partners.css';
+import './styles/pages.css';
 import './components/LangSwitcher.css';
 import App from './App.jsx';
 

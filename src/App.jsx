@@ -5,10 +5,17 @@ import { LangProvider, localize } from './i18n/index.jsx';
 import NotFound from './pages/NotFound.jsx';
 
 const ServicesPage = lazy(() => import('./pages/ServicesPage.jsx'));
+const AboutPage = lazy(() => import('./pages/AboutPage.jsx'));
+const ContactPage = lazy(() => import('./pages/ContactPage.jsx'));
+const ServiceDetailPage = lazy(() => import('./pages/ServiceDetailPage.jsx'));
+const SERVICE_ROUTES = ['electricite-industrielle', 'automatisme-et-instrumentation', 'energie-solaire', 'maintenance', 'personnel-technique', 'controleur-acces', 'video-surveillances', 'domotique', 'alarme-incendie', 'materiel-electrique', 'composants-hydrauliques', 'roulements-transmissions'];
 const Partners = lazy(() => import('./pages/Partners.jsx'));
 const PartnerDetail = lazy(() => import('./pages/PartnerDetail.jsx'));
 const extraRoutes = [
   { path: '/services', Component: ServicesPage },
+  { path: '/a-propos', Component: AboutPage },
+  { path: '/contact', Component: ContactPage },
+  ...SERVICE_ROUTES.map((s) => ({ path: '/services/' + s, Component: () => <ServiceDetailPage route={'/services/' + s} /> })),
   { path: '/partenaires', Component: Partners },
   { path: '/partenaires/:slug', Component: PartnerDetail },
 ];
@@ -38,7 +45,7 @@ export default function App() {
       <ScrollManager />
       <Suspense fallback={null}>
         <Routes>
-          {[...routes.filter((r) => r.path !== '/services'), ...extraRoutes].flatMap(({ path, Component }) => [
+          {[...routes.filter((r) => !['/services', '/a-propos', '/contact'].includes(r.path) && !r.path.startsWith('/services/')), ...extraRoutes].flatMap(({ path, Component }) => [
             <Route key={path} path={path} element={<Component />} />,
             <Route key={'en' + path} path={localize(path, 'en')} element={<Component />} />,
           ])}

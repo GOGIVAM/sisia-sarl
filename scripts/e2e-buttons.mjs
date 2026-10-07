@@ -19,7 +19,7 @@ const click = async (pg, sel) => { try { const found = await pg.evaluate((s) => 
 let pg = await open('/a-propos');
 const maps = await pg.$eval('footer a[href*="google.com/maps"]', (a) => a.href).catch(() => null);
 ok('footer "show on map" -> Google Maps', !!maps, maps || '');
-await pg.evaluate(() => { const a = [...document.querySelectorAll('footer a')].find((x) => /parler à un expert/i.test(x.textContent)); a.scrollIntoView({ block: 'center', behavior: 'instant' }); a.setAttribute('data-t', '1'); }); await wait(250); await pg.click('footer a[data-t]');
+await pg.evaluate(() => { const a = [...document.querySelectorAll('footer a')].find((x) => /parler à un expert/i.test(x.textContent)); a.scrollIntoView({ block: 'center', behavior: 'instant' }); a.setAttribute('data-t', '1'); }); await wait(1500); await pg.click('footer a[data-t]');
 await wait(700);
 ok('footer "Parler à un expert" -> /contact', new URL(pg.url()).pathname === '/contact', pg.url());
 await click(pg, 'header a.u-logo');
@@ -45,13 +45,10 @@ await click(pg, '.u-accordion-link'); await wait(300);
 ok('FAQ : accordéon se referme', await pg.$eval('.u-accordion-pane', (e) => !e.classList.contains('u-accordion-active')));
 await pg.close();
 
-// 4) galerie À propos (flèches)
+// 4) A propos : liens de la page
 pg = await open('/a-propos');
-const sc = () => pg.evaluate(() => document.querySelector('.u-gallery-nav-next').closest('.u-list').querySelector('.u-repeater').scrollLeft);
-const l0 = await sc();
-await click(pg, '.u-gallery-nav-next'); await wait(900);
-const l1 = await sc();
-ok('À propos : flèche suivante fait défiler', l1 > l0, `${l0} -> ${l1}`);
+await click(pg, '.ab-link'); await wait(700);
+ok('A propos : carte service -> page service', new URL(pg.url()).pathname.startsWith('/services'), pg.url());
 await pg.close();
 
 // 5) accueil : carrousels, galerie, partenaires, boutons de carte

@@ -1,6 +1,9 @@
 // Textes d'interface partagés des pages écrites à la main (partenaires, 404...).
 export const UI = {
   fr: {
+    allServices: 'Tous les services',
+    brandsTitle: 'Marques et constructeurs associés',
+    otherServices: 'Dans le même pôle',
     metaServicesTitle: 'SISIA | Nos services',
     metaServicesDesc: 'Électricité industrielle, automatisme, sécurité, énergie solaire et négoce de matériel industriel : les services de SISIA SARL au Cameroun.',
     servicesKicker: 'Ce que nous faisons',
@@ -59,6 +62,9 @@ export const UI = {
     '/services': 'Tous nos services',
   },
   en: {
+    allServices: 'All services',
+    brandsTitle: 'Related brands and manufacturers',
+    otherServices: 'In the same area',
     metaServicesTitle: 'SISIA | Our services',
     metaServicesDesc: 'Industrial electrical engineering, automation, security, solar energy and industrial equipment trading: the services of SISIA SARL in Cameroon.',
     servicesKicker: 'What we do',
