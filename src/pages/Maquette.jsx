@@ -488,7 +488,7 @@ export default function Maquette() {
                 <h2>{t("kf8eewn")}</h2>
                 <p>{t("klbefy2")}</p>
               </div>
-              <Link to="/contact" className="btn btn-primary">{t("k1y0xgct")}</Link>
+              <Link to="/contact" className="btn btn-primary">{t("kwmu3bz")}</Link>
             </div>
           </div>
         </div>

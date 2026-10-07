@@ -224,7 +224,56 @@ export default function Home() {
       <section className="u-clearfix u-container-align-center u-section-3" id="carousel_1fd3" style={{ minHeight: "700px", padding: "80px 20px", background: "linear-gradient(135deg, #ffffff 0%, #f8f8f8 100%)" }}>
         <div className="u-clearfix u-sheet u-valign-middle u-sheet-1" style={{ width: "100%", maxWidth: "1200px", margin: "0 auto" }}>
           <h2 className="u-align-center u-text u-text-default u-text-1" data-animation-name="customAnimationIn" data-animation-duration="1500">{t("k11u49ca")}</h2>
-          <div className="services-carousel" role="region" aria-roledescription="carousel" aria-label={t("kg2dkg1")}>
+          <div className="services-carousel services-showcase" role="region" aria-roledescription="carousel" aria-label={t("kg2dkg1")}>
+            <div className="showcase-tabs" role="tablist">
+              <button className="indicator active" data-slide="0" role="tab">
+                <span className="tab-num">01</span>
+                {" "}
+                <span className="tab-title">{t("kayf5me")}</span>
+                {" "}
+                <span className="tab-desc">{t("k1e32cgb")}</span>
+              </button>
+              {" "}
+              <button className="indicator" data-slide="1" role="tab">
+                <span className="tab-num">02</span>
+                {" "}
+                <span className="tab-title">{t("klpw4l3")}</span>
+                {" "}
+                <span className="tab-desc">{t("kxtn8yb")}</span>
+              </button>
+              {" "}
+              <button className="indicator" data-slide="2" role="tab">
+                <span className="tab-num">03</span>
+                {" "}
+                <span className="tab-title">{t("k1067bq6")}</span>
+                {" "}
+                <span className="tab-desc">{t("k6d1msf")}</span>
+              </button>
+              {" "}
+              <button className="indicator" data-slide="3" role="tab">
+                <span className="tab-num">04</span>
+                {" "}
+                <span className="tab-title">{t("k18lz767")}</span>
+                {" "}
+                <span className="tab-desc">{t("kmf8ii7")}</span>
+              </button>
+              {" "}
+              <button className="indicator" data-slide="4" role="tab">
+                <span className="tab-num">05</span>
+                {" "}
+                <span className="tab-title">{t("k1d4rbcj")}</span>
+                {" "}
+                <span className="tab-desc">{t("k2f00rm")}</span>
+              </button>
+              {" "}
+              <button className="indicator" data-slide="5" role="tab">
+                <span className="tab-num">06</span>
+                {" "}
+                <span className="tab-title">{t("k1769hkc")}</span>
+                {" "}
+                <span className="tab-desc">{t("kndz12r")}</span>
+              </button>
+            </div>
             <div className="carousel-wrapper">
               <div className="carousel-slide active">
                 <div className="carousel-image">
@@ -232,9 +281,6 @@ export default function Home() {
                   <div className="carousel-overlay"></div>
                 </div>
                 <div className="carousel-caption">
-                  <span className="carousel-count">01 / 06</span>
-                  <h3>{t("kayf5me")}</h3>
-                  <p>{t("k1e32cgb")}</p>
                   <Link className="carousel-cta" to="/services/electricite-industrielle">{t("k1rlv4uu")}</Link>
                 </div>
               </div>
@@ -244,9 +290,6 @@ export default function Home() {
                   <div className="carousel-overlay"></div>
                 </div>
                 <div className="carousel-caption">
-                  <span className="carousel-count">02 / 06</span>
-                  <h3>{t("klpw4l3")}</h3>
-                  <p>{t("kxtn8yb")}</p>
                   <Link className="carousel-cta" to="/services/automatisme-et-instrumentation">{t("k1rlv4uu")}</Link>
                 </div>
               </div>
@@ -256,9 +299,6 @@ export default function Home() {
                   <div className="carousel-overlay"></div>
                 </div>
                 <div className="carousel-caption">
-                  <span className="carousel-count">03 / 06</span>
-                  <h3>{t("k1067bq6")}</h3>
-                  <p>{t("k6d1msf")}</p>
                   <Link className="carousel-cta" to="/services/video-surveillances">{t("k1rlv4uu")}</Link>
                 </div>
               </div>
@@ -268,9 +308,6 @@ export default function Home() {
                   <div className="carousel-overlay"></div>
                 </div>
                 <div className="carousel-caption">
-                  <span className="carousel-count">04 / 06</span>
-                  <h3>{t("k18lz767")}</h3>
-                  <p>{t("kmf8ii7")}</p>
                   <Link className="carousel-cta" to="/services/energie-solaire">{t("k1rlv4uu")}</Link>
                 </div>
               </div>
@@ -280,9 +317,6 @@ export default function Home() {
                   <div className="carousel-overlay"></div>
                 </div>
                 <div className="carousel-caption">
-                  <span className="carousel-count">05 / 06</span>
-                  <h3>{t("k1d4rbcj")}</h3>
-                  <p>{t("k2f00rm")}</p>
                   <Link className="carousel-cta" to="/services">{t("k1rlv4uu")}</Link>
                 </div>
               </div>
@@ -292,37 +326,24 @@ export default function Home() {
                   <div className="carousel-overlay"></div>
                 </div>
                 <div className="carousel-caption">
-                  <span className="carousel-count">06 / 06</span>
-                  <h3>{t("k1769hkc")}</h3>
-                  <p>{t("kndz12r")}</p>
                   <Link className="carousel-cta" to="/services/controleur-acces">{t("k1rlv4uu")}</Link>
                 </div>
               </div>
+              <button className="carousel-btn prev-btn" aria-label={t("kgw5m5h")}>
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
+                </svg>
+              </button>
+              {" "}
+              <button className="carousel-btn next-btn" aria-label={t("k182am67")}>
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
+                </svg>
+              </button>
             </div>
-            <button className="carousel-btn prev-btn" aria-label={t("kgw5m5h")}>
-              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
-              </svg>
-            </button>
-            {" "}
-            <button className="carousel-btn next-btn" aria-label={t("k182am67")}>
-              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
-              </svg>
-            </button>
-            <div className="carousel-indicators">
-              <button className="indicator active" data-slide="0" aria-label={t("kea9nw5")}></button>
-              {" "}
-              <button className="indicator" data-slide="1" aria-label={t("kdgaut8")}></button>
-              {" "}
-              <button className="indicator" data-slide="2" aria-label={t("kdqagi7")}></button>
-              {" "}
-              <button className="indicator" data-slide="3" aria-label={t("kcwbnfa")}></button>
-              {" "}
-              <button className="indicator" data-slide="4" aria-label={t("kd6b949")}></button>
-              {" "}
-              <button className="indicator" data-slide="5" aria-label={t("kcccg1c")}></button>
-            </div>
+          </div>
+          <div className="showcase-more">
+            <Link className="hero-btn hero-btn--ghost" to="/services">{t("k1xggvue")}</Link>
           </div>
         </div>
       </section>
@@ -734,6 +755,7 @@ export default function Home() {
             </div>
           </div>
           <div className="supervision-cta">
+            <p className="supervision-cta-text">{t("k165611x")}</p>
             <Link to="/services" className="supervision-btn">
               {" " + t("k1bgubj") + " "}
               <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -817,7 +839,7 @@ export default function Home() {
                 </div>
                 <div className="u-container-align-left u-container-style u-layout-cell u-size-24-lg u-size-28-xl u-size-60-md u-size-60-sm u-size-60-xs u-layout-cell-2">
                   <div className="u-container-layout u-valign-middle u-container-layout-2">
-                    <Link to="/contact" target="_blank" rel="noopener" className="u-active-white u-align-left u-border-active-white u-border-hover-white u-border-none u-btn u-btn-round u-button-style u-hover-white u-palette-1-base u-radius-50 u-text-active-black u-text-body-alt-color u-text-hover-black u-btn-1" data-animation-name="customAnimationIn" data-animation-duration="1000" data-animation-delay="700">{" " + t("k1y0xgct") + ""}</Link>
+                    <Link to="/contact" target="_blank" rel="noopener" className="u-active-white u-align-left u-border-active-white u-border-hover-white u-border-none u-btn u-btn-round u-button-style u-hover-white u-palette-1-base u-radius-50 u-text-active-black u-text-body-alt-color u-text-hover-black u-btn-1" data-animation-name="customAnimationIn" data-animation-duration="1000" data-animation-delay="700">{" " + t("kwmu3bz") + ""}</Link>
                   </div>
                 </div>
               </div>

@@ -15,13 +15,13 @@ async function open(url, w = 1440) {
 }
 const click = async (pg, sel) => { try { const found = await pg.evaluate((s) => { const e = document.querySelector(s); if (!e) return false; e.scrollIntoView({ block: 'center', behavior: 'instant' }); return true; }, sel); if (!found) { results.push('FAIL introuvable: ' + sel); return; } await wait(250); await pg.click(sel); } catch (e) { results.push('FAIL clic ' + sel + ' : ' + e.message.slice(0, 80)); } };
 
-// 1) pied de page : Talk to an expert -> /contact ; show on map -> Google Maps ; logo -> accueil
+// 1) pied de page : Parler à un expert -> /contact ; show on map -> Google Maps ; logo -> accueil
 let pg = await open('/a-propos');
 const maps = await pg.$eval('footer a[href*="google.com/maps"]', (a) => a.href).catch(() => null);
 ok('footer "show on map" -> Google Maps', !!maps, maps || '');
-await pg.evaluate(() => { const a = [...document.querySelectorAll('footer a')].find((x) => /talk to an expert/i.test(x.textContent)); a.scrollIntoView({ block: 'center', behavior: 'instant' }); a.setAttribute('data-t', '1'); }); await wait(250); await pg.click('footer a[data-t]');
+await pg.evaluate(() => { const a = [...document.querySelectorAll('footer a')].find((x) => /parler à un expert/i.test(x.textContent)); a.scrollIntoView({ block: 'center', behavior: 'instant' }); a.setAttribute('data-t', '1'); }); await wait(250); await pg.click('footer a[data-t]');
 await wait(700);
-ok('footer "Talk to an expert" -> /contact', new URL(pg.url()).pathname === '/contact', pg.url());
+ok('footer "Parler à un expert" -> /contact', new URL(pg.url()).pathname === '/contact', pg.url());
 await click(pg, 'header a.u-logo');
 await wait(500);
 ok('logo -> accueil', new URL(pg.url()).pathname === '/');
@@ -66,7 +66,7 @@ await click(pg, '.u-gallery-item:nth-child(3)'); await wait(600);
 ok('Accueil : galerie ouvre la visionneuse', !!(await pg.$('.lightbox.is-open')));
 await pg.keyboard.press('Escape'); await wait(500);
 ok('Accueil : visionneuse se ferme', !(await pg.$('.lightbox')));
-await pg.evaluate(() => { const t = [...document.querySelectorAll('.logo-tile')].find((x) => { const r = x.getBoundingClientRect(); return r.left > 200 && r.right < window.innerWidth - 200; }); t.scrollIntoView({ block: 'center', behavior: 'instant' }); t.setAttribute('data-t', '1'); }); await wait(300); await pg.hover('.logo-tile[data-t]'); await pg.click('.logo-tile[data-t]'); await wait(700);
+await pg.evaluate(() => { const t = [...document.querySelectorAll('.lm-tile')].find((x) => { const r = x.getBoundingClientRect(); return r.left > 200 && r.right < window.innerWidth - 200; }); t.scrollIntoView({ block: 'center', behavior: 'instant' }); t.setAttribute('data-t', '1'); }); await wait(300); await pg.hover('.lm-tile[data-t]'); await pg.click('.lm-tile[data-t]'); await wait(700);
 ok('Accueil : logo partenaire -> page partenaire', new URL(pg.url()).pathname.startsWith('/partenaires/'), pg.url());
 await pg.close();
 
@@ -104,8 +104,9 @@ await pg.close();
 
 // 8) pages partenaires : filtres + fiches
 pg = await open('/partenaires');
-await pg.evaluate(() => document.querySelectorAll('.partners-filters button')[1].click()); await wait(300);
-ok('Partenaires : filtre catégorie', (await pg.$$('.partner-card')).length > 0 && (await pg.$$('.partner-card')).length < 12);
+ok('Partenaires : 12 lignes en groupes par domaine', (await pg.$$('.partner-row')).length === 12 && (await pg.$$('.partner-group')).length === 5);
+await pg.click('.partner-row'); await wait(700);
+ok('Partenaires : ligne -> fiche', new URL(pg.url()).pathname.startsWith('/partenaires/'));
 await pg.close();
 pg = await open('/partenaires/festo');
 const ext = await pg.$eval('a[href^="https://www.festo.com"]', (a) => a.target).catch(() => null);

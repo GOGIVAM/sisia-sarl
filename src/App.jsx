@@ -4,9 +4,11 @@ import { routes } from './routes.js';
 import { LangProvider, localize } from './i18n/index.jsx';
 import NotFound from './pages/NotFound.jsx';
 
+const ServicesPage = lazy(() => import('./pages/ServicesPage.jsx'));
 const Partners = lazy(() => import('./pages/Partners.jsx'));
 const PartnerDetail = lazy(() => import('./pages/PartnerDetail.jsx'));
 const extraRoutes = [
+  { path: '/services', Component: ServicesPage },
   { path: '/partenaires', Component: Partners },
   { path: '/partenaires/:slug', Component: PartnerDetail },
 ];
@@ -36,7 +38,7 @@ export default function App() {
       <ScrollManager />
       <Suspense fallback={null}>
         <Routes>
-          {[...routes, ...extraRoutes].flatMap(({ path, Component }) => [
+          {[...routes.filter((r) => r.path !== '/services'), ...extraRoutes].flatMap(({ path, Component }) => [
             <Route key={path} path={path} element={<Component />} />,
             <Route key={'en' + path} path={localize(path, 'en')} element={<Component />} />,
           ])}

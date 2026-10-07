@@ -128,7 +128,7 @@ export default function ElectriciteIndustrielle() {
                   </div>
                   <div className="u-black u-menu-overlay u-opacity u-opacity-70"></div>
                 </div>
-                <style className="menu-style" dangerouslySetInnerHTML={{ __html: "@media (max-width: 939px) {\r\n                            [data-responsive-from=\"MD\"] .u-nav-container { display: none; }\r\n                            [data-responsive-from=\"MD\"] .menu-collapse { display: block; }\r\n                        }" }} />
+                <style className="menu-style" dangerouslySetInnerHTML={{ __html: "@media (max-width: 939px) {\n                            [data-responsive-from=\"MD\"] .u-nav-container { display: none; }\n                            [data-responsive-from=\"MD\"] .menu-collapse { display: block; }\n                        }" }} />
               </nav>
               <div className="nav-actions">
                 <Link className="nav-cta" to="/contact">{t("kw3fq2r")}</Link>
@@ -275,7 +275,7 @@ export default function ElectriciteIndustrielle() {
                 </div>
                 <div className="u-container-align-left u-container-style u-layout-cell u-size-24-lg u-size-28-xl u-size-60-md u-size-60-sm u-size-60-xs u-layout-cell-2">
                   <div className="u-container-layout u-valign-middle u-container-layout-2">
-                    <Link to="/contact" className="u-active-white u-align-left u-border-active-white u-border-hover-white u-border-none u-btn u-btn-round u-button-style u-hover-white u-palette-1-base u-radius-50 u-text-active-black u-text-body-alt-color u-text-hover-black u-btn-1" data-animation-name="customAnimationIn" data-animation-duration="1000" data-animation-delay="700">{t("k1y0xgct")}</Link>
+                    <Link to="/contact" className="u-active-white u-align-left u-border-active-white u-border-hover-white u-border-none u-btn u-btn-round u-button-style u-hover-white u-palette-1-base u-radius-50 u-text-active-black u-text-body-alt-color u-text-hover-black u-btn-1" data-animation-name="customAnimationIn" data-animation-duration="1000" data-animation-delay="700">{t("kwmu3bz")}</Link>
                   </div>
                 </div>
               </div>

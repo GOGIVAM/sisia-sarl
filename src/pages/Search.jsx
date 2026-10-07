@@ -41,7 +41,7 @@ export default function Search() {
                       <use xlinkHref="#svg-5e14" />
                     </svg>
                     <svg className="u-svg-content" viewBox="0 0 112 112" x="0" y="0" id="svg-5e14">
-                      <path fill="currentColor" d={"M75.5,28.8H65.4c-1.5,0-4,0.9-4,4.3v9.4h13.9l-1.5,15.8H61.4v45.1H42.8V58.3h-8.8V42.4h8.8V32.2\r\nc0-7.4,3.4-18.8,18.8-18.8h13.8v15.4H75.5z"} />
+                      <path fill="currentColor" d={"M75.5,28.8H65.4c-1.5,0-4,0.9-4,4.3v9.4h13.9l-1.5,15.8H61.4v45.1H42.8V58.3h-8.8V42.4h8.8V32.2\nc0-7.4,3.4-18.8,18.8-18.8h13.8v15.4H75.5z"} />
                     </svg>
                   </span>
                 </a>
@@ -52,7 +52,7 @@ export default function Search() {
                       <use xlinkHref="#svg-acba" />
                     </svg>
                     <svg className="u-svg-content" viewBox="0 0 112.2 112.2" x="0px" y="0px" id="svg-acba">
-                      <path d={"M67.1,49.1L98.6,16h-12L62,42L43.2,16H11l32.8,45.2L11,96h11.6l26.3-27.7L69.1,96H101L67.1,49.1z M55,61.9l-5.1-7L27.5,24.4\r\n\th11.4l17.3,23.8l5.1,7.1l23.4,32.2H73.8L55,61.9z"} />
+                      <path d={"M67.1,49.1L98.6,16h-12L62,42L43.2,16H11l32.8,45.2L11,96h11.6l26.3-27.7L69.1,96H101L67.1,49.1z M55,61.9l-5.1-7L27.5,24.4\n\th11.4l17.3,23.8l5.1,7.1l23.4,32.2H73.8L55,61.9z"} />
                     </svg>
                   </span>
                 </a>
@@ -63,8 +63,8 @@ export default function Search() {
                       <use xlinkHref="#svg-7491" />
                     </svg>
                     <svg className="u-svg-content" viewBox="0 0 112 112" x="0" y="0" id="svg-7491">
-                      <path fill="currentColor" d={"M55.9,32.9c-12.8,0-23.2,10.4-23.2,23.2s10.4,23.2,23.2,23.2s23.2-10.4,23.2-23.2S68.7,32.9,55.9,32.9z\r\n\t M55.9,69.4c-7.4,0-13.3-6-13.3-13.3c-0.1-7.4,6-13.3,13.3-13.3s13.3,6,13.3,13.3C69.3,63.5,63.3,69.4,55.9,69.4z"} />
-                      <path fill="currentColor" d={"M78.2,11H33.5C21,11,10.8,21.3,10.8,33.7v44.7c0,12.6,10.2,22.8,22.7,22.8h44.7c12.6,0,22.7-10.2,22.7-22.7\r\n\tV33.7C100.8,21.1,90.6,11,78.2,11z M91,78.4c0,7.1-5.8,12.8-12.8,12.8H33.5c-7.1,0-12.8-5.8-12.8-12.8V33.7\r\n\tc0-7.1,5.8-12.8,12.8-12.8h44.7c7.1,0,12.8,5.8,12.8,12.8V78.4z"} />
+                      <path fill="currentColor" d={"M55.9,32.9c-12.8,0-23.2,10.4-23.2,23.2s10.4,23.2,23.2,23.2s23.2-10.4,23.2-23.2S68.7,32.9,55.9,32.9z\n\t M55.9,69.4c-7.4,0-13.3-6-13.3-13.3c-0.1-7.4,6-13.3,13.3-13.3s13.3,6,13.3,13.3C69.3,63.5,63.3,69.4,55.9,69.4z"} />
+                      <path fill="currentColor" d={"M78.2,11H33.5C21,11,10.8,21.3,10.8,33.7v44.7c0,12.6,10.2,22.8,22.7,22.8h44.7c12.6,0,22.7-10.2,22.7-22.7\n\tV33.7C100.8,21.1,90.6,11,78.2,11z M91,78.4c0,7.1-5.8,12.8-12.8,12.8H33.5c-7.1,0-12.8-5.8-12.8-12.8V33.7\n\tc0-7.1,5.8-12.8,12.8-12.8h44.7c7.1,0,12.8,5.8,12.8,12.8V78.4z"} />
                     </svg>
                   </span>
                 </a>
@@ -174,7 +174,7 @@ export default function Search() {
                   </div>
                   <div className="u-black u-menu-overlay u-opacity u-opacity-70"></div>
                 </div>
-                <style className="menu-style" dangerouslySetInnerHTML={{ __html: "@media (max-width: 939px) {\r\n                    [data-responsive-from=\"MD\"] .u-nav-container {\r\n                        display: none;\r\n                    }\r\n                    [data-responsive-from=\"MD\"] .menu-collapse {\r\n                        display: block;\r\n                    }\r\n                }" }} />
+                <style className="menu-style" dangerouslySetInnerHTML={{ __html: "@media (max-width: 939px) {\n                    [data-responsive-from=\"MD\"] .u-nav-container {\n                        display: none;\n                    }\n                    [data-responsive-from=\"MD\"] .menu-collapse {\n                        display: block;\n                    }\n                }" }} />
               </nav>
             </div>
           </div>
@@ -243,7 +243,7 @@ export default function Search() {
                 </div>
                 <div className="u-container-align-left u-container-style u-layout-cell u-size-24-lg u-size-28-xl u-size-60-md u-size-60-sm u-size-60-xs u-layout-cell-2">
                   <div className="u-container-layout u-valign-middle u-container-layout-2">
-                    <Link to="/contact" className="u-active-white u-align-left u-border-active-white u-border-hover-white u-border-none u-btn u-btn-round u-button-style u-hover-white u-palette-1-base u-radius-50 u-text-active-black u-text-body-alt-color u-text-hover-black u-btn-1" data-animation-name="customAnimationIn" data-animation-duration="1000" data-animation-delay="700">{" " + t("k1y0xgct") + ""}</Link>
+                    <Link to="/contact" className="u-active-white u-align-left u-border-active-white u-border-hover-white u-border-none u-btn u-btn-round u-button-style u-hover-white u-palette-1-base u-radius-50 u-text-active-black u-text-body-alt-color u-text-hover-black u-btn-1" data-animation-name="customAnimationIn" data-animation-duration="1000" data-animation-delay="700">{" " + t("kwmu3bz") + ""}</Link>
                   </div>
                 </div>
               </div>
@@ -275,7 +275,7 @@ export default function Search() {
                             <use xlinkHref="#svg-0b86" />
                           </svg>
                           <svg className="u-svg-content" viewBox="0 0 112 112" x="0" y="0" id="svg-0b86">
-                            <path fill="currentColor" d={"M75.5,28.8H65.4c-1.5,0-4,0.9-4,4.3v9.4h13.9l-1.5,15.8H61.4v45.1H42.8V58.3h-8.8V42.4h8.8V32.2\r\nc0-7.4,3.4-18.8,18.8-18.8h13.8v15.4H75.5z"} />
+                            <path fill="currentColor" d={"M75.5,28.8H65.4c-1.5,0-4,0.9-4,4.3v9.4h13.9l-1.5,15.8H61.4v45.1H42.8V58.3h-8.8V42.4h8.8V32.2\nc0-7.4,3.4-18.8,18.8-18.8h13.8v15.4H75.5z"} />
                           </svg>
                         </span>
                       </a>
@@ -286,7 +286,7 @@ export default function Search() {
                             <use xlinkHref="#svg-a57b" />
                           </svg>
                           <svg className="u-svg-content" viewBox="0 0 112.2 112.2" x="0px" y="0px" id="svg-a57b">
-                            <path d={"M67.1,49.1L98.6,16h-12L62,42L43.2,16H11l32.8,45.2L11,96h11.6l26.3-27.7L69.1,96H101L67.1,49.1z M55,61.9l-5.1-7L27.5,24.4\r\n\th11.4l17.3,23.8l5.1,7.1l23.4,32.2H73.8L55,61.9z"} />
+                            <path d={"M67.1,49.1L98.6,16h-12L62,42L43.2,16H11l32.8,45.2L11,96h11.6l26.3-27.7L69.1,96H101L67.1,49.1z M55,61.9l-5.1-7L27.5,24.4\n\th11.4l17.3,23.8l5.1,7.1l23.4,32.2H73.8L55,61.9z"} />
                           </svg>
                         </span>
                       </a>
@@ -297,8 +297,8 @@ export default function Search() {
                             <use xlinkHref="#svg-af1e" />
                           </svg>
                           <svg className="u-svg-content" viewBox="0 0 112 112" x="0" y="0" id="svg-af1e">
-                            <path fill="currentColor" d={"M55.9,32.9c-12.8,0-23.2,10.4-23.2,23.2s10.4,23.2,23.2,23.2s23.2-10.4,23.2-23.2S68.7,32.9,55.9,32.9z\r\n\t M55.9,69.4c-7.4,0-13.3-6-13.3-13.3c-0.1-7.4,6-13.3,13.3-13.3s13.3,6,13.3,13.3C69.3,63.5,63.3,69.4,55.9,69.4z"} />
-                            <path fill="currentColor" d={"M78.2,11H33.5C21,11,10.8,21.3,10.8,33.7v44.7c0,12.6,10.2,22.8,22.7,22.8h44.7c12.6,0,22.7-10.2,22.7-22.7\r\n\tV33.7C100.8,21.1,90.6,11,78.2,11z M91,78.4c0,7.1-5.8,12.8-12.8,12.8H33.5c-7.1,0-12.8-5.8-12.8-12.8V33.7\r\n\tc0-7.1,5.8-12.8,12.8-12.8h44.7c7.1,0,12.8,5.8,12.8,12.8V78.4z"} />
+                            <path fill="currentColor" d={"M55.9,32.9c-12.8,0-23.2,10.4-23.2,23.2s10.4,23.2,23.2,23.2s23.2-10.4,23.2-23.2S68.7,32.9,55.9,32.9z\n\t M55.9,69.4c-7.4,0-13.3-6-13.3-13.3c-0.1-7.4,6-13.3,13.3-13.3s13.3,6,13.3,13.3C69.3,63.5,63.3,69.4,55.9,69.4z"} />
+                            <path fill="currentColor" d={"M78.2,11H33.5C21,11,10.8,21.3,10.8,33.7v44.7c0,12.6,10.2,22.8,22.7,22.8h44.7c12.6,0,22.7-10.2,22.7-22.7\n\tV33.7C100.8,21.1,90.6,11,78.2,11z M91,78.4c0,7.1-5.8,12.8-12.8,12.8H33.5c-7.1,0-12.8-5.8-12.8-12.8V33.7\n\tc0-7.1,5.8-12.8,12.8-12.8h44.7c7.1,0,12.8,5.8,12.8,12.8V78.4z"} />
                           </svg>
                         </span>
                       </a>

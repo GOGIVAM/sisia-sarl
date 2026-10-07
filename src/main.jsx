@@ -9,6 +9,7 @@ import './styles/shapes.css';
 import './styles/modern-carousels.css';
 import './styles/nav.css';
 import './styles/reference.css';
+import './styles/partners.css';
 import './components/LangSwitcher.css';
 import App from './App.jsx';
 

@@ -95,7 +95,7 @@ function fnv(str) {
 // Boutons du gabarit Nicepage laissés en href="#" : [libellé, destination]
 const MAPS = 'https://www.google.com/maps/search/?api=1&query=Douala+3e+Ngodi-Bakoko+Chefferie+Cameroun';
 const HASH_LINKS = [
-  [/talk to an expert|parler à un expert/, '/contact'],
+  [/parler à un expert|talk to an expert/, '/contact'],
   [/show on map|voir la carte|voir sur la carte/, MAPS],
   [/découvrir sisia/, '/services'],
   [/demander un devis|nous contacter|contactez-nous/, '/contact'],

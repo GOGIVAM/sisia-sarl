@@ -142,7 +142,7 @@ export default function Blog() {
                   </div>
                   <div className="u-black u-menu-overlay u-opacity u-opacity-70"></div>
                 </div>
-                <style className="menu-style" dangerouslySetInnerHTML={{ __html: "@media (max-width: 939px) {\r\n                        [data-responsive-from=\"MD\"] .u-nav-container {\r\n                            display: none;\r\n                        }\r\n                        [data-responsive-from=\"MD\"] .menu-collapse {\r\n                            display: block;\r\n                        }\r\n                    }" }} />
+                <style className="menu-style" dangerouslySetInnerHTML={{ __html: "@media (max-width: 939px) {\n                        [data-responsive-from=\"MD\"] .u-nav-container {\n                            display: none;\n                        }\n                        [data-responsive-from=\"MD\"] .menu-collapse {\n                            display: block;\n                        }\n                    }" }} />
               </nav>
               <div className="nav-actions">
                 <Link className="nav-cta" to="/contact">{t("kw3fq2r")}</Link>
@@ -256,7 +256,7 @@ export default function Blog() {
                 </div>
                 <div className="u-container-align-left u-container-style u-layout-cell u-size-24-lg u-size-28-xl u-size-60-md u-size-60-sm u-size-60-xs u-layout-cell-2">
                   <div className="u-container-layout u-valign-middle u-container-layout-2">
-                    <Link to="/contact" className="u-active-white u-align-left u-border-active-white u-border-hover-white u-border-none u-btn u-btn-round u-button-style u-hover-white u-palette-1-base u-radius-50 u-text-active-black u-text-body-alt-color u-text-hover-black u-btn-1" data-animation-name="customAnimationIn" data-animation-duration="1000" data-animation-delay="700">{" " + t("k1y0xgct") + ""}</Link>
+                    <Link to="/contact" className="u-active-white u-align-left u-border-active-white u-border-hover-white u-border-none u-btn u-btn-round u-button-style u-hover-white u-palette-1-base u-radius-50 u-text-active-black u-text-body-alt-color u-text-hover-black u-btn-1" data-animation-name="customAnimationIn" data-animation-duration="1000" data-animation-delay="700">{" " + t("kwmu3bz") + ""}</Link>
                   </div>
                 </div>
               </div>
@@ -290,7 +290,7 @@ export default function Blog() {
                             <use xlinkHref="#svg-0b86" />
                           </svg>
                           <svg className="u-svg-content" viewBox="0 0 112 112" x="0" y="0" id="svg-0b86">
-                            <path fill="currentColor" d={"M75.5,28.8H65.4c-1.5,0-4,0.9-4,4.3v9.4h13.9l-1.5,15.8H61.4v45.1H42.8V58.3h-8.8V42.4h8.8V32.2\r\nc0-7.4,3.4-18.8,18.8-18.8h13.8v15.4H75.5z"} />
+                            <path fill="currentColor" d={"M75.5,28.8H65.4c-1.5,0-4,0.9-4,4.3v9.4h13.9l-1.5,15.8H61.4v45.1H42.8V58.3h-8.8V42.4h8.8V32.2\nc0-7.4,3.4-18.8,18.8-18.8h13.8v15.4H75.5z"} />
                           </svg>
                         </span>
                       </a>

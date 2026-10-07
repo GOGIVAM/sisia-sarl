@@ -157,3 +157,52 @@ html body #carousel_1fd3 .services-carousel .carousel-wrapper { position: absolu
 html body #carousel_1fd3 .services-carousel .carousel-slide { height: 100% !important; transform: none !important; }
 html body #carousel_1fd3 .services-carousel .carousel-image, html body #carousel_1fd3 .services-carousel .carousel-image img { height: 100% !important; position: absolute; inset: 0; }
 html body #carousel_1fd3 .services-carousel .carousel-slide.active .carousel-image img { animation: none; }
+
+/* =========================================================================
+   Vitrine des métiers (accueil) : onglets numérotés à gauche, visuel à droite
+   ========================================================================= */
+html body #carousel_1fd3 { background: #fff !important; padding: 72px 20px 40px !important; min-height: 0 !important; }
+html body #carousel_1fd3 .u-sheet-1 { max-width: 1180px !important; min-height: 0 !important; padding: 0 !important; margin: 0 auto !important; }
+html body #carousel_1fd3 h2.u-text-1 { text-align: left !important; margin: 0 0 8px !important; transform: none !important; }
+html body #carousel_1fd3 h2.u-text-1::after { display: none !important; }
+html body #carousel_1fd3 .services-showcase {
+  display: grid !important; grid-template-columns: minmax(300px, 38%) 1fr; gap: 28px; align-items: stretch;
+  height: auto !important; min-height: 0 !important; background: transparent !important; box-shadow: none !important; border-radius: 0 !important; overflow: visible !important; margin-top: 28px;
+}
+html body #carousel_1fd3 .services-showcase .showcase-tabs { display: flex; flex-direction: column; gap: 8px; }
+html body #carousel_1fd3 .services-showcase .indicator {
+  position: relative; display: grid; grid-template-columns: 38px 1fr; grid-template-areas: "num title" "num desc"; column-gap: 12px; row-gap: 0;
+  width: 100% !important; height: auto !important; min-width: 0; padding: 16px 18px !important; text-align: left; border-radius: 10px !important;
+  background: var(--gray-1) !important; border: 1px solid var(--frame) !important; overflow: hidden; cursor: pointer;
+  transition: background 0.3s, border-color 0.3s, transform 0.3s var(--ease);
+}
+html body #carousel_1fd3 .services-showcase .indicator::before { display: none; }
+html body #carousel_1fd3 .services-showcase .indicator:hover { background: #fff !important; border-color: #d6d6d6 !important; }
+html body #carousel_1fd3 .services-showcase .indicator.active { background: #fff !important; border-color: #cfcfcf !important; box-shadow: 0 14px 30px rgba(10, 10, 10, 0.07); }
+html body #carousel_1fd3 .services-showcase .tab-num { grid-area: num; font: 700 13px/1.6 var(--font-head); color: #9a9a9f; letter-spacing: 0.06em; transition: color 0.3s; }
+html body #carousel_1fd3 .services-showcase .indicator.active .tab-num { color: var(--brand); }
+html body #carousel_1fd3 .services-showcase .tab-title { grid-area: title; font: 700 17px/1.35 var(--font-head); color: var(--ink); }
+html body #carousel_1fd3 .services-showcase .tab-desc { grid-area: desc; font: 400 14.5px/1.55 var(--font-body); color: #4a4d54; max-height: 0; opacity: 0; overflow: hidden; transition: max-height 0.5s var(--ease), opacity 0.4s, margin 0.4s; }
+html body #carousel_1fd3 .services-showcase .indicator.active .tab-desc { max-height: 120px; opacity: 1; margin-top: 6px; }
+/* barre de progression sous l'onglet actif */
+html body #carousel_1fd3 .services-showcase .indicator::after { content: ''; position: absolute; left: 0; bottom: 0; height: 3px; width: 100%; background: var(--brand); transform: scaleX(0); transform-origin: 0 50%; border-radius: 0; inset: auto 0 0 0; }
+html body #carousel_1fd3 .services-showcase .indicator.active::after { animation: carFill var(--dur, 6000ms) linear forwards; }
+
+/* visuel */
+html body #carousel_1fd3 .services-showcase .carousel-wrapper { position: relative !important; inset: auto !important; min-height: 520px !important; height: 100% !important; border-radius: 14px; overflow: hidden; background: var(--black); }
+html body #carousel_1fd3 .services-showcase .carousel-overlay { background: linear-gradient(0deg, rgba(5, 5, 5, 0.55) 0%, transparent 45%) !important; }
+html body #carousel_1fd3 .services-showcase .carousel-caption { left: 24px !important; right: auto !important; bottom: 24px !important; max-width: none; }
+html body #carousel_1fd3 .services-showcase .carousel-btn { bottom: 20px !important; }
+html body #carousel_1fd3 .services-showcase .carousel-btn.next-btn { right: 20px !important; }
+html body #carousel_1fd3 .services-showcase .carousel-btn.prev-btn { right: 82px !important; }
+html body .showcase-more { max-width: 1180px; margin: 28px auto 0; display: flex; justify-content: flex-start; }
+
+@media (max-width: 900px) {
+  html body #carousel_1fd3 .services-showcase { grid-template-columns: 1fr; }
+  html body #carousel_1fd3 .services-showcase .carousel-wrapper { order: -1; min-height: 340px !important; }
+  html body #carousel_1fd3 .services-showcase .showcase-tabs { flex-direction: row; overflow-x: auto; scrollbar-width: none; gap: 8px; padding-bottom: 4px; }
+  html body #carousel_1fd3 .services-showcase .indicator { flex: 0 0 auto; width: 220px !important; }
+}
+html body #carousel_1fd3 .services-showcase .indicator { flex: 0 0 auto !important; }
+html body #carousel_1fd3 .services-showcase .showcase-tabs { justify-content: flex-start; }
+html body #carousel_1fd3 .services-showcase .indicator:hover, html body #carousel_1fd3 .services-showcase .indicator.active { transform: none !important; }

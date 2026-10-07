@@ -125,7 +125,7 @@ export default function AutomatismeInstrumentation() {
                   </div>
                   <div className="u-black u-menu-overlay u-opacity u-opacity-70"></div>
                 </div>
-                <style className="menu-style" dangerouslySetInnerHTML={{ __html: "@media (max-width: 939px) {\r\n                            [data-responsive-from=\"MD\"] .u-nav-container { display: none; }\r\n                            [data-responsive-from=\"MD\"] .menu-collapse { display: block; }\r\n                        }" }} />
+                <style className="menu-style" dangerouslySetInnerHTML={{ __html: "@media (max-width: 939px) {\n                            [data-responsive-from=\"MD\"] .u-nav-container { display: none; }\n                            [data-responsive-from=\"MD\"] .menu-collapse { display: block; }\n                        }" }} />
               </nav>
               <div className="nav-actions">
                 <Link className="nav-cta" to="/contact">{t("kw3fq2r")}</Link>
