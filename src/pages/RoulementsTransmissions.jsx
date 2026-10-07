@@ -100,9 +100,6 @@ export default function RoulementsTransmissions() {
                     <li className="u-nav-item">
                       <Link className="u-button-style u-nav-link" to="/partenaires">{t("k1ruzyud")}</Link>
                     </li>
-                    <li className="u-nav-item">
-                      <Link className="u-button-style u-nav-link" to="/contact">{t("kw3fq2r")}</Link>
-                    </li>
                   </ul>
                 </div>
                 <div className="u-custom-menu u-nav-container-collapse" role="region" aria-label={t("k14jszik")}>
@@ -132,6 +129,9 @@ export default function RoulementsTransmissions() {
                 </div>
                 <style className="menu-style" dangerouslySetInnerHTML={{ __html: "@media (max-width: 939px) { [data-responsive-from=\"MD\"] .u-nav-container { display: none; } [data-responsive-from=\"MD\"] .menu-collapse { display: block; } }" }} />
               </nav>
+              <div className="nav-actions">
+                <Link className="nav-cta" to="/contact">{t("kw3fq2r")}</Link>
+              </div>
             </div>
           </div>
         </div>

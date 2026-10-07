@@ -79,6 +79,9 @@ export default function Maquette() {
                   </li>
                 </ul>
               </nav>
+              <div className="nav-actions">
+                <Link className="nav-cta" to="/contact">{t("kw3fq2r")}</Link>
+              </div>
             </div>
           </div>
         </div>

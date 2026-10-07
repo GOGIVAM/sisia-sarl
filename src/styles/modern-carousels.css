@@ -139,7 +139,7 @@ html body .u-layout-horizontal .u-repeater-item .u-black { background: linear-gr
 /* ---- Ajustements après relecture --------------------------------------- */
 html body .services-carousel .carousel-slide, html body .services-carousel .carousel-image, html body .services-carousel .carousel-image img { height: 100% !important; }
 html body .services-carousel .carousel-image img { min-height: 100%; }
-html body .testimonial-card .avatar { border: 0 !important; box-shadow: 0 8px 18px rgba(46, 90, 172, 0.28); }
+html body .testimonial-card .avatar { border: 0 !important; box-shadow: 0 8px 18px rgba(224, 32, 39, 0.28); }
 html body .testimonials-carousel { position: relative; padding-bottom: 84px; }
 html body .testimonial-nav { top: auto !important; bottom: 14px !important; transform: none !important; width: 48px; height: 48px; margin: 0 !important; z-index: 3; }
 html body .testimonial-nav.testimonial-prev { left: calc(50% - 150px) !important; right: auto !important; }

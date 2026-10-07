@@ -15,7 +15,7 @@ export default function LangSwitcher() {
   const [ready, setReady] = useState(false);
 
   useEffect(() => {
-    setHost(document.querySelector('header .u-section-row-2 .u-sheet'));
+    setHost(document.querySelector('header .nav-actions') || document.querySelector('header .u-section-row-2 .u-sheet'));
     setReady(true);
   }, [pathname]);
 

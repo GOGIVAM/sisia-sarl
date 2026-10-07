@@ -3,7 +3,7 @@
    ========================================================================= */
 html body .u-section-7 {
   min-height: 0 !important; padding: 96px 20px 88px !important; background-image: none !important;
-  background: radial-gradient(900px 320px at 10% 0%, rgba(46, 90, 172, 0.09), transparent 60%), var(--sky-2) !important;
+  background: radial-gradient(900px 320px at 10% 0%, rgba(224, 32, 39, 0.09), transparent 60%), var(--sky-2) !important;
 }
 html body .u-section-7 .u-group-1 { min-height: 0 !important; height: auto !important; margin: 0 auto !important; background: transparent !important; box-shadow: none !important; max-width: 760px; }
 html body .u-section-7 .u-container-layout-1 { padding: 0 !important; }
@@ -51,7 +51,7 @@ html body .u-section-7 .u-btn-1 {
   display: flex !important; width: max-content; margin: 44px auto 0 !important; padding: 16px 40px !important;
   font-size: 15px !important; letter-spacing: 0.04em; border-radius: 10px !important;
   background: var(--brand) !important; border-color: var(--brand) !important; color: #fff !important;
-  box-shadow: 0 12px 28px rgba(46, 90, 172, 0.32);
+  box-shadow: 0 12px 28px rgba(224, 32, 39, 0.32);
 }
 html body .u-section-7 .u-btn-1:hover { background: var(--brand-600) !important; border-color: var(--brand-600) !important; }
 

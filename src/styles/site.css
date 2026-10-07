@@ -2,8 +2,8 @@
    SISIA : couche design, accessibilité et motion (chargée après nicepage.css)
    ========================================================================= */
 :root {
-  --brand: #2e5aac;
-  --brand-dark: #1d3f80;
+  --brand: #E02027;
+  --brand-dark: #A31018;
   --brand-soft: #eaf0fb;
   --accent: #d71920;
   --ink: #17212b;
@@ -125,7 +125,7 @@ a:hover > .u-image:not(.u-logo-image) { transform: scale(1.03); }
 /* ---- Pages partenaires ------------------------------------------------ */
 .page-hero {
   background: radial-gradient(1200px 400px at 85% -10%, rgba(215, 25, 32, 0.28), transparent 60%),
-              linear-gradient(135deg, #14264d 0%, var(--brand) 100%);
+              linear-gradient(135deg, #0b0d12 0%, var(--brand) 100%);
   color: #fff; padding: 76px 20px 70px;
 }
 .page-hero__inner { max-width: 1140px; margin: 0 auto; }

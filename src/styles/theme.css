@@ -4,19 +4,19 @@
    Répartition visée : 60 % clair, 25 % marine, 10 % bleu, 5 % rouge.
    ========================================================================= */
 :root {
-  --black: #090d16;
-  --black-2: #0f1626;
-  --navy: #0b1b3a;
-  --navy-2: #12295a;
-  --brand: #2e5aac;
-  --brand-600: #244a8f;
-  --sky: #eaf1fc;
-  --sky-2: #f3f7fd;
-  --ink: #0b1220;
-  --muted: #475569;
-  --bg: #f8fafc;
-  --line: #e2e8f0;
-  --red: #d71920;
+  --black: #0a0a0a;
+  --black-2: #141414;
+  --navy: #0a0a0a;
+  --navy-2: #1a1a1a;
+  --brand: #e02027;
+  --brand-600: #b9151b;
+  --sky: #fdecec;
+  --sky-2: #f6f6f6;
+  --ink: #0a0a0a;
+  --muted: #5b5f66;
+  --bg: #ffffff;
+  --line: #e6e6e6;
+  --red: #e02027;
   --accent: var(--red);
   --font-head: 'Manrope', 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
   --font-body: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
@@ -78,7 +78,7 @@ header.u-header .u-nav-container .u-nav-link.active { background: var(--sky); co
 /* dernier lien (Contact) : bouton plein */
 header.u-header .u-nav-container .u-nav-item:last-child .u-nav-link,
 header.u-header .u-nav-container .u-nav-item:last-child .u-nav-link.active {
-  background: var(--brand); color: #fff !important; box-shadow: 0 6px 16px rgba(46, 90, 172, 0.32);
+  background: var(--brand); color: #fff !important; box-shadow: 0 6px 16px rgba(224, 32, 39, 0.32);
 }
 header.u-header .u-nav-container .u-nav-item:last-child .u-nav-link:hover { background: var(--brand-600); color: #fff !important; transform: translateY(-1px); }
 
@@ -107,7 +107,7 @@ footer.u-footer a:hover { color: #fff; }
 .logo-wall {
   position: relative; overflow: hidden; padding: 88px 0 80px;
   background:
-    radial-gradient(900px 300px at 12% 0%, rgba(46, 90, 172, 0.10), transparent 60%),
+    radial-gradient(900px 300px at 12% 0%, rgba(224, 32, 39, 0.10), transparent 60%),
     radial-gradient(800px 300px at 95% 100%, rgba(215, 25, 32, 0.06), transparent 60%),
     var(--sky-2);
   border-top: 1px solid var(--line);
@@ -203,7 +203,7 @@ html body section.u-shading p.u-text, html body section.u-shading .u-text-defaul
 html body .supervision-cta { background: linear-gradient(135deg, var(--black) 0%, var(--navy) 65%, var(--navy-2) 100%) !important; box-shadow: 0 24px 60px rgba(9, 13, 22, 0.32) !important; }
 html body .supervision-cta-btn { color: var(--navy) !important; }
 html body .supervision-cta-btn:hover { color: var(--brand) !important; }
-html body .add-review-btn { background: var(--brand) !important; border-color: var(--brand) !important; box-shadow: 0 10px 24px rgba(46, 90, 172, 0.3) !important; }
+html body .add-review-btn { background: var(--brand) !important; border-color: var(--brand) !important; box-shadow: 0 10px 24px rgba(224, 32, 39, 0.3) !important; }
 html body .add-review-btn:hover { background: var(--brand-600) !important; }
 /* titres h3 des sections contact / supervision */
 html body .u-section-10 .u-text-1, html body .u-section-11 .u-text-1, html body .u-section-12 .u-text-1, html body .u-section-9 .u-text-1 {

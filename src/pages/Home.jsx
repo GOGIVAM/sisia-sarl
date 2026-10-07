@@ -129,9 +129,6 @@ export default function Home() {
                     <li className="u-nav-item" role="none">
                       <Link className="u-button-style u-nav-link" to="/partenaires">{t("k1ruzyud")}</Link>
                     </li>
-                    <li className="u-nav-item" role="none">
-                      <Link className="u-button-style u-nav-link" to="/contact">{t("kw3fq2r")}</Link>
-                    </li>
                   </ul>
                 </div>
                 <div className="u-custom-menu u-nav-container-collapse" id="07e9" role="region" aria-label={t("k14jszik")}>
@@ -161,6 +158,9 @@ export default function Home() {
                 </div>
                 <style className="menu-style" dangerouslySetInnerHTML={{ __html: "@media (max-width: 939px) {\n                    [data-responsive-from=\"MD\"] .u-nav-container {\n                        display: none;\n                    }\n                    [data-responsive-from=\"MD\"] .menu-collapse {\n                        display: block;\n                    }\n                }" }} />
               </nav>
+              <div className="nav-actions">
+                <Link className="nav-cta" to="/contact">{t("kw3fq2r")}</Link>
+              </div>
             </div>
           </div>
         </div>
@@ -168,7 +168,13 @@ export default function Home() {
       <section className="u-align-center u-clearfix u-container-align-center u-grey-5 u-valign-top-lg u-valign-top-xl u-section-1" id="carousel_3dba">
         <div className="u-container-align-center u-container-style u-expanded-width u-group u-image u-shading u-image-1" data-image-width="1980" data-image-height="1033" data-animation-name="flipIn" data-animation-duration="1500" data-animation-delay="0" data-animation-direction="X">
           <div className="u-container-layout u-valign-top u-container-layout-1">
-            <h1 className="u-align-center u-text u-text-body-alt-color u-text-default u-text-1">{t("k1gvwtq4")}</h1>
+            <h1 className="u-align-center u-text u-text-body-alt-color u-text-default u-text-1">{t("k12db5u1")}</h1>
+            <p className="hero-sub">{t("kpv3449")}</p>
+            <div className="hero-actions">
+              <Link className="hero-btn hero-btn--primary" to="/contact">{t("k1ovdr4p")}</Link>
+              {" "}
+              <Link className="hero-btn hero-btn--ghost" to="/services">{t("k1vwqky5")}</Link>
+            </div>
           </div>
         </div>
         <div className="data-layout-selected u-clearfix u-gutter-30 u-layout-wrap u-layout-wrap-1">
@@ -179,8 +185,8 @@ export default function Home() {
                   <div className="u-align-center u-container-align-center u-container-style u-layout-cell u-radius u-shape-round u-size-60 u-white u-layout-cell-2" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="250">
                     <div className="u-container-layout u-valign-top u-container-layout-3">
                       <img src={"https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=400&h=300&fit=crop"} alt={t("k1d4oepa")} className="u-expanded-width u-image u-image-round u-radius" style={{ marginBottom: "20px" }} />
-                      <h4 className="u-align-center u-text u-text-2">{t("kl3gsyo")}</h4>
-                      <p className="u-align-center u-text u-text-3">{t("kao1snm")}</p>
+                      <h4 className="u-align-center u-text u-text-2">{t("kayf5me")}</h4>
+                      <p className="u-align-center u-text u-text-3">{t("kvss5xq")}</p>
                       <Link to="/services/electricite-industrielle" className="u-active-none u-align-center u-border-1 u-border-active-grey-60 u-border-black u-border-hover-grey-60 u-border-no-left u-border-no-right u-border-no-top u-btn u-button-style u-hover-none u-none u-text-body-color u-btn-1">{t("k1rlv4uu")}</Link>
                     </div>
                   </div>
@@ -190,9 +196,9 @@ export default function Home() {
                 <div className="u-layout-col">
                   <div className="u-align-center u-container-align-center u-container-style u-layout-cell u-radius u-shape-round u-size-60 u-white u-layout-cell-3" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="250">
                     <div className="u-container-layout u-valign-top u-container-layout-4">
-                      <img src={"https://images.unsplash.com/photo-1558002038-1055907df827?w=400&h=300&fit=crop"} alt={t("kirryrc")} className="u-expanded-width u-image u-image-round u-radius" style={{ marginBottom: "20px" }} />
-                      <h4 className="u-align-center u-text u-text-4">{t("kirryrc")}</h4>
-                      <p className="u-align-center u-text u-text-5">{t("kmws5zk")}</p>
+                      <img src={"https://images.unsplash.com/photo-1558002038-1055907df827?w=400&h=300&fit=crop"} alt={t("k161wu72")} className="u-expanded-width u-image u-image-round u-radius" style={{ marginBottom: "20px" }} />
+                      <h4 className="u-align-center u-text u-text-4">{t("k161wu72")}</h4>
+                      <p className="u-align-center u-text u-text-5">{t("ko3tptn")}</p>
                       <Link to="/services/alarme-incendie" className="u-active-none u-align-center u-border-1 u-border-active-grey-60 u-border-black u-border-hover-grey-60 u-border-no-left u-border-no-right u-border-no-top u-btn u-button-style u-hover-none u-none u-text-body-color u-btn-2">{t("k1rlv4uu")}</Link>
                     </div>
                   </div>
@@ -203,8 +209,8 @@ export default function Home() {
                   <div className="u-align-center u-container-align-center u-container-style u-layout-cell u-radius u-shape-round u-size-60 u-white u-layout-cell-6" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="250">
                     <div className="u-container-layout u-valign-top u-container-layout-7">
                       <img src={"https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=400&h=300&fit=crop"} alt={t("klgh8k6")} className="u-expanded-width u-image u-image-round u-radius" style={{ marginBottom: "20px" }} />
-                      <h4 className="u-align-center u-text u-text-6">{t("k1uu2w2b")}</h4>
-                      <p className="u-align-center u-text u-text-7">{t("kjfvubz")}</p>
+                      <h4 className="u-align-center u-text u-text-6">{t("ks7qnbt")}</h4>
+                      <p className="u-align-center u-text u-text-7">{t("kolbi7j")}</p>
                       <Link to="/services/materiel-electrique" className="u-active-none u-align-center u-border-1 u-border-active-grey-60 u-border-black u-border-hover-grey-60 u-border-no-left u-border-no-right u-border-no-top u-btn u-button-style u-hover-none u-none u-text-body-color u-btn-3">{t("k1rlv4uu")}</Link>
                     </div>
                   </div>

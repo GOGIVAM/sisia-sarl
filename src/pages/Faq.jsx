@@ -101,9 +101,6 @@ export default function Faq() {
                     <li className="u-nav-item">
                       <Link className="u-button-style u-nav-link" to="/blog/articles">{t("k1jdup01")}</Link>
                     </li>
-                    <li className="u-nav-item">
-                      <Link className="u-button-style u-nav-link" to="/contact">{t("kw3fq2r")}</Link>
-                    </li>
                   </ul>
                 </div>
                 <div className="u-custom-menu u-nav-container-collapse" id="07e9" role="region" aria-label={t("k14jszik")}>
@@ -147,6 +144,9 @@ export default function Faq() {
                   <div className="u-black u-menu-overlay u-opacity u-opacity-70"></div>
                 </div>
               </nav>
+              <div className="nav-actions">
+                <Link className="nav-cta" to="/contact">{t("kw3fq2r")}</Link>
+              </div>
             </div>
           </div>
         </div>

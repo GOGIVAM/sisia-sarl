@@ -14,13 +14,13 @@
   letter-spacing: 0.08em;
   padding: 8px 11px;
   border-radius: 7px;
-  color: #2e5aac;
+  color: #E02027;
   text-decoration: none;
   transition: background 0.25s, color 0.25s, box-shadow 0.25s;
 }
 .lang-switcher a:hover { background: #dfe8f7; }
-.lang-switcher a.is-active { background: #2e5aac; color: #fff; box-shadow: 0 4px 12px rgba(46, 90, 172, 0.35); }
-.lang-switcher a:focus-visible { outline: 2px solid #2e5aac; outline-offset: 2px; }
+.lang-switcher a.is-active { background: #E02027; color: #fff; box-shadow: 0 4px 12px rgba(224, 32, 39, 0.35); }
+.lang-switcher a:focus-visible { outline: 2px solid #E02027; outline-offset: 2px; }
 @media (max-width: 400px) { .lang-switcher a { padding: 7px 9px; } }
 
 /* Repli sans en-tête : pastille flottante */

@@ -105,9 +105,6 @@ export default function About() {
                     <li className="u-nav-item" role="none">
                       <Link className="u-button-style u-nav-link" to="/partenaires">{t("k1ruzyud")}</Link>
                     </li>
-                    <li className="u-nav-item" role="none">
-                      <Link className="u-button-style u-nav-link" to="/contact">{t("kw3fq2r")}</Link>
-                    </li>
                   </ul>
                 </div>
                 <div className="u-custom-menu u-nav-container-collapse" id="07e9" role="region" aria-label={t("k14jszik")}>
@@ -137,6 +134,9 @@ export default function About() {
                 </div>
                 <style className="menu-style" dangerouslySetInnerHTML={{ __html: "@media (max-width: 939px) {\r\n                    [data-responsive-from=\"MD\"] .u-nav-container {\r\n                        display: none;\r\n                    }\r\n                    [data-responsive-from=\"MD\"] .menu-collapse {\r\n                        display: block;\r\n                    }\r\n                }" }} />
               </nav>
+              <div className="nav-actions">
+                <Link className="nav-cta" to="/contact">{t("kw3fq2r")}</Link>
+              </div>
             </div>
           </div>
         </div>

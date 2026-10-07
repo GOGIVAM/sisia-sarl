@@ -12,7 +12,7 @@
   --r-pill: 999px;
   --sh-1: 0 1px 2px rgba(15, 23, 42, 0.05), 0 8px 22px rgba(11, 27, 58, 0.07);
   --sh-2: 0 2px 4px rgba(15, 23, 42, 0.06), 0 22px 46px rgba(11, 27, 58, 0.16);
-  --ring: 0 0 0 4px rgba(46, 90, 172, 0.25);
+  --ring: 0 0 0 4px rgba(224, 32, 39, 0.25);
 }
 
 /* ---- Boutons : une seule forme ---------------------------------------- */
@@ -37,7 +37,7 @@ html body .u-btn.u-palette-1-base, html body .u-btn.u-btn-submit, html body .btn
 html body .service-cta-btn, html body .submit-review-btn, html body .add-review-btn {
   background: linear-gradient(135deg, var(--brand), var(--brand-600)) !important; background-color: var(--brand) !important;
   border-color: var(--brand) !important; color: #fff !important;
-  box-shadow: 0 10px 24px rgba(46, 90, 172, 0.28);
+  box-shadow: 0 10px 24px rgba(224, 32, 39, 0.28);
 }
 html body .u-btn.u-btn-1.u-btn-round.u-none:not(.u-btn-submit):not([class*="u-text-"]):hover,
 html body .u-btn.u-palette-1-base:hover, html body .u-btn.u-btn-submit:hover, html body .btn-pill:not(.btn-pill--ghost):hover,
@@ -78,7 +78,7 @@ html body .u-group.u-radius, html body .u-container-style.u-radius { border-radi
 html body .u-image.u-radius, html body img.u-radius, html body .u-image-round { border-radius: var(--r-lg); }
 
 /* ---- Icônes en pastille ------------------------------------------------ */
-html body .u-icon.u-icon-circle.u-palette-1-light-1 { background: linear-gradient(135deg, var(--brand), var(--brand-600)) !important; color: #fff !important; box-shadow: 0 10px 22px rgba(46, 90, 172, 0.3); }
+html body .u-icon.u-icon-circle.u-palette-1-light-1 { background: linear-gradient(135deg, var(--brand), var(--brand-600)) !important; color: #fff !important; box-shadow: 0 10px 22px rgba(224, 32, 39, 0.3); }
 html body .service-card-icon, html body .service-highlight-icon { background: linear-gradient(135deg, var(--brand), var(--brand-600)) !important; border-radius: var(--r-md) !important; }
 
 /* ---- Intertitres h3 : bleu sur fond clair, blanc sur fond sombre ------- */

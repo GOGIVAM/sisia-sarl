@@ -1,8 +1,8 @@
 :root {
   --brand-red: #D42027;
-  --brand-blue: #2E5AAC;
+  --brand-blue: #E02027;
   --brand-light-red: #FFE5E6;
-  --brand-light-blue: #E8EDF5;
+  --brand-light-blue: #F4F4F4;
   --brand-white: #FFFFFF;
   --brand-dark: #1a1a1a;
   --brand-gray: #f5f5f5;
@@ -462,7 +462,7 @@
 }
 
 #sec-b470_2 .u-layout-cell-1 {
-  background: linear-gradient(135deg, rgba(46, 90, 172, 0.95) 0%, rgba(30, 60, 120, 0.95) 100%) !important;
+  background: linear-gradient(135deg, rgba(224, 32, 39, 0.95) 0%, rgba(30, 60, 120, 0.95) 100%) !important;
   border-radius: 24px !important;
   box-shadow: 0 25px 60px rgba(0, 0, 0, 0.3) !important;
 }
@@ -839,7 +839,7 @@
 .u-section-7 .u-form-1 input:focus,
 .u-section-7 .u-form-1 textarea:focus {
   border-color: var(--brand-blue);
-  box-shadow: 0 0 0 3px rgba(46, 90, 172, 0.1);
+  box-shadow: 0 0 0 3px rgba(224, 32, 39, 0.1);
 }
 
 .u-section-7 .u-btn-1 {
@@ -1369,7 +1369,7 @@
 
 .carousel-button-custom:hover {
   background-color: var(--brand-blue);
-  box-shadow: 0 8px 20px rgba(46, 90, 172, 0.4);
+  box-shadow: 0 8px 20px rgba(224, 32, 39, 0.4);
   transform: translateY(-50%) scale(1.1);
 }
 

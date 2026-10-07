@@ -5,6 +5,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { parseDocument, DomUtils } from 'htmlparser2';
+import { recolor } from './recolor.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const LEGACY = path.join(ROOT, 'legacy');
@@ -410,7 +411,22 @@ function convertHead(head, ctx) {
 const NAV_RE = /(<li class="u-nav-item"( role="none")?>)<a class="([^"]*)" href="Services\.html">([^<]*)<\/a><\/li>/g;
 /** Ajoute l'entrée « Partenaires » après « Nos services » dans les deux menus de chaque page. */
 function preprocess(html) {
-  return html.replace(NAV_RE, (m, li, role, cls) => m + li + '<a class="' + cls.replace(' active', '') + '" href="Partenaires.html">Partenaires</a></li>');
+  html = html.replace(NAV_RE, (m, li, role, cls) => m + li + '<a class="' + cls.replace(' active', '') + '" href="Partenaires.html">Partenaires</a></li>');
+  // En-tête : Contact quitte la liste desktop et devient un bouton d'action à droite (.nav-actions)
+  const hs = html.indexOf('<header');
+  const he = html.indexOf('</header>');
+  if (hs >= 0 && he > hs) {
+    let hdr = html.slice(hs, he);
+    hdr = hdr.replace(/(<ul class="u-nav u-unstyled u-nav-1"[^>]*>)([\s\S]*?)(<\/ul>)/, (m, open, body, close) => {
+      const li = body.match(/<li class="u-nav-item"[^>]*><a [^>]*href="Contact\.html"[^>]*>[^<]*<\/a><\/li>/);
+      return li ? open + body.replace(li[0], '') + close : m;
+    });
+    if (hdr.includes('class="nav-cta"') === false && /href="Contact\.html"/.test(html.slice(hs, he))) {
+      hdr = hdr.replace('</nav>', '</nav><div class="nav-actions"><a class="nav-cta" href="Contact.html">Contact</a></div>');
+    }
+    html = html.slice(0, hs) + hdr + html.slice(he);
+  }
+  return html;
 }
 
 /** Injections propres à certaines pages (bandeau de logos partenaires sur l'accueil). */
@@ -492,7 +508,7 @@ function main() {
       if (dir !== '.') base = dir + '-' + base;
       if (!fs.existsSync(p)) { ctx.warnings.push(`CSS introuvable : ${href}`); continue; }
       if (!cssCopied.has(base)) {
-        fs.writeFileSync(path.join(OUT_STYLES, base), fixCssUrls(fs.readFileSync(p, 'utf8')));
+        fs.writeFileSync(path.join(OUT_STYLES, base), recolor(fixCssUrls(fs.readFileSync(p, 'utf8'))));
         cssCopied.add(base);
       }
       cssFiles.push(base);
