@@ -1,0 +1,117 @@
+/* =========================================================================
+   Retouches : proportions (A propos accueil, realisations, pied de page),
+   fonds photo assombris, avis, section "Nous sommes la", heros
+   ========================================================================= */
+
+/* ---- Heros : photo visible sous un assombrissement noir ------------------ */
+html body .page-hero {
+  background: linear-gradient(180deg, rgba(8, 8, 8, 0.72) 0%, rgba(8, 8, 8, 0.86) 100%), var(--hero, none) center / cover no-repeat, #0a0a0a !important;
+  padding: 72px 20px 64px;
+}
+html body .page-hero::before { display: none; }
+
+/* hero de l'accueil : photo + voile noir, titre surligné rouge, texte clair */
+html body #carousel_3dba { background: #0a0a0a !important; }
+html body #carousel_3dba .u-image-1::after {
+  background: linear-gradient(180deg, rgba(8, 8, 8, 0.68) 0%, rgba(8, 8, 8, 0.78) 62%, rgba(8, 8, 8, 0.92) 100%) !important;
+}
+html body #carousel_3dba .hero-sub { color: #ececee !important; }
+html body #carousel_3dba .hero-btn--primary { background: #fff; color: var(--ink) !important; }
+html body #carousel_3dba .hero-btn--primary:hover { background: var(--brand); color: #fff !important; }
+html body #carousel_3dba .hero-btn--ghost { background: rgba(255, 255, 255, 0.12); color: #fff !important; box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.3); }
+html body #carousel_3dba .hero-btn--ghost:hover { background: rgba(255, 255, 255, 0.24); }
+html body #carousel_3dba .u-container-layout-1 { padding: 64px 20px 76px !important; }
+
+/* ---- A propos (accueil) : compact ------------------------------------------ */
+html body #sec-31fd { padding: 48px 20px !important; }
+html body #sec-31fd .u-layout-row { max-width: 1040px; margin: 0 auto !important; }
+html body #sec-31fd .u-layout-row > .u-layout-cell:first-child img { min-height: 300px; max-height: 360px; }
+html body #sec-31fd .u-container-layout { padding: clamp(22px, 3vw, 38px) !important; }
+html body #sec-31fd h2.u-text-1 { font-size: clamp(24px, 2.6vw, 32px) !important; margin-bottom: 10px !important; }
+html body #sec-31fd p.u-text { font-size: 16px !important; line-height: 1.6 !important; }
+html body #sec-31fd .u-list { margin: 18px 0 !important; padding: 16px 0 !important; }
+html body #sec-31fd h3.u-text { font-size: clamp(26px, 2.8vw, 34px) !important; }
+
+/* ---- Nos realisations : galerie resserree ---------------------------------- */
+html body .u-section-7 { padding: 56px 20px 56px !important; }
+html body .u-section-7 .u-gallery-1 { max-width: 1040px !important; margin-top: 30px !important; }
+html body .u-section-7 .u-gallery-inner-1 { grid-auto-rows: 168px !important; gap: 10px !important; }
+html body .u-section-7 .u-text-1 { font-size: clamp(26px, 3vw, 36px) !important; }
+html body .u-section-7 .u-text-2 { font-size: 16px !important; margin-top: 10px !important; }
+html body .u-section-7 .u-btn-1 { margin-top: 26px !important; }
+
+/* ---- Avis clients : cartes plus sobres ------------------------------------- */
+html body .testimonials-section { padding: 56px 0 !important; background: #fff !important; border-top: 1px solid var(--frame); }
+html body .testimonials-section .testimonials-container { max-width: 1140px; }
+html body .testimonials-header { display: flex; align-items: flex-end; justify-content: space-between; gap: 18px; flex-wrap: wrap; text-align: left !important; margin-bottom: 26px !important; }
+html body .testimonials-header > * { margin: 0; }
+html body .testimonials-header .section-badge { flex: 0 0 100%; width: max-content; background: var(--gray-2) !important; color: var(--ink) !important; border-radius: 999px !important; box-shadow: none !important; border: 0 !important; margin-bottom: 4px; }
+html body .testimonials-header h2 { text-align: left !important; font: 700 clamp(24px, 2.8vw, 34px)/1.15 var(--font-head) !important; letter-spacing: -0.025em; color: var(--ink) !important; flex: 1 1 380px; }
+html body .testimonials-header p { flex: 1 1 100%; text-align: left !important; color: var(--muted) !important; font-size: 16px !important; max-width: 560px; }
+html body .testimonial-card {
+  background: var(--gray-1) !important; border: 1px solid var(--frame) !important; border-radius: 12px !important; box-shadow: none !important;
+  padding: 22px !important; display: flex; flex-direction: column; gap: 14px;
+}
+html body .testimonial-card::before { content: '\201C'; position: static; display: block; height: 26px; font: 800 54px/0.8 var(--font-head); color: var(--brand); opacity: 1; }
+html body .testimonial-card:hover { background: #fff !important; border-color: #d4d4d4 !important; transform: translateY(-3px); box-shadow: 0 16px 32px rgba(10, 10, 10, 0.07) !important; }
+html body .testimonial-card .card-header { order: 3; display: flex; align-items: center; gap: 12px; margin: 0 !important; padding-top: 14px; border-top: 1px solid var(--frame); }
+html body .testimonial-card .stars { order: 1; margin: 0 !important; }
+html body .testimonial-card .testimonial-text { order: 2; flex: 1; font-style: normal !important; font-size: 15.5px !important; line-height: 1.65 !important; color: #26272b !important; margin: 0 !important; }
+html body .testimonial-card .card-footer { order: 4; border: 0 !important; padding: 0 !important; margin: 0 !important; display: flex; justify-content: space-between; align-items: center; }
+html body .testimonial-card .avatar { width: 40px !important; height: 40px !important; border-radius: 999px !important; background: var(--black) !important; box-shadow: none !important; font-size: 13px !important; }
+html body .testimonial-card .client-info h4 { font: 700 15px/1.2 var(--font-head) !important; }
+html body .testimonial-card .client-info span { font-size: 13px; }
+html body .testimonial-card .stars svg { width: 16px; height: 16px; }
+html body .testimonial-card .card-footer .project-type { background: #fff !important; border: 1px solid var(--frame); color: var(--ink) !important; }
+
+/* ---- "Nous sommes la pour vous aider" : carte formulaire + photo ----------- */
+html body #sec-faec, html body #carousel_4581 { background: #fff !important; padding: 56px 20px !important; min-height: 0 !important; border-top: 1px solid var(--frame); }
+html body #sec-faec .u-sheet-1, html body #carousel_4581 .u-sheet-1 { max-width: 1040px !important; min-height: 0 !important; padding: 0 !important; margin: 0 auto !important; }
+html body #sec-faec .u-layout-wrap-1, html body #carousel_4581 .u-layout-wrap-1 { margin: 0 !important; }
+html body #sec-faec .u-layout-row, html body #carousel_4581 .u-layout-row { display: grid !important; grid-template-columns: 1.1fr 1fr; gap: 0; background: var(--gray-1); border: 1px solid var(--frame); border-radius: 14px; overflow: hidden; }
+html body #sec-faec .u-layout-row > div, html body #carousel_4581 .u-layout-row > div { width: auto !important; max-width: none !important; margin: 0 !important; padding: 0 !important; float: none !important; background: transparent !important; box-shadow: none !important; border: 0 !important; border-radius: 0 !important; min-height: 0 !important; }
+html body #sec-faec .u-container-layout, html body #carousel_4581 .u-container-layout { padding: clamp(24px, 3vw, 40px) !important; }
+html body #sec-faec h3.u-text-1, html body #carousel_4581 h3.u-text-1 { font: 700 clamp(22px, 2.4vw, 30px)/1.2 var(--font-head) !important; letter-spacing: -0.02em; color: var(--ink) !important; margin: 0 0 16px !important; text-align: left !important; }
+html body #sec-faec h3.u-text-1::after, html body #carousel_4581 h3.u-text-1::after { display: none !important; }
+html body #sec-faec .u-form, html body #carousel_4581 .u-form { background: transparent !important; border-radius: 0 !important; box-shadow: none !important; margin: 0 !important; }
+html body #sec-faec .u-inner-form, html body #carousel_4581 .u-inner-form { padding: 0 !important; }
+html body #sec-faec .u-form-group, html body #carousel_4581 .u-form-group { margin-bottom: 12px !important; }
+html body #sec-faec textarea.u-input, html body #carousel_4581 textarea.u-input { min-height: 104px; }
+html body #sec-faec .u-layout-row > div:last-child .u-container-layout, html body #carousel_4581 .u-layout-row > div:last-child .u-container-layout { padding: 0 !important; height: 100%; }
+html body #sec-faec .u-layout-row > div:last-child img, html body #carousel_4581 .u-layout-row > div:last-child img { width: 100% !important; height: 100% !important; min-height: 320px; object-fit: cover; border-radius: 0 !important; box-shadow: none !important; margin: 0 !important; display: block; }
+@media (max-width: 800px) { html body #sec-faec .u-layout-row, html body #carousel_4581 .u-layout-row { grid-template-columns: 1fr; } html body #sec-faec .u-layout-row > div:last-child img, html body #carousel_4581 .u-layout-row > div:last-child img { min-height: 220px; } }
+
+/* ---- Pied de page : compact ------------------------------------------------- */
+html body footer.u-footer .u-sheet-1 { min-height: 0 !important; max-width: 1040px !important; padding: 0 20px !important; margin: 0 auto !important; }
+html body footer.u-footer .u-layout-wrap-1 { margin: 0 !important; }
+html body footer.u-footer .u-layout-wrap-1 .u-layout-cell { min-height: 0 !important; }
+html body footer.u-footer .u-layout-wrap-1 .u-container-layout { padding: 30px 0 !important; }
+html body footer.u-footer .u-layout-wrap-1 .u-text-1 { font: 700 clamp(22px, 2.4vw, 30px)/1.2 var(--font-head) !important; margin: 0 0 6px !important; }
+html body footer.u-footer .u-layout-wrap-1 .u-text-2 { margin: 0 !important; font-size: 15px !important; }
+html body footer.u-footer .u-line { margin: 0 !important; }
+html body footer.u-footer .u-layout-wrap-2 { margin: 0 !important; }
+html body footer.u-footer .u-layout-wrap-2 .u-layout-cell { min-height: 0 !important; }
+html body footer.u-footer .u-layout-wrap-2 .u-container-layout { padding: 28px 24px 28px 0 !important; }
+html body footer.u-footer .u-layout-wrap-2 .u-logo-image { max-height: 44px; width: auto; }
+html body footer.u-footer p.u-text { font-size: 14.5px !important; line-height: 1.55 !important; margin-top: 8px !important; margin-bottom: 0 !important; }
+html body footer.u-footer h3.u-text { font: 700 17px/1.3 var(--font-head) !important; margin: 0 0 10px !important; }
+html body footer.u-footer .u-nav-item { margin: 0 !important; }
+html body footer.u-footer .u-nav-link, html body footer.u-footer .u-btn.u-button-link { padding-top: 5px !important; padding-bottom: 5px !important; font-size: 14.5px !important; }
+html body footer.u-footer .u-btn-1 { margin-top: 0 !important; }
+
+/* ---- A propos (page React) : fonds image et rythme ---------------------------- */
+.ab-block--photo { position: relative; color: #fff; background: linear-gradient(rgba(8, 8, 8, 0.82), rgba(8, 8, 8, 0.88)), var(--bg) center / cover no-repeat !important; border: 0 !important; }
+.ab-block--photo h2, .ab-block--photo h3 { color: #fff !important; }
+.ab-block--photo .ab-steps li, .ab-block--photo .ab-figures li { background: rgba(255, 255, 255, 0.08); border-color: rgba(255, 255, 255, 0.16); }
+.ab-block--photo .ab-steps p, .ab-block--photo .ab-figures span { color: #d3d3d8; }
+.ab-block--photo .ab-steps li > span, .ab-block--photo .ab-figures b { color: #fff; }
+.ab-eyebrow { display: inline-block; margin-bottom: 14px; font: 700 12px/1 var(--font-head); letter-spacing: 0.12em; text-transform: uppercase; color: var(--brand); }
+.ab-block--photo .ab-eyebrow { color: #ffb3b6; }
+.ab-block, .ab-intro { padding-top: 56px; padding-bottom: 56px; }
+.mo.mo-left { transform: translateX(-48px); }
+.mo.mo-right { transform: translateX(48px); }
+.mo.mo-zoom { transform: scale(0.9); }
+.mo.mo-in { transform: none; }
+html body .testimonials-header .section-badge { flex: 0 0 auto; width: auto !important; display: inline-block; align-self: flex-start; }
+html body .testimonials-header { flex-direction: row; }
+html body .testimonials-header .section-badge { order: -1; margin-right: auto; }

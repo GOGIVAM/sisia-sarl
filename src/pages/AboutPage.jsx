@@ -60,6 +60,14 @@ const C = {
     { fr: 'Installation de régulateur thermique industriel', en: 'Industrial thermal regulator installation' },
     { fr: 'Gestion d’accès et sécurité des bâtiments', en: 'Access management and building security' },
   ],
+  eyebrows: [
+    { fr: 'Présentation', en: 'Overview' },
+    { fr: 'Nos atouts', en: 'Our strengths' },
+    { fr: 'Notre méthode', en: 'Our method' },
+    { fr: 'En chiffres', en: 'In figures' },
+    { fr: 'Savoir-faire', en: 'Expertise' },
+    { fr: 'Sur le terrain', en: 'In the field' },
+  ],
   discover: { fr: 'Découvrir SISIA', en: 'Discover SISIA' },
 };
 
@@ -72,7 +80,7 @@ export default function AboutPage() {
       <meta name="description" content={C.desc[lang]} />
       <SiteHeader />
       <main id="contenu">
-        <section className="page-hero ab-hero">
+        <section className="page-hero ab-hero" style={{ '--hero': 'url(/images/marque.jpg)' }}>
           <div className="page-hero__inner">
             <span className="kicker">{C.kicker[lang]}</span>
             <h1>{C.h1[lang]}</h1>
@@ -82,19 +90,21 @@ export default function AboutPage() {
 
         <section className="ab-intro">
           <div className="ab-intro__inner">
-            <div className="ab-intro__text" data-mo>
+            <div className="ab-intro__text" data-mo="left">
+              <span className="ab-eyebrow">01 · {C.eyebrows[0][lang]}</span>
               <h2>{C.lead[lang]}</h2>
               <p>{C.text[lang]}</p>
               <Link to="/contact" className="btn-pill">{C.contact[lang]}</Link>
             </div>
             <ul className="ab-stats">
-              {C.stats.map((s) => (<li key={s.v} data-mo><b>{s.v}</b><span>{s.l[lang]}</span></li>))}
+              {C.stats.map((s) => (<li key={s.v} data-mo="zoom"><b data-animation-name="counter" data-animation-duration="2200">{s.v}</b><span>{s.l[lang]}</span></li>))}
             </ul>
           </div>
         </section>
 
         <section className="ab-block">
           <div className="ab-block__inner">
+            <span className="ab-eyebrow" data-mo>02 · {C.eyebrows[1][lang]}</span>
             <h2 data-mo>{C.assetsTitle[lang]}</h2>
             <ul className="ab-grid ab-grid--4">
               {C.assets.map((a) => (<li key={a.t.fr} data-mo><h3>{a.t[lang]}</h3><p>{a.d[lang]}</p></li>))}
@@ -102,18 +112,20 @@ export default function AboutPage() {
           </div>
         </section>
 
-        <section className="ab-block ab-block--gray">
+        <section className="ab-block ab-block--photo" style={{ '--bg': 'url(/images/IMG_20190506_145257.jpg)' }}>
           <div className="ab-block__inner ab-split">
-            <div data-mo>
+            <div data-mo="left">
+              <span className="ab-eyebrow">03 · {C.eyebrows[2][lang]}</span>
               <h2>{C.missionsTitle[lang]}</h2>
               <ol className="ab-steps">
                 {C.missions.map((m, i) => (<li key={m.t.fr}><span>{String(i + 1).padStart(2, '0')}</span><div><h3>{m.t[lang]}</h3><p>{m.d[lang]}</p></div></li>))}
               </ol>
             </div>
-            <div data-mo>
+            <div data-mo="right">
+              <span className="ab-eyebrow">04 · {C.eyebrows[3][lang]}</span>
               <h2>{C.whyTitle[lang]}</h2>
               <ul className="ab-figures">
-                {C.figures.map((f) => (<li key={f.l.fr}><b>{f.v}</b><span>{f.l[lang]}</span></li>))}
+                {C.figures.map((f) => (<li key={f.l.fr}><b data-animation-name="counter" data-animation-duration="2200">{f.v}</b><span>{f.l[lang]}</span></li>))}
               </ul>
             </div>
           </div>
@@ -121,6 +133,7 @@ export default function AboutPage() {
 
         <section className="ab-block">
           <div className="ab-block__inner">
+            <span className="ab-eyebrow" data-mo>05 · {C.eyebrows[4][lang]}</span>
             <h2 data-mo>{C.servicesTitle[lang]}</h2>
             <p className="ab-lead" data-mo>{C.servicesLead[lang]}</p>
             <ul className="ab-grid ab-grid--3">
@@ -135,12 +148,13 @@ export default function AboutPage() {
 
         <section className="ab-block ab-block--gray">
           <div className="ab-block__inner ab-split">
-            <div data-mo>
+            <div data-mo="left">
+              <span className="ab-eyebrow">06 · {C.eyebrows[5][lang]}</span>
               <h2>{C.atTitle[lang]}</h2>
               <ul className="plain-list">{C.at.map((x) => <li key={x.fr}>{x[lang]}</li>)}</ul>
               <Link to="/services" className="btn-pill" style={{ marginTop: 24 }}>{C.discover[lang]}</Link>
             </div>
-            <div data-mo><ContactForm /></div>
+            <div data-mo="right"><ContactForm /></div>
           </div>
         </section>
       </main>

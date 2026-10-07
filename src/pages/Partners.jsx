@@ -23,7 +23,7 @@ export default function Partners() {
       <meta name="description" content={u('metaPartnersDesc')} />
       <SiteHeader />
       <main id="contenu">
-        <section className="page-hero">
+        <section className="page-hero" style={{ '--hero': 'url(/images/lukas-hron-Gz5eVQzkNrs-unsplash.jpg)' }}>
           <div className="page-hero__inner">
             <span className="kicker">{u('partnersKicker')}</span>
             <h1>{u('listTitle')}</h1>

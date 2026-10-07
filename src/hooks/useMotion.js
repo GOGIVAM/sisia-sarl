@@ -29,7 +29,9 @@ function setupReveal(signal) {
     el.classList.add('mo');
     // variantes : deux colonnes face a face entrent par les cotes, les images zooment
     const sibs = [...parent.children].filter((c) => set.has(c));
-    if (el.matches('.u-layout-cell') && sibs.length === 2) el.classList.add(i === 0 ? 'mo-left' : 'mo-right');
+    const dir = el.dataset.mo;
+    if (dir === 'left' || dir === 'right' || dir === 'zoom') el.classList.add('mo-' + dir);
+    else if (el.matches('.u-layout-cell') && sibs.length === 2) el.classList.add(i === 0 ? 'mo-left' : 'mo-right');
     else if (el.matches('img')) el.classList.add('mo-zoom');
   });
   const io = new IntersectionObserver((entries) => {

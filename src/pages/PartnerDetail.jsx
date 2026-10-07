@@ -30,7 +30,7 @@ export default function PartnerDetail() {
       <meta property="og:description" content={p.tagline[lang]} />
       <SiteHeader />
       <main id="contenu">
-        <section className="page-hero page-hero--partner">
+        <section className="page-hero page-hero--partner" style={{ '--hero': 'url(/images/lukas-hron-Gz5eVQzkNrs-unsplash.jpg)' }}>
           <div className="page-hero__inner">
             <nav className="crumbs" aria-label="Breadcrumb">
               <Link to="/">SISIA</Link> <span aria-hidden="true">/</span> <Link to="/partenaires">{u('partnersTitle')}</Link> <span aria-hidden="true">/</span> <span>{p.name}</span>

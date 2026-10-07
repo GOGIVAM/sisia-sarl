@@ -20,7 +20,7 @@ export default function ServicesPage() {
       <meta name="description" content={u('metaServicesDesc')} />
       <SiteHeader />
       <main id="contenu">
-        <section className="page-hero">
+        <section className="page-hero" style={{ '--hero': 'url(/images/lukas-hron-Gz5eVQzkNrs-unsplash.jpg)' }}>
           <div className="page-hero__inner">
             <span className="kicker">{u('servicesKicker')}</span>
             <h1>{u('servicesTitle')}</h1>

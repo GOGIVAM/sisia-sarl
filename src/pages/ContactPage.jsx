@@ -36,7 +36,7 @@ export default function ContactPage() {
       <meta name="description" content={C.desc[lang]} />
       <SiteHeader />
       <main id="contenu">
-        <section className="page-hero">
+        <section className="page-hero" style={{ '--hero': 'url(/images/53e3dc404b5bad14f6da8c7dda793678153bdee757596c48732e7bdd9244cd5ab0_1280.jpg)' }}>
           <div className="page-hero__inner">
             <span className="kicker">{C.kicker[lang]}</span>
             <h1>{C.h1[lang]}</h1>
