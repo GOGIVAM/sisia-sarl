@@ -1,1 +1,4 @@
 facture/** text eol=lf
+facture/**/*.png binary
+facture/**/*.ico binary
+facture/**/*.jpg binary
