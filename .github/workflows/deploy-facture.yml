@@ -1,0 +1,45 @@
+name: Deploy facture (Dolibarr)
+
+# Se declenche uniquement quand le dossier facture/ change (le site vitrine est deploye par Vercel).
+on:
+  push:
+    branches: [main]
+    paths: ['facture/**', '.github/workflows/deploy-facture.yml']
+  workflow_dispatch:
+
+concurrency: deploy-facture
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Envoi de facture/ sur le serveur
+        env:
+          EC2_HOST: ${{ secrets.EC2_HOST }}
+          EC2_SSH_KEY: ${{ secrets.EC2_SSH_KEY }}
+        run: |
+          install -m 600 /dev/null key && printf '%s\n' "$EC2_SSH_KEY" > key
+          SSH="ssh -i key -o StrictHostKeyChecking=accept-new ubuntu@$EC2_HOST"
+          # conf/conf.php, .env, import/ et work/ vivent seulement sur le serveur : on n'y touche pas
+          tar czf - -C facture docker-compose.yml app deploy conf/conf.php.example \
+            | $SSH 'cd /opt/facture && rm -rf app && tar xzf - && install -m 750 deploy/backup-db.sh backup-db.sh'
+
+      - name: Reconstruction et redemarrage de l'application
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ubuntu
+          key: ${{ secrets.EC2_SSH_KEY }}
+          script_stop: true
+          script: |
+            set -e
+            cd /opt/facture
+            sudo docker compose up -d --build app
+            for i in $(seq 1 30); do
+              code=$(sudo docker exec facture-app curl -s -o /dev/null -w '%{http_code}' -H 'X-Forwarded-Proto: https' http://localhost/index.php || true)
+              [ "$code" = 200 ] && break; sleep 3
+            done
+            test "$code" = 200
+            curl -fsS -o /dev/null https://facture.sisia-sarl.com/

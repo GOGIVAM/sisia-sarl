@@ -1,0 +1,53 @@
+name: facture
+# Dolibarr (facturation) sur le meme EC2 que la messagerie.
+# Documents : bucket S3 monte sur /mnt/facture-docs (voir deploy/facture-docs.service). Base : MariaDB locale.
+services:
+  db:
+    image: mariadb:10.11
+    container_name: facture-db
+    restart: unless-stopped
+    mem_limit: 384m
+    environment:
+      MARIADB_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
+      MARIADB_DATABASE: dolibarr
+      MARIADB_USER: dolibarr
+      MARIADB_PASSWORD: ${DB_PASSWORD}
+    command: ["--innodb-buffer-pool-size=128M", "--max-connections=30", "--character-set-server=utf8mb3", "--collation-server=utf8mb3_unicode_ci"]
+    volumes:
+      - facture-db-data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      interval: 10s
+      retries: 10
+
+  app:
+    build:
+      context: ./app
+      args:
+        DOLIBARR_VERSION: ${DOLIBARR_VERSION:-24.0.2}
+    image: facture-app:${DOLIBARR_VERSION:-24.0.2}
+    container_name: facture-app
+    restart: unless-stopped
+    mem_limit: 450m
+    depends_on:
+      db:
+        condition: service_healthy
+    volumes:
+      - ./conf/conf.php:/var/www/html/conf/conf.php:ro
+      - type: bind
+        source: /mnt/facture-docs
+        target: /var/documents
+        bind:
+          propagation: rslave
+    tmpfs:
+      - /var/documents/admin/temp:uid=33,gid=33,size=64m
+    networks:
+      - default
+      - message_default
+
+networks:
+  message_default:
+    external: true
+
+volumes:
+  facture-db-data:

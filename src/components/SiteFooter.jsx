@@ -119,6 +119,8 @@ export default function SiteFooter() {
               </div>
             </div>
           </div>
+          <div className="u-border-2 u-border-grey-60 u-expanded-width u-line u-line-horizontal u-opacity u-opacity-50 u-line-3"></div>
+          <p className="u-text u-text-default site-copyright" style={{ textAlign: "center", fontSize: "0.85rem", opacity: 0.75, margin: "16px 0 8px" }}>Copyright by MKO-LIDIA</p>
         </div>
       </footer>
   );

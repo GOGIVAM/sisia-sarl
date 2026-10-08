@@ -1,0 +1,19 @@
+[Unit]
+Description=Documents Dolibarr (bucket S3 sisia-facture-documents)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=notify
+ExecStartPre=-/bin/fusermount3 -uz /mnt/facture-docs
+ExecStart=/usr/bin/rclone mount ":s3,provider=AWS,env_auth=true,region=eu-north-1,no_check_bucket=true:sisia-facture-documents" /mnt/facture-docs \
+  --allow-other --uid 33 --gid 33 --file-perms 0660 --dir-perms 0770 \
+  --vfs-cache-mode full --vfs-cache-max-size 300M --vfs-cache-max-age 15m \
+  --vfs-write-back 3s --dir-cache-time 30s --cache-dir /var/cache/rclone-facture \
+  --transfers 4 --log-level NOTICE
+ExecStop=/bin/fusermount3 -uz /mnt/facture-docs
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
