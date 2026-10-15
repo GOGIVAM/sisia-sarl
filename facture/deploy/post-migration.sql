@@ -48,3 +48,9 @@ INSERT INTO llx_const (name,value,type,visible,note,entity) VALUES
  ('THEME_FONT_FAMILY','Inter','chaine',0,'Theme SISIA',1),
  ('MAIN_LOGIN_BACKGROUND','login-bg.jpg','chaine',0,'Theme SISIA',0),
  ('MAIN_LOGIN_BACKGROUND','login-bg.jpg','chaine',0,'Theme SISIA',1);
+
+-- Module maison "PDF a la demande" (custom/sisiaondemand) : active et accroche aux fiches proposition, commande, expedition, intervention
+DELETE FROM llx_const WHERE entity=1 AND name IN ('MAIN_MODULE_SISIAONDEMAND','MAIN_MODULE_SISIAONDEMAND_HOOKS');
+INSERT INTO llx_const (name,value,type,visible,note,entity) VALUES
+ ('MAIN_MODULE_SISIAONDEMAND','1','chaine',0,'',1),
+ ('MAIN_MODULE_SISIAONDEMAND_HOOKS','["propalcard","ordercard","expeditioncard","fichintercard"]','chaine',0,'',1);

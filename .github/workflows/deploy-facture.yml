@@ -24,7 +24,7 @@ jobs:
           SSH="ssh -i key -o StrictHostKeyChecking=accept-new ubuntu@$EC2_HOST"
           # conf/conf.php, .env, import/ et work/ vivent seulement sur le serveur : on n'y touche pas
           tar czf - -C facture docker-compose.yml app deploy conf/conf.php.example \
-            | $SSH 'cd /opt/facture && rm -rf app && tar xzf - && install -m 750 deploy/backup-db.sh backup-db.sh'
+            | $SSH 'cd /opt/facture && rm -rf app && tar xzf - && install -m 750 deploy/backup-db.sh backup-db.sh && install -m 750 deploy/purge-docs.py purge-docs.py'
 
       - name: Reconstruction et redemarrage de l'application
         uses: appleboy/ssh-action@v1.0.3
