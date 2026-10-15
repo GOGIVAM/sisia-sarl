@@ -1,7 +1,6 @@
--- Reglages SISIA a (re)appliquer apres une migration ou un remplacement de la base (entity 1 = SISIA).
+-- Reglages SISIA a (re)appliquer apres une migration ou un remplacement de la base (entity 1 = SISIA ; 0 = global pour l'ecran de connexion).
 -- Rejouable sans risque : chaque ligne supprime puis recree la constante.
-DELETE FROM llx_const WHERE entity=1 AND name IN
- ('MAIN_DOCUMENTS_LOGO_HEIGHT','MAIN_ADD_PDF_BACKGROUND','MAIN_USE_BACKGROUND_ON_PDF','MAIN_USE_BACKGROUND_ON_PDF_X','MAIN_USE_BACKGROUND_ON_PDF_Y','FACTURE_ADDON_PDF','PROPALE_ADDON_PDF','MAIN_FAVICON_URL','MAIN_HTML_HEADER','MAIN_HTML_FOOTER');
+DELETE FROM llx_const WHERE entity IN (0,1) AND name IN ('MAIN_DOCUMENTS_LOGO_HEIGHT','MAIN_ADD_PDF_BACKGROUND','MAIN_USE_BACKGROUND_ON_PDF','MAIN_USE_BACKGROUND_ON_PDF_X','MAIN_USE_BACKGROUND_ON_PDF_Y','FACTURE_ADDON_PDF','PROPALE_ADDON_PDF','MAIN_FAVICON_URL','MAIN_HTML_HEADER','MAIN_HTML_FOOTER','THEME_ELDY_ENABLE_PERSONALIZED','THEME_ELDY_TOPMENU_BACK1','THEME_ELDY_VERMENU_BACK1','THEME_ELDY_BACKTITLE1','THEME_ELDY_TEXTTITLE','THEME_ELDY_TEXTTITLENOTAB','THEME_ELDY_TEXTTITLELINK','THEME_ELDY_TEXTLINK','THEME_ELDY_BTNACTION','THEME_ELDY_TEXTBTNACTION','THEME_ELDY_TOPBORDER_TITLE1','THEME_ELDY_USE_HOVER','THEME_ELDY_USE_CHECKED','THEME_ELDY_BACKBODY','THEME_FONT_FAMILY','MAIN_LOGIN_BACKGROUND');
 INSERT INTO llx_const (name,value,type,visible,note,entity) VALUES
  ('MAIN_DOCUMENTS_LOGO_HEIGHT','27','chaine',0,'Hauteur du logo en tete des documents (mm), max avant de toucher le bloc Emetteur',1),
  ('MAIN_USE_BACKGROUND_ON_PDF','watermark.png','chaine',0,'Filigrane SISIA transparent (mycompany/logos)',1),
@@ -9,6 +8,41 @@ INSERT INTO llx_const (name,value,type,visible,note,entity) VALUES
  ('MAIN_USE_BACKGROUND_ON_PDF_Y','0','chaine',0,'',1),
  ('FACTURE_ADDON_PDF','sponge','chaine',0,'Modele facture (remplace atmsponge, module ATM absent)',1),
  ('PROPALE_ADDON_PDF','cyan','chaine',0,'Modele proposition (remplace atmcyan, module ATM absent)',1),
+ ('MAIN_FAVICON_URL','/custom/favicon.ico','chaine',0,'Favicon SISIA',0),
  ('MAIN_FAVICON_URL','/custom/favicon.ico','chaine',0,'Favicon SISIA',1),
- ('MAIN_HTML_HEADER','<link rel="icon" type="image/png" sizes="32x32" href="/custom/favicon-32.png"><link rel="icon" type="image/png" sizes="16x16" href="/custom/favicon-16.png"><link rel="apple-touch-icon" href="/custom/apple-touch-icon.png">','chaine',0,'Icones SISIA',1),
- ('MAIN_HTML_FOOTER','<div style="text-align:center;font-size:12px;opacity:.75;padding:8px 0">Copyright by MKO-LIDIA</div>','chaine',0,'Mention de copyright',1);
+ ('MAIN_HTML_HEADER','<link rel="icon" type="image/png" sizes="32x32" href="/custom/favicon-32.png"><link rel="icon" type="image/png" sizes="16x16" href="/custom/favicon-16.png"><link rel="apple-touch-icon" href="/custom/apple-touch-icon.png"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap"><link rel="stylesheet" href="/custom/sisia-theme.css?v=3">','chaine',0,'Icones, polices et theme SISIA',0),
+ ('MAIN_HTML_HEADER','<link rel="icon" type="image/png" sizes="32x32" href="/custom/favicon-32.png"><link rel="icon" type="image/png" sizes="16x16" href="/custom/favicon-16.png"><link rel="apple-touch-icon" href="/custom/apple-touch-icon.png"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap"><link rel="stylesheet" href="/custom/sisia-theme.css?v=3">','chaine',0,'Icones, polices et theme SISIA',1),
+ ('MAIN_HTML_FOOTER','<div style="text-align:center;font-size:12px;opacity:.75;padding:8px 0">Copyright by MKO-LIDIA</div>','chaine',0,'Mention de copyright',0),
+ ('MAIN_HTML_FOOTER','<div style="text-align:center;font-size:12px;opacity:.75;padding:8px 0">Copyright by MKO-LIDIA</div>','chaine',0,'Mention de copyright',1),
+ ('THEME_ELDY_ENABLE_PERSONALIZED','1','chaine',0,'Theme SISIA',0),
+ ('THEME_ELDY_ENABLE_PERSONALIZED','1','chaine',0,'Theme SISIA',1),
+ ('THEME_ELDY_TOPMENU_BACK1','10,10,10','chaine',0,'Theme SISIA',0),
+ ('THEME_ELDY_TOPMENU_BACK1','10,10,10','chaine',0,'Theme SISIA',1),
+ ('THEME_ELDY_VERMENU_BACK1','255,255,255','chaine',0,'Theme SISIA',0),
+ ('THEME_ELDY_VERMENU_BACK1','255,255,255','chaine',0,'Theme SISIA',1),
+ ('THEME_ELDY_BACKTITLE1','245,245,246','chaine',0,'Theme SISIA',0),
+ ('THEME_ELDY_BACKTITLE1','245,245,246','chaine',0,'Theme SISIA',1),
+ ('THEME_ELDY_TEXTTITLE','10,10,10','chaine',0,'Theme SISIA',0),
+ ('THEME_ELDY_TEXTTITLE','10,10,10','chaine',0,'Theme SISIA',1),
+ ('THEME_ELDY_TEXTTITLENOTAB','184,35,47','chaine',0,'Theme SISIA',0),
+ ('THEME_ELDY_TEXTTITLENOTAB','184,35,47','chaine',0,'Theme SISIA',1),
+ ('THEME_ELDY_TEXTTITLELINK','10,10,10','chaine',0,'Theme SISIA',0),
+ ('THEME_ELDY_TEXTTITLELINK','10,10,10','chaine',0,'Theme SISIA',1),
+ ('THEME_ELDY_TEXTLINK','184,35,47','chaine',0,'Theme SISIA',0),
+ ('THEME_ELDY_TEXTLINK','184,35,47','chaine',0,'Theme SISIA',1),
+ ('THEME_ELDY_BTNACTION','10,10,10','chaine',0,'Theme SISIA',0),
+ ('THEME_ELDY_BTNACTION','10,10,10','chaine',0,'Theme SISIA',1),
+ ('THEME_ELDY_TEXTBTNACTION','255,255,255','chaine',0,'Theme SISIA',0),
+ ('THEME_ELDY_TEXTBTNACTION','255,255,255','chaine',0,'Theme SISIA',1),
+ ('THEME_ELDY_TOPBORDER_TITLE1','215,25,32','chaine',0,'Theme SISIA',0),
+ ('THEME_ELDY_TOPBORDER_TITLE1','215,25,32','chaine',0,'Theme SISIA',1),
+ ('THEME_ELDY_USE_HOVER','253,238,239','chaine',0,'Theme SISIA',0),
+ ('THEME_ELDY_USE_HOVER','253,238,239','chaine',0,'Theme SISIA',1),
+ ('THEME_ELDY_USE_CHECKED','253,238,239','chaine',0,'Theme SISIA',0),
+ ('THEME_ELDY_USE_CHECKED','253,238,239','chaine',0,'Theme SISIA',1),
+ ('THEME_ELDY_BACKBODY','246,246,247','chaine',0,'Theme SISIA',0),
+ ('THEME_ELDY_BACKBODY','246,246,247','chaine',0,'Theme SISIA',1),
+ ('THEME_FONT_FAMILY','Inter','chaine',0,'Theme SISIA',0),
+ ('THEME_FONT_FAMILY','Inter','chaine',0,'Theme SISIA',1),
+ ('MAIN_LOGIN_BACKGROUND','login-bg.jpg','chaine',0,'Theme SISIA',0),
+ ('MAIN_LOGIN_BACKGROUND','login-bg.jpg','chaine',0,'Theme SISIA',1);

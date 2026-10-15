@@ -1,0 +1,106 @@
+/* Theme SISIA pour Dolibarr : meme identite que le site vitrine (noir, rouge, Manrope / Inter).
+   Charge par MAIN_HTML_HEADER (voir deploy/post-migration.sql). Aucune modification du noyau Dolibarr. */
+:root {
+  --s-black: #0a0a0a;
+  --s-ink: #141414;
+  --s-red: #d71920;
+  --s-red-dark: #b8232f;
+  --s-red-tint: #fdeeef;
+  --s-bg: #f6f6f7;
+  --s-line: #e6e6e8;
+  --s-radius: 12px;
+}
+
+html body, body, input, select, textarea, button, .body {
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  color: var(--s-ink);
+}
+h1, h2, h3, div.titre, .titre, .pagination, div.vmenu .menu_titre, a.tmenu .mainmenuaspan, .login_table_title {
+  font-family: 'Manrope', 'Inter', system-ui, sans-serif;
+}
+
+/* ---------- Fond et zones ---------- */
+body { background: var(--s-bg); }
+#id-right, #id-container { background: var(--s-bg); }
+div.fiche, div.fichecenter, div.fichehalfleft, div.fichehalfright { color: var(--s-ink); }
+table.noborder, table.border, div.tabBar, .tagtable.liste, div.div-table-responsive-no-min > table.tagtable {
+  border-radius: var(--s-radius);
+}
+div.tabBar { background: #fff !important; border: 1px solid var(--s-line); box-shadow: 0 1px 2px rgba(10, 10, 10, .04); }
+
+/* ---------- Barre du haut (noire) ---------- */
+#id-top, div#tmenu_tooltip, div.tmenudiv { background: var(--s-black) !important; }
+a.tmenu, a.tmenusel, span.tmenuimage { color: #fff !important; }
+li.tmenusel a, a.tmenusel { border-bottom: 3px solid var(--s-red); }
+a.tmenu:hover { color: #ffd4d6 !important; }
+
+/* ---------- Menu de gauche ---------- */
+div.vmenu, #id-left { background: #fff; }
+div.vmenu .menu_titre, div.vmenu a.vmenu { color: var(--s-ink); }
+div.vmenu a.vmenu:hover, div.vmenu a.vsmenu:hover { color: var(--s-red); }
+div.vmenu .menu_contenu.menusel, div.vmenu .menusel { border-left: 3px solid var(--s-red); background: var(--s-red-tint); }
+
+/* ---------- Boutons : pilule noire, rouge au survol (comme le site) ---------- */
+a.butAction, a.butActionNew, input.button, button.button, input[type=submit].button, a.butActionDelete, a.butActionRefused, span.butAction {
+  border-radius: 999px !important;
+  font-weight: 600;
+  letter-spacing: .01em;
+  padding: 8px 18px !important;
+  transition: background .15s ease, border-color .15s ease, color .15s ease;
+}
+a.butAction, a.butActionNew, input.button, button.button, input[type=submit].button {
+  background: var(--s-black) !important;
+  border: 1px solid var(--s-black) !important;
+  color: #fff !important;
+}
+a.butAction:hover, a.butActionNew:hover, input.button:hover, button.button:hover, input[type=submit].button:hover {
+  background: var(--s-red) !important;
+  border-color: var(--s-red) !important;
+  color: #fff !important;
+}
+a.butActionDelete { background: #fff !important; border: 1px solid var(--s-red-dark) !important; color: var(--s-red-dark) !important; }
+a.butActionDelete:hover { background: var(--s-red-dark) !important; color: #fff !important; }
+
+/* ---------- Onglets, titres, liens ---------- */
+div.tabs a.tab, a.tab { font-family: 'Manrope', 'Inter', sans-serif; font-weight: 600; }
+div.tabs a.tab#active, a.tab.tabactive { border-bottom: 3px solid var(--s-red) !important; color: var(--s-black) !important; }
+tr.liste_titre td, tr.liste_titre th, tr.liste_titre_sel td, tr.liste_titre_sel th, tr.liste_titre_filter td {
+  border-top: 2px solid var(--s-red) !important;
+  font-weight: 700;
+}
+a, a:link, a:visited { color: var(--s-red-dark); }
+a:hover { color: var(--s-red); }
+tr.oddeven:hover, tr.oddeven:hover td { background: var(--s-red-tint) !important; }
+input:focus, select:focus, textarea:focus { outline: none; border-color: var(--s-red) !important; box-shadow: 0 0 0 3px rgba(215, 25, 32, .15); }
+input[type=text], input[type=password], input[type=email], input[type=number], select, textarea { border-radius: 8px; }
+
+/* ---------- Page de connexion ---------- */
+body.bodylogin { background-color: var(--s-black); }
+.login_vertical_align { padding-top: 40px; }
+div.login_block, #login, form#login { font-family: 'Inter', sans-serif; }
+.login_table, table.login_table {
+  background: #fff !important;
+  border-radius: 18px !important;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, .45) !important;
+  border: 0 !important;
+  max-width: 440px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.login_table .login_table_title, .login_table_title { color: var(--s-black) !important; font-weight: 800; }
+div.login_block_other, .login_main_message { color: #fff; }
+.login_table input#username, .login_table input#password, .login_table input[name=username], .login_table input[name=password] {
+  border: 1px solid var(--s-line) !important; border-radius: 10px !important; padding: 12px 12px 12px 40px;
+}
+.login_table .button, .login_table input[type=submit] {
+  width: 100%; border-radius: 999px !important; padding: 13px 20px !important; background: var(--s-black) !important; border-color: var(--s-black) !important; color: #fff !important; font-weight: 700;
+}
+.login_table .button:hover, .login_table input[type=submit]:hover { background: var(--s-red) !important; border-color: var(--s-red) !important; }
+div.login_footer a, .login_block_tools a { color: #ffd4d6 !important; }
+.login_main_home a { color: var(--s-red-dark) !important; font-weight: 600; }
+
+/* ---------- Connexion : retouches de lisibilite sur le fond sombre ---------- */
+form#login .login_table_title, #login .login_table_title { color: #fff !important; font-size: 1.1rem; letter-spacing: .04em; margin-bottom: 14px; }
+body.bodylogin div[style*="opacity:.75"], body.bodylogin div[style*="opacity: .75"] { color: #e6e6e8 !important; opacity: .9 !important; }
+.login_table #img_logo, .login_table img.logologin, img#img_logo { max-height: none !important; width: 100% !important; max-width: 360px !important; height: auto !important; }
+.login_main_home, div.login_main_home { background: #fff !important; border-radius: 14px !important; border: 0 !important; box-shadow: 0 12px 34px rgba(0, 0, 0, .35) !important; color: var(--s-ink) !important; }
