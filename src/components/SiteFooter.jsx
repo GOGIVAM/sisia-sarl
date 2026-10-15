@@ -32,8 +32,8 @@ export default function SiteFooter() {
               <div className="u-layout-row">
                 <div className="u-container-style u-layout-cell u-size-20-lg u-size-20-xl u-size-30-md u-size-30-sm u-size-30-xs u-layout-cell-3">
                   <div className="u-container-layout u-valign-top u-container-layout-3">
-                    <Link to="/" className="u-image u-logo u-image-1" data-image-width="581" data-image-height="268">
-                      <img src="/images/logo-smart-white.png" className="u-logo-image u-logo-image-1" />
+                    <Link to="/" className="u-image u-logo u-image-1" data-image-width="281" data-image-height="400">
+                      <img src="/images/logo-smart-white.png" style={{ background: "#fff", borderRadius: "12px", padding: "8px 12px", maxHeight: "92px", width: "auto" }} className="u-logo-image u-logo-image-1" />
                     </Link>
                     <p className="u-text u-text-default u-text-3">{t("kslsd0i")}</p>
                     <p className="u-text u-text-default u-text-4">

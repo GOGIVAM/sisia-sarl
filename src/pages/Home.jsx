@@ -97,7 +97,7 @@ export default function Home() {
           </div>
           <div className="u-clearfix u-section-row u-section-row-2" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">
             <div className="u-clearfix u-sheet u-valign-middle u-valign-middle-xxl u-sheet-2">
-              <Link to="/" className="u-image u-logo u-image-1" data-image-width="581" data-image-height="268">
+              <Link to="/" className="u-image u-logo u-image-1" data-image-width="281" data-image-height="400">
                 <img src="/images/logo-smart3.png" alt={t("ktgtju9")} className="u-logo-image u-logo-image-1" />
               </Link>
               <nav className="u-dropdown-icon u-menu u-menu-dropdown u-offcanvas u-menu-1" data-responsive-from="MD" role="navigation" style={{ height: "50px" }}>
@@ -871,8 +871,8 @@ export default function Home() {
               <div className="u-layout-row">
                 <div className="u-container-style u-layout-cell u-size-20-lg u-size-20-xl u-size-30-md u-size-30-sm u-size-30-xs u-layout-cell-3">
                   <div className="u-container-layout u-valign-top u-container-layout-3">
-                    <Link to="/" className="u-image u-logo u-image-1" data-image-width="581" data-image-height="268">
-                      <img src="/images/logo-smart-white.png" alt={t("ktgtju9")} className="u-logo-image u-logo-image-1" />
+                    <Link to="/" className="u-image u-logo u-image-1" data-image-width="281" data-image-height="400">
+                      <img src="/images/logo-smart-white.png" style={{ background: "#fff", borderRadius: "12px", padding: "8px 12px", maxHeight: "92px", width: "auto" }} alt={t("ktgtju9")} className="u-logo-image u-logo-image-1" />
                     </Link>
                     <p className="u-text u-text-default u-text-3">{t("kslsd0i")}</p>
                     <p className="u-text u-text-default u-text-4">

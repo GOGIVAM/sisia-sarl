@@ -44,7 +44,7 @@ export default function SiteHeader() {
           </div>
           <div className="u-clearfix u-section-row u-section-row-2" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">
             <div className="u-clearfix u-sheet u-valign-middle u-valign-middle-xxl u-sheet-2">
-              <Link to="/" className="u-image u-logo u-image-1" data-image-width="581" data-image-height="268">
+              <Link to="/" className="u-image u-logo u-image-1" data-image-width="281" data-image-height="400">
                 <img src="/images/logo-smart3.png" className="u-logo-image u-logo-image-1" />
               </Link>
               <nav className="u-dropdown-icon u-menu u-menu-dropdown u-offcanvas u-menu-1" data-responsive-from="MD" role="navigation">
